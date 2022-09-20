@@ -17,35 +17,67 @@ export default function Navbar() {
             <div className={NavbarStyles.title}>
               <ul className={NavbarStyles.titletext}>
                 <Link href={``}>
-                  <div className="">
+                  <a className="">
                     Home Page
-                  </div>
+                  </a>
                 </Link>
               </ul>
               <ul className={NavbarStyles.titletext}>
                 <Link href={``}>
-                  <div className="">
+                  <a className="">
                     Recipe Page
-                  </div>
+                  </a>
                 </Link>
               </ul>
               <ul className={NavbarStyles.titletext}>
                 <Link href={``}>
-                  <div className="">
+                  <a className="">
                     Pages
-                  </div>
+                  </a>
                 </Link>
               </ul>
               <ul className={NavbarStyles.titletext}>
                 <Link href={``}>
-                  <div className="">
+                  <a className="">
                     Buy
-                  </div>
+                  </a>
                 </Link>
               </ul>
             </div>
+            <Search />
+            <Avatar />
         </div>
       </div>
     </>
   );
+}
+
+
+export function Search() {
+
+  return (
+    <>
+      <div class={NavbarStyles.box}>
+        <div class={NavbarStyles.container1}>
+          <span class="icon"><i class="fa fa-search"></i></span>
+          <input type="search" id="search" placeholder="Search..." />
+        </div>
+      </div>
+    </>
+  );
+}
+
+export function Avatar() {
+  return (
+    <>
+      <div className={NavbarStyles.avatar} >
+        <Image
+          className={NavbarStyles.imgavatar}
+          src="/images/avt.png"
+          width='50px'
+          height='50px'
+        />
+      </div>
+    </>
+  )
 }
