@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import NavbarStyles from '../styles/Navbar.module.css';
+import NavbarStyles from '../../styles/Navbar.module.css';
 import Image from 'next/image';
 
 export default function Navbar() {
@@ -10,7 +10,7 @@ export default function Navbar() {
         <div className={NavbarStyles.content}>
           <Link href={``}>
             <a className="">
-              <img src="/images/Logo.svg"/>
+              <img src="/images/navbar/Logo.svg"/>
             </a>
           </Link>
         
@@ -73,7 +73,7 @@ export function Avatar() {
       <div className={NavbarStyles.avatar} >
         <Image
           className={NavbarStyles.imgavatar}
-          src="/images/avt.png"
+          src="/images/navbar/avt.png"
           width='50px'
           height='50px'
         />

@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import Navbar, { MBFooter, Footer } from '../pages/navbar';
+import Navbar, { MBFooter, Footer } from '../pages/views/navbar';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
 
 
 
-export default function Home({}) {
+export default function Home() {
 
   return (
     <>
