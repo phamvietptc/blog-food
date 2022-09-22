@@ -37,9 +37,9 @@
     background: #b8b9bb;
     border: none;
     font-size: 12pt;
-    float: left;
+    float: right;
     color: #262626;
-    padding-left: 50px;
+    padding-left: 32px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -69,7 +69,7 @@
   .container1 .icon{
     position: absolute;
     top: 50%;
-    margin-left: 17px;
+    margin-left: 265px;
     margin-top: 17px;
     z-index: 1;
     color: #4f5b66;
