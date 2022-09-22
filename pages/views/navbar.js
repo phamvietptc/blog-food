@@ -57,16 +57,16 @@ export function Search() {
 
   return (
     <>
-      <div class={NavbarStyles.box}>
-        <div class={NavbarStyles.container1}>
+      <div className={NavbarStyles.box}>
+        <div className={NavbarStyles.container1}>
+          <span className={NavbarStyles.icon}>
+            <Image
+              src='/images/navbar/icons-search.svg'
+              width="20px"
+              height="20px">
+            </Image>
+          </span>
           <input type="search" id="search" placeholder="Search..." />
-          <Image
-            class="icon"
-            src='/images/navbar/icons-search.svg'
-            width="15px"
-            height="15px"
-          ></Image>
-          
         </div>
       </div>
     </>
