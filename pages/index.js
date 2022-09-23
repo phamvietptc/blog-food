@@ -13,6 +13,7 @@ export default function Home() {
       <div className={styles.contain}>
         <div className={styles.content}>
           <Navbar />
+          <Footer />
 
         </div>
       </div>
