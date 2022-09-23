@@ -63,7 +63,7 @@ export function Search() {
         <div className={NavbarStyles.container1}>
           <span className={NavbarStyles.icon}>
             <Image
-              src='/images/navbar/icons-search.svg'
+              src='/icons/navbar/icons-search.svg'
               width="20px"
               height="20px">
             </Image>
@@ -136,6 +136,7 @@ export function Footer({ isNoPadding = false }) {
   return (
     <div
       id="normal-footer"
+      className={NavbarStyles.foodter}
       // style={shouldAtBottom ? { height: footerHeight } : undefined}
     >
       <div
@@ -144,114 +145,68 @@ export function Footer({ isNoPadding = false }) {
         //   'min-w-full hidden md:block ' +
         //   (shouldAtBottom ? 'fixed bottom-0 left-0 right-0' : '')
         // }
-        style={{ background: '#262626' }}
       >
         <div
-          className={`w-full pt-8 pb-8 hidden md:flex md:flex-row md:justify-between container ${
-            isNoPadding ? 'px-0' : ''
-          }`}
+          // className={`w-full pt-8 pb-8 hidden md:flex md:flex-row md:justify-between container ${
+          //   isNoPadding ? 'px-0' : ''
+          // }`}
+          className={NavbarStyles.containerFoodter}
         >
-          <div className="flex-1">
-            <Image src="/images/navbar/Logo.svg" height={60} width={180} alt="" />
-            <div className="flex flex-row">
-              <a
-                className="pr-4"
-                href=""
-                target="_blank"
-              >
-                <Image
-                  src="/images/ins.svg"
-                  height={28}
-                  width={28}
-                  alt="Instagram"
-                />
-              </a>
-              <a
-                className="pr-4"
-                href=""
-                target="_blank"
-              >
-                <Image
-                  src="/images/fb.svg"
-                  height={28}
-                  width={28}
-                  alt="Facebook"
-                />
-              </a>
-              <a className="pr-4" href="mailto:.......@gmail.com">
-                <Image
-                  src="/images/email.svg"
-                  height={28}
-                  width={28}
-                  alt="Mail"
-                />
-              </a>
-            </div>
+          <div className={NavbarStyles.foodterLogo}>
+            <Image src="/images/navbar/Logo.svg" height={60} width={180} alt="Tastebite" />
+            <p className={NavbarStyles.foodterTitle} style={{ color: '#7a8186' }}>
+              "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment
+            </p>
           </div>
-          <div className="flex-1 flex flex-row justify-between">
-            <div className="min-w-m189">
-              <ul
-                id="navbar-list"
-                className="nearwhite ftpad list-none"
-                style={{ listStyleType: 'none !important' }}
-              >
-                <li className="fs-15">
-                  <Link href={``}>
-                    Aboutus
-                  </Link>
-                </li>
-                <li className="fs-15">
-                  <Link href={``}>
-                    Careers
-                  </Link>
-                </li>
 
-                <li className="fs-15">
-                  <Link href={``}>
-                    Contact Us
-                  </Link>
-                </li>
-
-                <li className="fs-15">
-                  <Link href={``}>
-                    Feedback
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="min-w-m189">
-              <ul id="navbar-list" className="nearwhite ftpad">
-                <li className="fs-15 cursor-pointer">My Profile</li>
-                <li
-                  className="fs-15 cursor-pointer"
-                  onClick={() => {
-                    router.push({
-                      pathname: `/aboutus`,
-                    });
-                  }}
-                >
-                  About Us
-                </li>
-                <li className="fs-15 cursor-pointer">
-                  <Link href={``}>Feedback</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="col-span-2 flex-column">
-              <div className="subbtn">SUBSCRIBE</div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className={`w-full pt-8 pb-4 hidden md:flow-root nearwhite text-xs container ${
-            isNoPadding ? 'px-0' : ''
-          }`}
-          style={{ background: '#262626' }}
-        >
           <div className="float-left flex flex-row">
+            <div className={NavbarStyles.foodterListHead} >Tastebite</div>
             <div
-              className="pr-6 cursor-pointer"
+              className={NavbarStyles.foodterList}
+              onClick={() => {
+                router.push({
+                  pathname: '/' + router.query + '/About us',
+                });
+              }}
+            >
+              About us
+            </div>
+            <div
+              className={NavbarStyles.foodterList}
+              onClick={() => {
+                router.push({
+                  pathname: '/' + router.query + '/Careers',
+                });
+              }}
+            >
+              Careers
+            </div>
+            <div
+              className={NavbarStyles.foodterList}
+              onClick={() => {
+                router.push({
+                  pathname: '/' + router.query + '/Contact Us',
+                });
+              }}
+            >
+              Contact Us
+            </div>
+            <div
+              className={NavbarStyles.foodterList}
+              onClick={() => {
+                router.push({
+                  pathname: '/' + router.query + '/Feedback',
+                });
+              }}
+            >
+              Feedback
+            </div>
+          </div>
+          
+          <div className="float-left flex flex-row">
+            <div className={NavbarStyles.foodterListHead} >Legal</div>
+            <div
+              className={NavbarStyles.foodterList}
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/terms',
@@ -261,27 +216,142 @@ export function Footer({ isNoPadding = false }) {
               Terms
             </div>
             <div
-              className="pr-6 cursor-pointer"
+              className={NavbarStyles.foodterList}
               onClick={() => {
                 router.push({
-                  pathname: '/' + router.query + '/privacy',
+                  pathname: '/' + router.query + '/Conditions',
                 });
               }}
             >
-              Privacy Policy
+              Conditions
             </div>
             <div
-              className="pr-6 cursor-pointer"
+              className={NavbarStyles.foodterList}
               onClick={() => {
                 router.push({
-                  pathname: '/' + router.query + '/disclaimer',
+                  pathname: '/' + router.query + '/Cookies',
                 });
               }}
             >
-              Disclaimer
+              Cookies
+            </div>
+            <div
+              className={NavbarStyles.foodterList}
+              onClick={() => {
+                router.push({
+                  pathname: '/' + router.query + '/Copyright',
+                });
+              }}
+            >
+              Copyright
             </div>
           </div>
-          <div className="float-right">©2022 Tastebite - All rights reserved</div>
+
+          <div className="float-left flex flex-row">
+            <div className={NavbarStyles.foodterListHead} >Follow</div>
+            <div
+              className={NavbarStyles.foodterList}
+              onClick={() => {
+                router.push({
+                  pathname: '/' + router.query + '/Facebook',
+                });
+              }}
+            >
+              Facebook
+            </div>
+            <div
+              className={NavbarStyles.foodterList}
+              onClick={() => {
+                router.push({
+                  pathname: '/' + router.query + '/Twitter',
+                });
+              }}
+            >
+              Twitter
+            </div>
+            <div
+              className={NavbarStyles.foodterList}
+              onClick={() => {
+                router.push({
+                  pathname: '/' + router.query + '/Instagram',
+                });
+              }}
+            >
+              Instagram
+            </div>
+            <div
+              className={NavbarStyles.foodterList}
+              onClick={() => {
+                router.push({
+                  pathname: '/' + router.query + '/Youtube',
+                });
+              }}
+            >
+              Youtube
+            </div>
+          </div>
+        </div>
+
+        <div style={{ width: '93%'}}>
+        <hr style={{ color:'#a2aaaf'}} />
+        <div
+          // className={`w-full pt-8 pb-4 hidden md:flow-root nearwhite text-xs container ${
+          //   isNoPadding ? 'px-0' : ''
+          // }`}
+          className={NavbarStyles.foodterEnd}
+        >
+          <div className={NavbarStyles.copyright}>©2022 Tastebite - All rights reserved</div>
+          <div className={NavbarStyles.foodterIcon}>
+              <a
+                className={NavbarStyles.foodterIcon}
+                href=""
+                target="_blank"
+              >
+                <Image
+                  src="/icons/navbar/icons-facebook.svg"
+                  height={25}
+                  width={25}
+                  alt="Facebook"
+                />
+              </a>
+              <a
+                className={NavbarStyles.foodterIcon}
+                href=""
+                target="_blank"
+              >
+                <Image
+                  src="/icons/navbar/icons-twitter.svg"
+                  height={25}
+                  width={25}
+                  alt="Twitter"
+                />
+              </a>
+              <a
+                className={NavbarStyles.foodterIcon}
+                href=""
+                target="_blank"
+              >
+                <Image
+                  src="/icons/navbar/icons-instagram.svg"
+                  height={25}
+                  width={25}
+                  alt="Instagram"
+                />
+              </a>
+              <a
+                className={NavbarStyles.foodterIcon}
+                href=""
+                target="_blank"
+              >
+                <Image
+                  src="/icons/navbar/icons-youtube.svg"
+                  height={25}
+                  width={25}
+                  alt="Youtube"
+                />
+              </a>
+          </div>
+        </div>
         </div>
       </div>
     </div>

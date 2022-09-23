@@ -40,6 +40,7 @@
     float: right;
     color: #262626;
     padding-left: 32px;
+    padding-right: 45px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -68,6 +69,7 @@
   
   .container1 .icon{
     position: absolute;
+    cursor: pointer;
     top: 50%;
     margin-left: 265px;
     margin-top: 17px;
@@ -88,11 +90,63 @@
   }
 .avatar {
   margin-top: 15px;
+  cursor: pointer;
 }
 .imgavatar {
   border-radius: 50% 50% 50% 50%;
 }
+
+/* Foodter */
+.foodter {
+  background-color: #ffffff;
+  width: 100vw;
+  padding: 25px 0 25px 30px;
+  margin: 0;
 }
+.containerFoodter {
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+}
+.foodterLogo {
+  flex: 1 1 0%;
+}
+.foodterTitle {
+  margin-top: 16px;
+  width: 32%;
+}
+.foodterList {
+  padding-right: 100px;
+  cursor: pointer;
+  color: #7a8186;
+  height: 30px;
+}
+.foodterListHead {
+  padding-right: 100px;
+  color: #000000;
+  font-weight: bold;
+  height: 30px;
+}
+.foodterIcon {
+  padding-right: 45px;
+}
+.copyright {
+  flex: 1 1;
+  color: #7a8186;
+}
+.foodterEnd {
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 16px;
+  display: flex;
+}
+
+}
+
+
+
+/* ////////////////////////////////////////////////// */
 
 /* Mobile */
 @media only screen and (max-width: 768px) {
