@@ -8,6 +8,42 @@
         background-position: center;
         background-size: cover;
     }
+
+    /* Email */
+    .emailBox {
+        width: 342px;
+    }
+    .sumbitEmail{
+        display: flex;
+        height: 50px;
+        width: 400px;
+        margin-left: -25px;
+    }
+    .inputEmail {
+        width: 400px;
+        height: 50px;
+        position: absolute;
+        background-color: #ffffff;
+        border: none;
+        color: black;
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 116px;
+        font-size: 20px;
+    }
+    .btnEmail {
+        width: 100px;
+        height: 45px;
+        text-align: center;
+        background: chocolate;
+        position: absolute;
+        margin-top: 2.5px;
+        margin-left: 298px;
+        border-radius: 2px;
+        padding-top: 10px;
+        cursor: pointer;
+    }
+    
 }
 
 /* Mobile */
