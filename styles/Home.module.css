@@ -9,6 +9,24 @@
         background-size: cover;
     }
 
+    /* Spotlight Food */
+    .boxSpotlight {
+        height: 491px;
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+    .imgSpotlight {
+        cursor: pointer;
+    }
+    .textSpotlight {
+        background-color: #c5e6e9;
+        height: 491px;
+        width: 400px;
+        padding: 80px 62px;
+        cursor: pointer;
+    }
+
     /* Email */
     .emailBox {
         width: 342px;

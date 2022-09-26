@@ -13,6 +13,7 @@ export default function Home() {
       <div className={styles.contain}>
         <div className={styles.content}>
           <Navbar />
+          <Spotlight_Food />
           <Email />
           <Footer />
 
@@ -58,5 +59,52 @@ export function Email() {
         </div>
       </div>
     </>
+  )
+}
+
+
+// Spotlight Food
+export function Spotlight_Food() {
+  return (
+    <>
+      <div className={styles.boxSpotlight}>
+        <div className={styles.imgSpotlight}>
+        <Link href={``}>
+          <Image
+            src="/images/home/Image_Sotlight.png"
+            width='654px'
+            height='491px'
+          />
+          </Link> 
+        </div>
+        <div>  
+        <div className={styles.textSpotlight}>
+          <div style={{display:'flex'}}>
+          <Image
+              src='/icons/home/icons-chart-up.png'
+              width='24px'
+              height='24px'
+          />
+          <p style={{color:'black', fontWeight:'600', lineHeight:'0', paddingLeft:'5px'}}>
+            85% would make this again
+          </p>
+          </div>
+          <h1 style={{color:'black', fontFamily:'-moz-initial', fontSize:'45px', fontWeight:'bold'}}>
+            Mighty Super Cheesecake
+          </h1>
+          <p style={{color:'black', fontWeight:'600', lineHeight:'25px'}}>
+            Look no further for a creamy and ultra smooth classic cheesecake reciper! no one can deny its simple decadence.
+          </p>
+          
+        </div>
+        <Image
+            src='/icons/home/icons-right.png'
+            width='24px'
+            height='24px'
+            // margin='-30px 10px'
+          />
+        </div>    
+      </div> 
+    </>  
   )
 }
