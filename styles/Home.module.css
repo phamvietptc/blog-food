@@ -11,7 +11,7 @@
 
     /* Spotlight Food */
     .boxSpotlight {
-        height: 491px;
+        height: 488px;
         display: flex;
         box-sizing: border-box;
         justify-content: center;
@@ -21,8 +21,8 @@
     }
     .textSpotlight {
         background-color: #c5e6e9;
-        height: 491px;
-        width: 400px;
+        height: 488px;
+        width: 465px;
         padding: 80px 62px;
         /* cursor: pointer; */
     }
@@ -64,12 +64,31 @@
 
     /* Card Food */
     .boxCard {
+        box-sizing: border-box;
+        margin-top: 48px;
+    }
+    .card {
         display: flex;
         justify-content: center;
     }
     .blockCard {
-        margin: 5px;
+        margin: 16px;
     }
+    .imageCard {
+        border-radius: 6px;
+        height: 243px;
+        width: 350px;
+        cursor: pointer;
+    }
+    .voteCard {
+        color: rgb(255, 0, 0);
+    }
+    .textCard {
+        color: black;
+        cursor: pointer;
+        margin-top: -10px;
+    }
+    
     
 }
 

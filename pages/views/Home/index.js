@@ -15,6 +15,7 @@ export default function Home() {
           <Navbar />
           <Spotlight_Food />
           <Card_Food />
+          <Card_Food />
           <Email />
           <Footer />
 
@@ -34,8 +35,8 @@ export function Spotlight_Food() {
           <Link href={``}>
             <Image
               src="/images/home/Image_Sotlight.png"
-              width='654px'
-              height='491px'
+              width='650px'
+              height='488px'
             />
           </Link> 
         </div>
@@ -113,81 +114,71 @@ export function Email() {
 
 // Card Food
 export function Card_Food() {
-
   const router = useRouter();
   const defaultContents = [
     {
       id: 0,
-      title: '1',
+      vote: '★★★★',
       text: 'Spinach and Cheese Pasta',
-      author: 'Super Delicious',
     },
     {
       id: 1,
-      title: '2',
+      vote: '★★★',
       text: 'Fancy Glazed Dounts',
-      author: 'Super Delicious',
     },
     {
       id: 2,
-      title: '3',
+      vote: '★★★★★',
       text: 'Mighty Cheesy Breakfast Burger',
-      author: 'Super Delicious',
     },
   ];
 
   return (
     <>
-      <div className={styles.boxCard}>
-          {/* <div className={styles.contentCard}> */}
-            {/* <div className={styles.containerCard}> */}
-              {defaultContents.map((item, index) => (
-                <div key={index} className={styles.blockCard}>
-                  <div className={styles.imageCard}>
-                    {index === 0 && (
-                      <img src="/images/home/card-food.jpg" alt="" />
-                    )}
-                    {index === 1 && (
-                      <img src="/images/home/card-food.jpg" alt="" />
-                    )}
-                    {index === 2 && <img src="/images/home/card-food.jpg" alt="" />}
-                  </div>
-                  <div style={{ position: 'relative' }}>
-                    <h3 className={styles.headingCard}>{item.title}</h3>
-                    <h3
-                      className={styles.textCard}
-                      onClick={() => {
-                        if (item.id === 3) {
-                          router.push(
-                            '/'
-                          );
-                        } else {
-                          return;
-                        }
-                      }}
-                    >
-                      {item.text}
-                    </h3>
-                  </div>
-                  <h3
-                    className={styles.priceCard}
-                    onClick={() => {
-                      if (item.id === 3) {
-                        router.push(
-                          '/'
-                        );
-                      } else {
-                        return;
-                      }
-                    }}
-                  >
-                    {item.author}
-                  </h3>
-                </div>
-              ))}
-            {/* </div> */}
-          {/* </div> */}
-        </div>
+    <div className={styles.boxCard}>
+      <div style={{color:'black', fontSize:'36px', fontFamily:'-moz-initial', fontWeight:'bold', width:'1115px', marginInline:'auto'}}>Super Delicious</div>
+      <div className={styles.card}>
+        {defaultContents.map((item, index) => (
+          <div key={index} className={styles.blockCard}>
+            <div>
+              {index === 0 && <img className={styles.imageCard} src="/images/home/card-food.jpg" alt="" />}
+              {index === 1 && <img className={styles.imageCard} src="/images/home/card-food.jpg" alt="" />}
+              {index === 2 && <img className={styles.imageCard} src="/images/home/card-food.jpg" alt="" />}
+            </div>
+            <div style={{ position: 'relative' }}>
+              <h3
+                className={styles.voteCard}
+                onClick={() => {
+                  if (item.id === 3) {
+                    router.push(
+                      '/'
+                    );
+                  } else {
+                    return;
+                  }
+                }}
+              >
+                {item.vote}
+              </h3>
+            </div>
+            <h3
+              className={styles.textCard}
+              onClick={() => {
+                if (item.id === 3) {
+                  router.push(
+                    '/'
+                  );
+                } else {
+                  return;
+                }
+              }}
+            >
+              {item.text}
+            </h3>
+          </div>
+        ))}
+      </div>
+    </div>
     </>
   )
 }
