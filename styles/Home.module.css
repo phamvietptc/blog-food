@@ -17,14 +17,14 @@
         justify-content: center;
     }
     .imgSpotlight {
-        cursor: pointer;
+        /* cursor: pointer; */
     }
     .textSpotlight {
         background-color: #c5e6e9;
         height: 491px;
         width: 400px;
         padding: 80px 62px;
-        cursor: pointer;
+        /* cursor: pointer; */
     }
 
     /* Email */
@@ -60,6 +60,15 @@
         border-radius: 2px;
         padding-top: 10px;
         cursor: pointer;
+    }
+
+    /* Card Food */
+    .boxCard {
+        display: flex;
+        justify-content: center;
+    }
+    .blockCard {
+        margin: 5px;
     }
     
 }

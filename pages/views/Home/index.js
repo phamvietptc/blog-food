@@ -14,6 +14,7 @@ export default function Home() {
         <div className={styles.content}>
           <Navbar />
           <Spotlight_Food />
+          <Card_Food />
           <Email />
           <Footer />
 
@@ -21,6 +22,53 @@ export default function Home() {
       </div>
     </>
   );
+}
+
+
+// Spotlight Food
+export function Spotlight_Food() {
+  return (
+    <>
+      <div className={styles.boxSpotlight}>
+        <div className={styles.imgSpotlight}>
+          <Link href={``}>
+            <Image
+              src="/images/home/Image_Sotlight.png"
+              width='654px'
+              height='491px'
+            />
+          </Link> 
+        </div>
+        <div>  
+          <div className={styles.textSpotlight}>
+            <div style={{display:'flex'}}>
+            <Image
+                src='/icons/home/icons-chart-up.png'
+                width='24px'
+                height='24px'
+            />
+            <p style={{color:'black', fontWeight:'600', lineHeight:'0', paddingLeft:'5px'}}>
+              85% would make this again
+            </p>
+            </div>
+            <h1 style={{color:'black', fontFamily:'-moz-initial', fontSize:'45px', fontWeight:'bold'}}>
+              Mighty Super Cheesecake
+            </h1>
+            <p style={{color:'black', fontWeight:'600', lineHeight:'25px'}}>
+              Look no further for a creamy and ultra smooth classic cheesecake reciper! no one can deny its simple decadence.
+            </p>
+          </div>
+          <div style={{float:'right', margin:'-30px 10px', cursor:'pointer'}}>
+            <Image
+              src='/icons/home/icons-right.png'
+              width='24px'
+              height='24px'
+            />
+          </div>
+        </div>    
+      </div> 
+    </>  
+  )
 }
 
 
@@ -63,48 +111,83 @@ export function Email() {
 }
 
 
-// Spotlight Food
-export function Spotlight_Food() {
+// Card Food
+export function Card_Food() {
+
+  const router = useRouter();
+  const defaultContents = [
+    {
+      id: 0,
+      title: '1',
+      text: 'Spinach and Cheese Pasta',
+      author: 'Super Delicious',
+    },
+    {
+      id: 1,
+      title: '2',
+      text: 'Fancy Glazed Dounts',
+      author: 'Super Delicious',
+    },
+    {
+      id: 2,
+      title: '3',
+      text: 'Mighty Cheesy Breakfast Burger',
+      author: 'Super Delicious',
+    },
+  ];
+
   return (
     <>
-      <div className={styles.boxSpotlight}>
-        <div className={styles.imgSpotlight}>
-        <Link href={``}>
-          <Image
-            src="/images/home/Image_Sotlight.png"
-            width='654px'
-            height='491px'
-          />
-          </Link> 
+      <div className={styles.boxCard}>
+          {/* <div className={styles.contentCard}> */}
+            {/* <div className={styles.containerCard}> */}
+              {defaultContents.map((item, index) => (
+                <div key={index} className={styles.blockCard}>
+                  <div className={styles.imageCard}>
+                    {index === 0 && (
+                      <img src="/images/home/card-food.jpg" alt="" />
+                    )}
+                    {index === 1 && (
+                      <img src="/images/home/card-food.jpg" alt="" />
+                    )}
+                    {index === 2 && <img src="/images/home/card-food.jpg" alt="" />}
+                  </div>
+                  <div style={{ position: 'relative' }}>
+                    <h3 className={styles.headingCard}>{item.title}</h3>
+                    <h3
+                      className={styles.textCard}
+                      onClick={() => {
+                        if (item.id === 3) {
+                          router.push(
+                            '/'
+                          );
+                        } else {
+                          return;
+                        }
+                      }}
+                    >
+                      {item.text}
+                    </h3>
+                  </div>
+                  <h3
+                    className={styles.priceCard}
+                    onClick={() => {
+                      if (item.id === 3) {
+                        router.push(
+                          '/'
+                        );
+                      } else {
+                        return;
+                      }
+                    }}
+                  >
+                    {item.author}
+                  </h3>
+                </div>
+              ))}
+            {/* </div> */}
+          {/* </div> */}
         </div>
-        <div>  
-        <div className={styles.textSpotlight}>
-          <div style={{display:'flex'}}>
-          <Image
-              src='/icons/home/icons-chart-up.png'
-              width='24px'
-              height='24px'
-          />
-          <p style={{color:'black', fontWeight:'600', lineHeight:'0', paddingLeft:'5px'}}>
-            85% would make this again
-          </p>
-          </div>
-          <h1 style={{color:'black', fontFamily:'-moz-initial', fontSize:'45px', fontWeight:'bold'}}>
-            Mighty Super Cheesecake
-          </h1>
-          <p style={{color:'black', fontWeight:'600', lineHeight:'25px'}}>
-            Look no further for a creamy and ultra smooth classic cheesecake reciper! no one can deny its simple decadence.
-          </p>
-          
-        </div>
-        <Image
-            src='/icons/home/icons-right.png'
-            width='24px'
-            height='24px'
-            // margin='-30px 10px'
-          />
-        </div>    
-      </div> 
-    </>  
+    </>
   )
 }
