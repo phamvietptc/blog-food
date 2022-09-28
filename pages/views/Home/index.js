@@ -16,6 +16,7 @@ export default function Home() {
           <Spotlight_Food />
           <Card_Food />
           <Card_Food />
+          <Card_Ctg />
           <Email />
           <Footer />
 
@@ -102,7 +103,7 @@ export function Email() {
           </div>
           <div>
             <p style={{ color:'black', fontSize:'10px', width:'342px', textAlign:'center'}}>
-              By joining our newsletter you agree to our <u>Terms and Conditions</u>
+              By joining our newsletter you agree to our <u style={{cursor:'pointer'}}>Terms and Conditions</u>
             </p>
           </div>
         </div>
@@ -175,6 +176,76 @@ export function Card_Food() {
             >
               {item.text}
             </h3>
+          </div>
+        ))}
+      </div>
+    </div>
+    </>
+  )
+}
+
+
+// Popular Categories
+export function Card_Ctg() {
+  const router = useRouter();
+  const content = [
+    {
+      id: 0,
+      title: 'Pasta',
+    },
+    {
+      id: 1,
+      title: 'Pizza',
+    },
+    {
+      id: 2,
+      title: 'Vegan',
+    },
+    {
+      id: 3,
+      title: 'Desserts',
+    },
+    {
+      id: 4,
+      title: 'Smoothies',
+    },
+    {
+      id: 5,
+      title: 'Breakfast',
+    },
+  ];
+
+  return (
+    <>
+    <div className={styles.boxCtg}>
+      <div style={{color:'black', fontSize:'36px', fontFamily:'-moz-initial', fontWeight:'bold', width:'1115px', marginInline:'auto'}}>Popular Categories</div>
+      <div className={styles.ctg}>
+        {content.map((item, index) => (
+          <div key={index} className={styles.blockCtg}>
+            <div>
+              {index === 0 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
+              {index === 1 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
+              {index === 2 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
+              {index === 3 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
+              {index === 4 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
+              {index === 5 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
+            </div>
+            <div style={{ position: 'relative' }}>
+              <h3
+                className={styles.titleCtg}
+                onClick={() => {
+                  if (item.id === 6) {
+                    router.push(
+                      '/'
+                    );
+                  } else {
+                    return;
+                  }
+                }}
+              >
+                {item.title}
+              </h3>
+            </div>
           </div>
         ))}
       </div>

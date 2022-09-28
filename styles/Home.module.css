@@ -89,7 +89,32 @@
         margin-top: -10px;
     }
     
-    
+    /* Popular Categories */
+    .boxCtg {
+        box-sizing: border-box;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .ctg {
+        display: flex;
+        justify-content: center;
+    }
+    .blockCtg {
+        margin: 16px;
+    }
+    .imageCtg {
+        width: 160px;
+        height: 160px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .titleCtg {
+        color: black;
+        text-align: center;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
 }
 
 /* Mobile */
