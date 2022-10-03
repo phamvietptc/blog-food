@@ -115,6 +115,29 @@
         cursor: pointer;
     }
 
+    /* Hand-Picked Collections */
+    .boxHpc {
+        box-sizing: border-box;
+        margin-top: 48px;
+        outline: none;
+    }
+    .hpc {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .blockHpc {
+        margin: 16px;
+        border-radius: 6px;
+    }
+    .imageHpc {
+        height: 243px;
+        width: 350px;
+        cursor: pointer;
+    }
+    .titleHpc {
+        color: black;
+    }
 }
 
 /* Mobile */

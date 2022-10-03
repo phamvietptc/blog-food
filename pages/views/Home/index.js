@@ -18,6 +18,7 @@ export default function Home() {
           <Card_Food />
           <Card_Ctg />
           <Email />
+          <Collections />
           <Footer />
 
         </div>
@@ -233,6 +234,76 @@ export function Card_Ctg() {
             <div style={{ position: 'relative' }}>
               <h3
                 className={styles.titleCtg}
+                onClick={() => {
+                  if (item.id === 6) {
+                    router.push(
+                      '/'
+                    );
+                  } else {
+                    return;
+                  }
+                }}
+              >
+                {item.title}
+              </h3>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+    </>
+  )
+}
+
+
+// Hand-Picked Collections
+export function Collections() {
+
+  const content = [
+    {
+      id: 0,
+      title: 'Sushi Combos for your Next Party',
+    },
+    {
+      id: 1,
+      title: 'Everything Bagel',
+    },
+    {
+      id: 2,
+      title: 'Vegan',
+    },
+    {
+      id: 3,
+      title: 'Desserts',
+    },
+    {
+      id: 4,
+      title: 'Smoothies',
+    },
+    {
+      id: 5,
+      title: 'Breakfast',
+    },
+  ];
+
+  return (
+    <>
+      <div className={styles.boxHpc}>
+      <div style={{color:'black', fontSize:'50px', fontFamily:'-moz-initial', fontWeight:'bold', width:'1115px', marginInline:'auto'}}>Hand-Picked Collections</div>
+      <div className={styles.hpc}>
+        {content.map((item, index) => (
+          <div key={index} className={styles.blockHpc}>
+            <div>
+              {index === 0 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
+              {index === 1 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
+              {index === 2 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
+              {index === 3 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
+              {index === 4 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
+              {index === 5 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
+            </div>
+            <div style={{ position: 'relative' }}>
+              <h3
+                className={styles.titleHpc}
                 onClick={() => {
                   if (item.id === 6) {
                     router.push(
