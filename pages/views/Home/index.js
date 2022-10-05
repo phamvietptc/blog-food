@@ -270,19 +270,19 @@ export function Collections() {
     },
     {
       id: 2,
-      title: 'Vegan',
+      title: 'Cook Like a Chef',
     },
     {
       id: 3,
-      title: 'Desserts',
+      title: 'Exquisite Dinner Recipe Ideas',
     },
     {
       id: 4,
-      title: 'Smoothies',
+      title: 'The Ultimate Cookie Frenzy Cookie ',
     },
     {
       id: 5,
-      title: 'Breakfast',
+      title: 'For the Love of Donuts',
     },
   ];
 
@@ -293,17 +293,17 @@ export function Collections() {
       <div className={styles.hpc}>
         {content.map((item, index) => (
           <div key={index} className={styles.blockHpc}>
-            <div>
+            {/* <div> */}
               {index === 0 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 1 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 2 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 3 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 4 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 5 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
-            </div>
-            <div style={{ position: 'relative' }}>
+            {/* </div> */}
+            <div className={styles.titleHpc}>
               <h3
-                className={styles.titleHpc}
+                style={{width:'350px', margin:'0 55px 40px 0', fontFamily:'-moz-initial', fontSize:'36px', minHeight:'86px'}}
                 onClick={() => {
                   if (item.id === 6) {
                     router.push(
@@ -316,6 +316,7 @@ export function Collections() {
               >
                 {item.title}
               </h3>
+              <span>156 Recipes</span>
             </div>
           </div>
         ))}

@@ -2,6 +2,8 @@
 @media only screen and (min-width: 768px) {
     .contain {
         background-color: #ffffff;
+        /* max-width: 1440px; */
+        margin: auto;
     }
     .content {
         background-repeat: no-repeat;
@@ -66,6 +68,7 @@
     .boxCard {
         box-sizing: border-box;
         margin-top: 48px;
+        margin: auto;
     }
     .card {
         display: flex;
@@ -94,6 +97,7 @@
         box-sizing: border-box;
         margin-top: 20px;
         margin-bottom: 20px;
+        margin: auto;
     }
     .ctg {
         display: flex;
@@ -119,7 +123,10 @@
     .boxHpc {
         box-sizing: border-box;
         margin-top: 48px;
-        outline: none;
+        margin-bottom: 48px;
+        /* outline: none; */
+        max-width: 1150px;
+        margin: auto;
     }
     .hpc {
         display: flex;
@@ -128,15 +135,30 @@
     }
     .blockHpc {
         margin: 16px;
-        border-radius: 6px;
     }
     .imageHpc {
-        height: 243px;
-        width: 350px;
+        height: 332px;
+        width: 540px;
         cursor: pointer;
+        overflow: hidden;
+        display: block;
+        border-radius: 6px 6px 0 0;
+        outline: none;
     }
     .titleHpc {
         color: black;
+        cursor: pointer;
+        position: relative;
+        border: 1px solid #D8D8D8;
+        border-radius: 0 0 6px 6px;
+        outline: none;
+        display: flex !important;
+        padding-top: 1rem !important;
+        padding-bottom: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        padding-left: 1.5rem !important;
+        align-items: flex-end !important;
+        justify-content: space-between !important;
     }
 }
 
