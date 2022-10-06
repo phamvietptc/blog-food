@@ -317,7 +317,7 @@ export function Collections() {
               >
                 {item.title}
               </h3>
-              <span className={styles.spanHpc}>156 Recipes</span>
+              <span>156 Recipes</span>
             </div>
           </div>
         ))}
