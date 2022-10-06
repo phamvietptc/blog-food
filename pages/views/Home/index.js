@@ -36,6 +36,7 @@ export function Spotlight_Food() {
         <div className={styles.imgSpotlight}>
           <Link href={``}>
             <Image
+              style={{borderRadius:'10px 0 0 10px'}}
               src="/images/home/Image_Sotlight.png"
               width='650px'
               height='488px'
