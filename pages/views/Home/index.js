@@ -303,7 +303,7 @@ export function Collections() {
             {/* </div> */}
             <div className={styles.titleHpc}>
               <h3
-                style={{width:'350px', margin:'0 55px 40px 0', fontFamily:'-moz-initial', fontSize:'36px', minHeight:'86px'}}
+                style={{width:'315px', margin:'0 55px 40px 0', fontFamily:'-moz-initial', fontSize:'30px', minHeight:'86px'}}
                 onClick={() => {
                   if (item.id === 6) {
                     router.push(
@@ -316,7 +316,7 @@ export function Collections() {
               >
                 {item.title}
               </h3>
-              <span>156 Recipes</span>
+              <span className={styles.spanHpc}>156 Recipes</span>
             </div>
           </div>
         ))}
