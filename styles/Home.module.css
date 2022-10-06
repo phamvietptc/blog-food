@@ -18,9 +18,9 @@
         box-sizing: border-box;
         justify-content: center;
     }
-    .imgSpotlight {
-        /* cursor: pointer; */
-    }
+    /* .imgSpotlight {
+        cursor: pointer;
+    } */
     .textSpotlight {
         background-color: #c5e6e9;
         height: 488px;
