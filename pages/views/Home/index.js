@@ -33,10 +33,10 @@ export function Spotlight_Food() {
   return (
     <>
       <div className={styles.boxSpotlight}>
-        <div className={styles.imgSpotlight}>
+        <div>
           <Link href={``}>
             <Image
-              style={{borderRadius:'10px 0 0 10px'}}
+              className={styles.imgSpotlight}
               src="/images/home/Image_Sotlight.png"
               width='650px'
               height='488px'

@@ -18,9 +18,9 @@
         box-sizing: border-box;
         justify-content: center;
     }
-    /* .imgSpotlight {
-        cursor: pointer;
-    } */
+    .imgSpotlight {
+        border-radius: 10px 0 0 10px;
+    }
     .textSpotlight {
         background-color: #c5e6e9;
         height: 488px;
@@ -170,6 +170,15 @@
 
 /* Mobile */
 @media only screen and (max-width: 768px) {
-    
+    .boxSpotlight {
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 16px;
+        margin: 0 24px 0 24px;
+    }
+    .imgSpotlight {
+        border-radius: 10px 10px 0 0;
+    }
 }
   
