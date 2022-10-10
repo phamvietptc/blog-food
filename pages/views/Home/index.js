@@ -43,7 +43,7 @@ export function Spotlight_Food() {
             />
           </Link> 
         </div>
-        <div>  
+        <div className={styles.boxTextSpotlight}>  
           <div className={styles.textSpotlight}>
             <div style={{display:'flex'}}>
             <Image
@@ -139,16 +139,18 @@ export function Card_Food() {
   return (
     <>
     <div className={styles.boxCard}>
-      <div style={{color:'black', fontSize:'36px', fontFamily:'-moz-initial', fontWeight:'bold', width:'1115px', marginInline:'auto'}}>Super Delicious</div>
+      <div className={styles.titleCard}>
+        Super Delicious
+      </div>
       <div className={styles.card}>
         {defaultContents.map((item, index) => (
           <div key={index} className={styles.blockCard}>
-            <div>
+            <div className={styles.boxImgCard}>
               {index === 0 && <img className={styles.imageCard} src="/images/home/card-food.jpg" alt="" />}
               {index === 1 && <img className={styles.imageCard} src="/images/home/card-food.jpg" alt="" />}
               {index === 2 && <img className={styles.imageCard} src="/images/home/card-food.jpg" alt="" />}
             </div>
-            <div style={{ position: 'relative' }}>
+            <div className={styles.detailCard}>
               <h3
                 className={styles.voteCard}
                 onClick={() => {
@@ -163,7 +165,7 @@ export function Card_Food() {
               >
                 {item.vote}
               </h3>
-            </div>
+            
             <h3
               className={styles.textCard}
               onClick={() => {
@@ -178,6 +180,7 @@ export function Card_Food() {
             >
               {item.text}
             </h3>
+            </div>
           </div>
         ))}
       </div>
