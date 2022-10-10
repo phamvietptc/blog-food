@@ -18,9 +18,9 @@
         box-sizing: border-box;
         justify-content: center;
     }
-    /* .imgSpotlight {
-        cursor: pointer;
-    } */
+    .imgSpotlight {
+        border-radius: 10px 0 0 10px;
+    }
     .textSpotlight {
         background-color: #c5e6e9;
         height: 488px;
@@ -70,6 +70,14 @@
         margin-top: 48px;
         /* margin: auto; */
     }
+    .titleCard {
+        color: black;
+        font-size: 36px;
+        font-family: -moz-initial;
+        font-weight: bold;
+        width: 1115px;
+        margin-inline: auto;
+    }
     .card {
         display: flex;
         justify-content: center;
@@ -82,6 +90,9 @@
         height: 243px;
         width: 350px;
         cursor: pointer;
+    }
+    .detailCard {
+        position: relative;
     }
     .voteCard {
         color: rgb(255, 0, 0);
@@ -170,6 +181,69 @@
 
 /* Mobile */
 @media only screen and (max-width: 768px) {
-    
+    .contain {
+        background-color: #ffffff;
+    }
+    .content {
+        --bs-gutter-x: 1.5rem;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* Spotlight Food */
+    .boxSpotlight {
+        background-color: #c5e6e9;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 16px;
+    }
+    .imgSpotlight {
+        border-radius: 10px 10px 0 0;
+    }
+    .boxTextSpotlight {
+        padding: 1.5rem !important;
+    }
+
+    /* Card Food */
+    .boxCard {
+        background-color: #ffffff;
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .titleCard {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        color: #000000;
+        font-weight: bold;
+        font-family: "Playfair Display", serif;
+        font-size: 24px;
+    }
+    .voteCard {
+        color: rgb(255, 0, 0);
+        margin-top: -16px;
+        margin-bottom: -10px;
+    }
+    .boxImgCard {
+        text-align: center;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .imageCard {
+        width: 100%;
+        border-radius: 6px;
+    }
+    .detailCard {
+        position: relative;
+        height: 80px;
+    }
+    .textCard {
+        color: #000000;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
 }
   
