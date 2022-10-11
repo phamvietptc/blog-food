@@ -100,7 +100,7 @@ export function Email() {
                 JOIN
               </div>
             </div>
-            <div>
+            <div className={styles.endEmail}>
               <a className={styles.endTextEmail}>
                 By joining our newsletter you agree to our <u href='#0' className={styles.termsEmail}>Terms and Conditions</u>
               </a>
