@@ -30,10 +30,33 @@
     }
 
     /* Email */
+    .email {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 350px;
+        background: #e5d8be;
+    }
     .emailBox {
         width: 342px;
     }
-    .sumbitEmail{
+    .headTextEmail {
+        color: black;
+        font-size: 59px;
+        font-family: -moz-initial;
+        font-weight: bold;
+        width: 342px;
+        line-height: 60px;
+        text-align: center;
+        margin: 0px 20px 0px 0px;
+    }
+    .bodyTextEmail {
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 5px;
+    }
+    .sumbitEmail {
         display: flex;
         height: 50px;
         width: 400px;
@@ -63,6 +86,18 @@
         padding-top: 10px;
         cursor: pointer;
     }
+    .endTextEmail {
+        color: black;
+        font-size: 10px;
+        width: 342px;
+        text-align: center;
+    }
+    .termsEmail {
+        cursor: pointer;
+        text-decoration-color: #FF642F;
+        text-underline-position: under;
+    }
+    
 
     /* Card Food */
     .boxCard {
@@ -110,6 +145,14 @@
         margin-bottom: 20px;
         /* margin: auto; */
     }
+    .category {
+        color: black;
+        font-size: 36px;
+        font-family: "Playfair Display", serif;
+        font-weight: bold;
+        width: 1115px;
+        margin-inline: auto;
+    }
     .ctg {
         display: flex;
         justify-content: center;
@@ -122,6 +165,9 @@
         height: 160px;
         margin-top: 10px;
         cursor: pointer;
+    }
+    .detailCtg {
+        position: relative;
     }
     .titleCtg {
         color: black;
@@ -244,6 +290,80 @@
         font-size: 16px;
         font-weight: bold;
         cursor: pointer;
+    }
+
+    /* Popular Categories */
+    .boxCtg {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .category {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        margin-bottom: 0 !important;
+        font-size: 24px;
+        font-weight: 700;
+        font-family: "Playfair Display", serif;
+        margin-top: 0;
+        color: #000;
+        line-height: 1.2;
+    }
+    .ctg {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .blockCtg {
+        flex: 0 0 auto;
+        width: 33.3333333333%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-top: var(--bs-gutter-y);
+    }
+    .boxImgCtg {
+        position: relative;
+        text-align: center !important;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+        margin: 0 0 1rem;
+    }
+    .imageCtg {
+        display: block;
+        overflow: hidden;
+        border-radius: 50% !important;
+        color: #000;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+    .detailCtg {
+        position: relative;
+        margin-top: 0.5rem !important;
+        text-align: center !important;
+    }
+    .titleCtg {
+        font-size: 14px;
+        font-weight: 600;
+        margin-top: 8px;
+        font-family: "Inter", sans-serif;
+        color: #000;
+        background-color: #fff;
+    }
+
+    /* Email */
+    .email {
+        background-color: #ffd8ca;
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+        margin-top: 3rem !important;
+        margin-bottom: 3rem !important;
+    }
+    .emailBox {
+        --bs-gutter-x: 1.5rem;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-right: auto;
+        margin-left: auto;
     }
 }
   
