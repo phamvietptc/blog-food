@@ -56,7 +56,7 @@
         text-align: center;
         margin-top: 5px;
     }
-    .sumbitEmail {
+    .submitEmail {
         display: flex;
         height: 50px;
         width: 400px;
@@ -337,7 +337,6 @@
         border-radius: 50% !important;
         color: #000;
         max-width: 100%;
-        vertical-align: middle;
     }
     .detailCtg {
         position: relative;
@@ -391,7 +390,7 @@
         margin-bottom: 1rem;
         color: #000;
     }
-    .sumbitEmail {
+    .submitEmail {
         flex-direction: column;
         border-radius: 3px;
         overflow: hidden;

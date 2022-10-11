@@ -37,7 +37,7 @@ export function Spotlight_Food() {
           <Link href={``}>
             <Image
               className={styles.imgSpotlight}
-              src="/images/home/Image_Sotlight.png"
+              src="/images/home/Image_Spotlight.png"
               width='650px'
               height='488px'
             />
@@ -59,7 +59,7 @@ export function Spotlight_Food() {
               Mighty Super Cheesecake
             </h1>
             <p style={{color:'black', fontWeight:'600', lineHeight:'25px'}}>
-              Look no further for a creamy and ultra smooth classic cheesecake reciper! no one can deny its simple decadence.
+              Look no further for a creamy and ultra smooth classic cheesecake recipe! no one can deny its simple decadence.
             </p>
           </div>
           <div style={{float:'right', margin:'-30px 10px', cursor:'pointer'}}>
@@ -87,7 +87,7 @@ export function Email() {
               <p className={styles.headTextEmail}>Deliciousness to your inbox</p>
               <p className={styles.bodyTextEmail}>Enjoy weekly hand picked recipes and recommendations</p>
             </div>
-            <div className={styles.sumbitEmail}>
+            <div className={styles.submitEmail}>
               <input 
                 type="email"
                 placeholder="Enter Address"
@@ -125,7 +125,7 @@ export function Card_Food() {
     {
       id: 1,
       vote: '★★★',
-      text: 'Fancy Glazed Dounts',
+      text: 'Fancy Glazed Donuts',
     },
     {
       id: 2,
