@@ -244,6 +244,61 @@
         font-family: "Inter", sans-serif;
         font-weight: 500;
     }
+
+    /* Latest Recipes */
+    .boxLr {
+        margin-top: 3rem !important;
+        margin-bottom: 3rem !important;
+        --bs-gutter-x: 1.5rem;
+        box-sizing: border-box;
+    }
+    .recipes {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        margin-bottom: 0 !important;
+        font-size: 36px;
+        font-weight: bold;
+        font-family: "Playfair Display", serif;
+        margin-top: 0;
+        line-height: 1.2;
+        color: #000;
+    }
+    .rowRecipes {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(var(--bs-gutter-y) * -1);
+        margin-right: calc(var(--bs-gutter-x) / -2);
+        margin-left: calc(var(--bs-gutter-x) / -2);
+    }
+    .lr {
+        flex: 0 0 auto;
+        width: 25%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-top: var(--bs-gutter-y);
+    }
+    .blockLr {
+        position: relative;
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+        margin: 0 0 1rem;
+        outline: none;
+    }
+    .imageLr {
+        display: block;
+        overflow: hidden;
+        border-radius: 6px;
+        transform: scale(1);
+        transition: all ease .8s;
+        width: 100% !important;
+        max-width: 100%;
+        user-select: none;
+        vertical-align: middle;
+    }
+
 }
 
 /* Mobile */
@@ -549,6 +604,55 @@
         cursor: pointer;
         border: 1px solid black;
         outline: none;
+    }
+
+    /* Latest Recipes */
+    .blockLr {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .recipes {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        margin-bottom: 0 !important;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: "Playfair Display", serif;
+        margin-top: 0;
+        line-height: 1.2;
+        color: #000;
+    }
+    .rowRecipes {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(var(--bs-gutter-y) * -1);
+        margin-right: calc(var(--bs-gutter-x) / -2);
+        margin-left: calc(var(--bs-gutter-x) / -2);
+    }
+    .lr {
+        flex: 0 0 auto;
+        width: 50%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-top: var(--bs-gutter-y);
+    }
+    .blockLr {
+        position: relative;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+        margin: 0 0 1rem;
+    }
+    .imageLr {
+        display: block;
+        overflow: hidden;
+        border-radius: 6px;
+        width: 100% !important;
+        max-width: 100%;
+        user-select: none;
+        vertical-align: middle;
     }
 }
   

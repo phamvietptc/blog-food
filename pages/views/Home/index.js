@@ -19,8 +19,8 @@ export default function Home() {
           <Card_Ctg />
           <Email />
           <Collections />
+          <Recipes />
           <Footer />
-
         </div>
       </div>
     </>
@@ -320,6 +320,92 @@ export function Collections() {
         ))}
       </div>
     </div>
+    </>
+  )
+}
+
+
+// Latest Recipes
+export function Recipes() {
+
+  const content = [
+    {
+      id: 0,
+      title: 'Caramel Strawberry Milkshake',
+    },
+    {
+      id: 1,
+      title: 'Cashew Vegan Rice',
+    },
+    {
+      id: 2,
+      title: 'Smoked Salmon Salad Sandwich',
+    },
+    {
+      id: 3,
+      title: 'Salmon in Creamy Sun Dried Tomato Sauce',
+    },
+    {
+      id: 4,
+      title: 'Healthy Jam Waffle Breakfast',
+    },
+    {
+      id: 5,
+      title: 'Chocolate and Banana Jar Cake',
+    },
+    {
+      id: 6,
+      title: 'Caramel Blueberry Scones',
+    },
+    {
+      id: 7,
+      title: 'Blueberry Carrot Cake',
+    },
+  ];
+
+  return (
+    <>
+      <div className={styles.boxLr}>
+        <div className={styles.recipes}>Latest Recipes</div>
+
+        <div className={styles.rowRecipes}>
+          {content.map((item, index) => (
+          <div className={styles.lr}>
+            <div key={index} className={styles.blockLr}>
+                {index === 0 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+                {index === 1 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+                {index === 2 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+                {index === 3 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+                {index === 4 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+                {index === 5 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+                {index === 6 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+                {index === 7 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+              <div className={styles.titleLr}>
+                <h3
+                  className={styles.textLr}
+                  onClick={() => {
+                    if (item.id === 8) {
+                      router.push(
+                        '/'
+                      );
+                    } else {
+                      return;
+                    }
+                  }}
+                >
+                  {item.title}
+                </h3>
+              </div>
+            </div>
+          </div>
+          ))}
+        </div>
+
+        {/* load more */}
+        <div>
+          <a href=''></a>
+        </div>
+      </div>
     </>
   )
 }
