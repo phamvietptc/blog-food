@@ -367,7 +367,6 @@ export function Recipes() {
     <>
       <div className={styles.boxLr}>
         <div className={styles.recipes}>Latest Recipes</div>
-
         <div className={styles.rowRecipes}>
           {content.map((item, index) => (
           <div className={styles.lr}>
@@ -380,8 +379,8 @@ export function Recipes() {
                 {index === 5 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
                 {index === 6 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
                 {index === 7 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-              <div className={styles.titleLr}>
-                <h3
+              <figcaption className={styles.titleLr}>
+                <a
                   className={styles.textLr}
                   onClick={() => {
                     if (item.id === 8) {
@@ -394,16 +393,21 @@ export function Recipes() {
                   }}
                 >
                   {item.title}
-                </h3>
-              </div>
+                </a>
+              </figcaption>
             </div>
           </div>
           ))}
         </div>
 
         {/* load more */}
-        <div>
-          <a href=''></a>
+        <div className={styles.btnLr}>
+          <a
+            className={styles.textBtnLR}
+            href=''
+          >
+            Load More
+          </a>
         </div>
       </div>
     </>

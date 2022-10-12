@@ -4,11 +4,20 @@
         background-color: #ffffff;
         /* max-width: 1440px; */
         margin: auto;
+        padding: 0 !important;
+        box-sizing: border-box;
     }
     .content {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        max-width: 1450px;
+        --bs-gutter-x: 0rem;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-right: auto;
+        margin-left: auto;
     }
 
     /* Spotlight Food */
@@ -249,8 +258,13 @@
     .boxLr {
         margin-top: 3rem !important;
         margin-bottom: 3rem !important;
-        --bs-gutter-x: 1.5rem;
         box-sizing: border-box;
+        --bs-gutter-x: 1.5rem;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-right: auto;
+        margin-left: auto;
     }
     .recipes {
         padding-top: 1rem !important;
@@ -295,11 +309,45 @@
         transition: all ease .8s;
         width: 100% !important;
         max-width: 100%;
-        user-select: none;
-        vertical-align: middle;
+    }
+    .titleLr {
+        margin-top: 0.5rem !important;
+    }
+    .textLr {
+        color: black;
+        font-size: 18px;
+        font-family: "Inter", sans-serif;
+        font-weight: 600 !important;
+        line-height: 1.5;
+        margin-top: 0.25rem !important;
+        display: block !important;
+        cursor: pointer;
+    }
+    .btnLr {
+        text-align: center !important;
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .textBtnLR {
+        color: #000;
+        font-size: 18px;
+        font-family: "Inter", sans-serif;
+        font-weight: 500 !important;
+        line-height: 1.5;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+        padding-right: 3rem !important;
+        padding-left: 3rem !important;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid black;
+        border-radius: 0.25rem;
     }
 
 }
+
+/* ------------------------------------------------- */
 
 /* Mobile */
 @media only screen and (max-width: 768px) {
@@ -607,7 +655,7 @@
     }
 
     /* Latest Recipes */
-    .blockLr {
+    .boxLr {
         margin-top: 1.5rem !important;
         margin-bottom: 1.5rem !important;
     }
@@ -651,8 +699,39 @@
         border-radius: 6px;
         width: 100% !important;
         max-width: 100%;
-        user-select: none;
-        vertical-align: middle;
+    }
+    .titleLr {
+        margin-top: 0.5rem !important;
+    }
+    .textLr {
+        color: #000;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: "Inter", sans-serif;
+        margin-top: 0.25rem !important;
+        display: block !important;
+        cursor: pointer;  
+    }
+    .btnLr {
+        text-align: center !important;
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .textBtnLR {
+        color: #000;
+        font-size: 14px;
+        font-weight: 500 !important;
+        line-height: 1.5;
+        padding-top: 0.25rem !important;
+        padding-bottom: 0.25rem !important;
+        padding-right: 1.5rem !important;
+        padding-left: 1.5rem !important;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid black;
+        border-radius: 0.25rem;
     }
 }
   
