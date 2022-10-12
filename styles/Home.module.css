@@ -74,6 +74,7 @@
         padding-right: 116px;
         font-size: 20px;
         outline: none;
+        border-radius: 3px;
     }
     .btnEmail {
         width: 100px;
@@ -186,6 +187,14 @@
         max-width: 1150px;
         margin: 48px auto 48px auto;
     }
+    .collections {
+        color: black;
+        font-size: 50px;
+        font-family: "Playfair Display", serif;
+        font-weight: bold;
+        width: 1115px;
+        margin-inline: auto;
+    }
     .hpc {
         display: flex;
         justify-content: center;
@@ -217,6 +226,14 @@
         padding-left: 1.5rem !important;
         align-items: flex-end !important;
         justify-content: space-between !important;
+    }
+    .textHpc {
+        width: 315px;
+        margin: 0 55px 40px 0;
+        font-family: "Playfair Display", serif;
+        font-weight: bold;
+        font-size: 30px;
+        min-height: 86px;
     }
     .spanHpc {
         border: 1px solid #000000;
@@ -453,6 +470,85 @@
         text-decoration-color: #FF642F;
         text-underline-position: under;
         cursor: pointer;
+    }
+
+    /* Hand-Picked Collections */
+    .boxHpc {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .collections {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: "Playfair Display", serif;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        margin-bottom: 0 !important;
+        margin-top: 0;
+        line-height: 1.2;
+        color: #000;
+    }
+    .hpc {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(var(--bs-gutter-y) * -1);
+        margin-right: calc(var(--bs-gutter-x) / -2);
+        margin-left: calc(var(--bs-gutter-x) / -2);
+    }
+    .blockHpc {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-top: var(--bs-gutter-y);
+        margin-bottom: 1rem !important;
+    }
+    .imageHpc {
+        border-radius: 6px 6px 0 0;
+        display: block;
+        cursor: pointer;
+        width: 100%;
+    }
+    .titleHpc {
+        border: 1px solid #D8D8D8;
+        border-radius: 0 0 6px 6px;
+        border-top: 0 !important;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        align-items: flex-end !important;
+        justify-content: space-between !important;
+        text-align: right !important;
+        padding-bottom: 1.5rem !important;
+        padding-top: 1rem !important;
+    }
+    .textHpc {
+        font-size: 30px;
+        min-height: 86px;
+        padding-right: 0 !important;
+        margin-bottom: 1rem !important;
+        margin-top: 0;
+        line-height: 1.2;
+        font-weight: bold;
+        font-family: "Playfair Display", serif;
+        color: black;
+        cursor: pointer;
+        text-align: left !important;
+    }
+    .spanHpc {
+        color: #000;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 2px 20px;
+        border-radius: 3px;
+        display: inline-block;
+        line-height: 1.5;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid black;
+        outline: none;
     }
 }
   

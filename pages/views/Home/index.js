@@ -289,21 +289,19 @@ export function Collections() {
   return (
     <>
       <div className={styles.boxHpc}>
-      <div style={{color:'black', fontSize:'50px', fontFamily:'-moz-initial', fontWeight:'bold', width:'1115px', marginInline:'auto'}}>Hand-Picked Collections</div>
+      <div className={styles.collections}>Hand-Picked Collections</div>
       <div className={styles.hpc}>
         {content.map((item, index) => (
           <div key={index} className={styles.blockHpc}>
-            {/* <div> */}
               {index === 0 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 1 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 2 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 3 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 4 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 5 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
-            {/* </div> */}
             <div className={styles.titleHpc}>
               <h3
-                style={{width:'315px', margin:'0 55px 40px 0', fontFamily:'-moz-initial', fontSize:'30px', minHeight:'86px'}}
+                className={styles.textHpc}
                 onClick={() => {
                   if (item.id === 6) {
                     router.push(
