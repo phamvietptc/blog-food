@@ -19,8 +19,8 @@ export default function Home() {
           <Card_Ctg />
           <Email />
           <Collections />
+          <Recipes />
           <Footer />
-
         </div>
       </div>
     </>
@@ -37,7 +37,7 @@ export function Spotlight_Food() {
           <Link href={``}>
             <Image
               className={styles.imgSpotlight}
-              src="/images/home/Image_Sotlight.png"
+              src="/images/home/Image_Spotlight.png"
               width='650px'
               height='488px'
             />
@@ -59,7 +59,7 @@ export function Spotlight_Food() {
               Mighty Super Cheesecake
             </h1>
             <p style={{color:'black', fontWeight:'600', lineHeight:'25px'}}>
-              Look no further for a creamy and ultra smooth classic cheesecake reciper! no one can deny its simple decadence.
+              Look no further for a creamy and ultra smooth classic cheesecake recipe! no one can deny its simple decadence.
             </p>
           </div>
           <div style={{float:'right', margin:'-30px 10px', cursor:'pointer'}}>
@@ -80,33 +80,31 @@ export function Spotlight_Food() {
 export function Email() {
   return (
     <>
-      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '350px', background: '#e5d8be'}}>
+      <div className={styles.email}>
         <div className={styles.emailBox}>
-          <div style={{}}>
-            <p style={{ color:'black', fontSize:'59px', fontFamily:'-moz-initial', fontWeight:'bold', width:'342px', lineHeight:'60px', textAlign:'center', margin:'0px 20px 0px 0px' }}>
-              Deliciousness to your inbox
-            </p>
-            <p style={{ color:'black', fontSize:'20px', textAlign:'center', marginTop:'5px' }}>
-              Enjoy weekly hand picked recipes and recommendations
-            </p>
-          </div>
-          <div className={styles.sumbitEmail}>
-            <input 
-              type="email"
-              placeholder="Enter Address"
-              className={styles.inputEmail}
-            />
-            <div
-              className={styles.btnEmail}
-              onClick={'/...'}
-            >
-              JOIN
+          <div className={styles.emailRow}>
+            <div className={styles.emailTitle}>
+              <p className={styles.headTextEmail}>Deliciousness to your inbox</p>
+              <p className={styles.bodyTextEmail}>Enjoy weekly hand picked recipes and recommendations</p>
             </div>
-          </div>
-          <div>
-            <p style={{ color:'black', fontSize:'10px', width:'342px', textAlign:'center'}}>
-              By joining our newsletter you agree to our <u style={{cursor:'pointer'}}>Terms and Conditions</u>
-            </p>
+            <div className={styles.submitEmail}>
+              <input 
+                type="email"
+                placeholder="Enter Address"
+                className={styles.inputEmail}
+              />
+              <div
+                className={styles.btnEmail}
+                onClick={'/...'}
+              >
+                JOIN
+              </div>
+            </div>
+            <div className={styles.endEmail}>
+              <a className={styles.endTextEmail}>
+                By joining our newsletter you agree to our <u href='#0' className={styles.termsEmail}>Terms and Conditions</u>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -127,7 +125,7 @@ export function Card_Food() {
     {
       id: 1,
       vote: '★★★',
-      text: 'Fancy Glazed Dounts',
+      text: 'Fancy Glazed Donuts',
     },
     {
       id: 2,
@@ -139,9 +137,7 @@ export function Card_Food() {
   return (
     <>
     <div className={styles.boxCard}>
-      <div className={styles.titleCard}>
-        Super Delicious
-      </div>
+      <div className={styles.titleCard}>Super Delicious</div>
       <div className={styles.card}>
         {defaultContents.map((item, index) => (
           <div key={index} className={styles.blockCard}>
@@ -223,11 +219,23 @@ export function Card_Ctg() {
   return (
     <>
     <div className={styles.boxCtg}>
-      <div style={{color:'black', fontSize:'36px', fontFamily:'-moz-initial', fontWeight:'bold', width:'1115px', marginInline:'auto'}}>Popular Categories</div>
+      <div className={styles.category}>Popular Categories</div>
       <div className={styles.ctg}>
         {content.map((item, index) => (
-          <div key={index} className={styles.blockCtg}>
-            <div>
+          <div
+            key={index}
+            className={styles.blockCtg}
+            onClick={() => {
+              if (item.id === index) {
+                router.push(
+                  '/views/Categories'
+                );
+              } else {
+                return;
+              }
+            }}
+          >
+            <div className={styles.boxImgCtg}>
               {index === 0 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
               {index === 1 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
               {index === 2 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
@@ -235,19 +243,8 @@ export function Card_Ctg() {
               {index === 4 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
               {index === 5 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
             </div>
-            <div style={{ position: 'relative' }}>
-              <h3
-                className={styles.titleCtg}
-                onClick={() => {
-                  if (item.id === 6) {
-                    router.push(
-                      '/'
-                    );
-                  } else {
-                    return;
-                  }
-                }}
-              >
+            <div className={styles.detailCtg}>
+              <h3 className={styles.titleCtg}>
                 {item.title}
               </h3>
             </div>
@@ -293,21 +290,19 @@ export function Collections() {
   return (
     <>
       <div className={styles.boxHpc}>
-      <div style={{color:'black', fontSize:'50px', fontFamily:'-moz-initial', fontWeight:'bold', width:'1115px', marginInline:'auto'}}>Hand-Picked Collections</div>
+      <div className={styles.collections}>Hand-Picked Collections</div>
       <div className={styles.hpc}>
         {content.map((item, index) => (
           <div key={index} className={styles.blockHpc}>
-            {/* <div> */}
               {index === 0 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 1 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 2 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 3 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 4 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 5 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
-            {/* </div> */}
             <div className={styles.titleHpc}>
               <h3
-                style={{width:'315px', margin:'0 55px 40px 0', fontFamily:'-moz-initial', fontSize:'30px', minHeight:'86px'}}
+                className={styles.textHpc}
                 onClick={() => {
                   if (item.id === 6) {
                     router.push(
@@ -326,6 +321,96 @@ export function Collections() {
         ))}
       </div>
     </div>
+    </>
+  )
+}
+
+
+// Latest Recipes
+export function Recipes() {
+
+  const content = [
+    {
+      id: 0,
+      title: 'Caramel Strawberry Milkshake',
+    },
+    {
+      id: 1,
+      title: 'Cashew Vegan Rice',
+    },
+    {
+      id: 2,
+      title: 'Smoked Salmon Salad Sandwich',
+    },
+    {
+      id: 3,
+      title: 'Salmon in Creamy Sun Dried Tomato Sauce',
+    },
+    {
+      id: 4,
+      title: 'Healthy Jam Waffle Breakfast',
+    },
+    {
+      id: 5,
+      title: 'Chocolate and Banana Jar Cake',
+    },
+    {
+      id: 6,
+      title: 'Caramel Blueberry Scones',
+    },
+    {
+      id: 7,
+      title: 'Blueberry Carrot Cake',
+    },
+  ];
+
+  return (
+    <>
+      <div className={styles.boxLr}>
+        <div className={styles.recipes}>Latest Recipes</div>
+        <div className={styles.rowRecipes}>
+          {content.map((item, index) => (
+          <div className={styles.lr}>
+            <div key={index} className={styles.blockLr}>
+                {index === 0 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+                {index === 1 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+                {index === 2 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+                {index === 3 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+                {index === 4 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+                {index === 5 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+                {index === 6 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+                {index === 7 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+              <figcaption className={styles.titleLr}>
+                <a
+                  className={styles.textLr}
+                  onClick={() => {
+                    if (item.id === 8) {
+                      router.push(
+                        '/'
+                      );
+                    } else {
+                      return;
+                    }
+                  }}
+                >
+                  {item.title}
+                </a>
+              </figcaption>
+            </div>
+          </div>
+          ))}
+        </div>
+
+        {/* load more */}
+        <div className={styles.btnLr}>
+          <a
+            className={styles.textBtnLR}
+            href=''
+          >
+            Load More
+          </a>
+        </div>
+      </div>
     </>
   )
 }
