@@ -222,8 +222,19 @@ export function Card_Ctg() {
       <div className={styles.category}>Popular Categories</div>
       <div className={styles.ctg}>
         {content.map((item, index) => (
-          <div key={index} className={styles.blockCtg}>
-            <Link href={`/Categories/index.js`}>
+          <div
+            key={index}
+            className={styles.blockCtg}
+            onClick={() => {
+              if (item.id === index) {
+                router.push(
+                  '/views/Categories'
+                );
+              } else {
+                return;
+              }
+            }}
+          >
             <div className={styles.boxImgCtg}>
               {index === 0 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
               {index === 1 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
@@ -232,20 +243,8 @@ export function Card_Ctg() {
               {index === 4 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
               {index === 5 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
             </div>
-            </Link>
             <div className={styles.detailCtg}>
-              <h3
-                className={styles.titleCtg}
-                onClick={() => {
-                  if (item.id === 6) {
-                    router.push(
-                      '/'
-                    );
-                  } else {
-                    return;
-                  }
-                }}
-              >
+              <h3 className={styles.titleCtg}>
                 {item.title}
               </h3>
             </div>
