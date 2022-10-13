@@ -2,7 +2,6 @@
 @media only screen and (min-width: 768px) {
     .contain {
         background-color: #ffffff;
-        /* max-width: 1440px; */
         margin: auto;
         padding: 0 !important;
         box-sizing: border-box;
@@ -11,11 +10,11 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        max-width: 1450px;
+        /* max-width: 1320px; */
         --bs-gutter-x: 0rem;
         width: 100%;
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        padding-left: calc(var(--bs-gutter-x) / 2);
+        /* padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2); */
         margin-right: auto;
         margin-left: auto;
     }
@@ -192,9 +191,17 @@
 
     /* Hand-Picked Collections */
     .boxHpc {
-        box-sizing: border-box;
         max-width: 1150px;
-        margin: 48px auto 48px auto;
+        /* margin: 48px auto 48px auto; */
+        margin-top: 3rem !important;
+        margin-bottom: 3rem !important;
+        /* box-sizing: border-box;
+        --bs-gutter-x: 12.5rem;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2); */
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
     }
     .collections {
         color: black;
@@ -258,13 +265,13 @@
     .boxLr {
         margin-top: 3rem !important;
         margin-bottom: 3rem !important;
-        box-sizing: border-box;
-        --bs-gutter-x: 1.5rem;
+        --bs-gutter-x: 2.5rem;
         width: 100%;
         padding-right: calc(var(--bs-gutter-x) / 2);
         padding-left: calc(var(--bs-gutter-x) / 2);
         margin-right: auto;
         margin-left: auto;
+        max-width: 1150px;
     }
     .recipes {
         padding-top: 1rem !important;
@@ -353,6 +360,7 @@
 @media only screen and (max-width: 768px) {
     .contain {
         background-color: #ffffff;
+        padding: 0 !important;
     }
     .content {
         --bs-gutter-x: 1.5rem;
