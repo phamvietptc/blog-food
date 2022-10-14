@@ -7,7 +7,6 @@ import { useRouter } from 'next/router';
 
 
 export default function Home() {
-
   return (
     <>
       <div className={styles.contain}>
@@ -259,7 +258,7 @@ export function Card_Ctg() {
 
 // Hand-Picked Collections
 export function Collections() {
-
+  const router = useRouter();
   const content = [
     {
       id: 0,
@@ -328,7 +327,7 @@ export function Collections() {
 
 // Latest Recipes
 export function Recipes() {
-
+  const router = useRouter();
   const content = [
     {
       id: 0,
@@ -370,7 +369,18 @@ export function Recipes() {
         <div className={styles.recipes}>Latest Recipes</div>
         <div className={styles.rowRecipes}>
           {content.map((item, index) => (
-          <div className={styles.lr}>
+          <div
+            className={styles.lr}
+            onClick={() => {
+              if (item.id === index) {
+                router.push(
+                  '/views/Recipes'
+                );
+              } else {
+                return;
+              }
+            }}
+          >
             <div key={index} className={styles.blockLr}>
                 {index === 0 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
                 {index === 1 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
@@ -381,18 +391,7 @@ export function Recipes() {
                 {index === 6 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
                 {index === 7 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
               <figcaption className={styles.titleLr}>
-                <a
-                  className={styles.textLr}
-                  onClick={() => {
-                    if (item.id === 8) {
-                      router.push(
-                        '/'
-                      );
-                    } else {
-                      return;
-                    }
-                  }}
-                >
+                <a className={styles.textLr}>
                   {item.title}
                 </a>
               </figcaption>

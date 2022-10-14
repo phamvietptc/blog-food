@@ -1,0 +1,85 @@
+/* Desktop */
+@media only screen and (min-width: 768px) {
+    .container {
+        background-color: #ffff;
+        padding: 0 !important;
+        outline: none;
+        box-sizing: border-box;
+    }
+    .content {
+        /* max-width: 1320px; */
+        --bs-gutter-x: 1.5rem;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* Recipes */
+    .recipes {
+        margin-top: 3rem !important;
+        margin-bottom: 3rem !important;
+    }
+    .head {
+        display: flex !important;
+    }
+    .iconsHead {
+        order: 2 !important;
+        margin-left: auto !important;
+    }
+    .iconsBlock {
+        display: flex;
+        padding-top: 0 !important;
+    }
+    .iconsShare {
+        margin-left: 35px;
+        cursor: pointer;
+    }
+    .share {
+        vertical-align: middle;
+        width: 32px;
+        height: 32px;
+    }
+    .iconsTag {
+        margin-left: 35px;
+        cursor: pointer;
+    }
+    .tag {
+        vertical-align: middle;
+        width: 32px;
+        height: 32px;
+    }
+    .chart {
+        vertical-align: middle;
+        line-height: 1.5;
+        width: 20px;
+        height: 20px;
+    }
+    .spanHead {
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        margin-left: 0.5rem !important;
+        font-family: "Inter", sans-serif;
+        color: #000;
+        line-height: 1.5;
+    }
+    .textHead {
+        font-size: 60px;
+        color: #000;
+        font-weight: bold;
+        font-family: "Playfair Display", serif;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        margin-bottom: 0 !important;
+        margin-top: 0;
+        line-height: 1.2;
+    }
+}
+
+/* ------------------------------------------------- */
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+
+}
