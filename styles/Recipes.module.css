@@ -75,6 +75,231 @@
         margin-top: 0;
         line-height: 1.2;
     }
+    .author {
+        flex-wrap: wrap !important;
+        display: flex !important;
+        line-height: 1.5;
+    }
+    .avatarAuthor {
+        margin-right: 1.5rem !important;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    .imgAuthor {
+        border-radius: 50% !important;
+        vertical-align: middle;
+        max-width: 100%;
+    }
+    .textAuthor {
+        padding-left: 0.25rem !important;
+        font-size: 12px !important;
+        font-family: "Inter", sans-serif;
+        color: #000;
+        font-weight: 400;
+    }
+    .calendarAuthor {
+        margin-right: 1.5rem !important;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    .iconsCalendar {
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+    }
+    .textCalendar {
+        font-size: 12px !important;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        color: #000;
+    }
+    .commentAuthor {
+        margin-right: 1.5rem !important;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+        line-height: 1.5;
+    }
+    .iconsComment {
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+    }
+    .numberComment {
+        font-size: 12px !important;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        color: #000;
+    }
+    .voted {
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+        line-height: 1.5;
+        color: red;
+    }
+    .preface {
+        font-size: 20px;
+        line-height: 37px;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-family: "Inter", sans-serif;
+        color: #000;
+        font-weight: 400;
+    }
+    .imgIntro {
+        border-radius: 12px;
+        position: relative !important;
+        overflow: hidden !important;
+        width: 100% !important;
+        max-width: 100%;
+        vertical-align: middle;
+    }
+    .blockDetail {
+        margin-top: 3rem !important;
+        margin-right: calc(var(--bs-gutter-x) / -2);
+        margin-left: calc(var(--bs-gutter-x) / -2);
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .leftBlock {
+        flex: 0 0 auto;
+        width: 66.6666666667%;
+    }
+    .inLeftBlock {
+        padding-right: 3rem !important;
+    }
+    .foodPlan {
+        margin: 0 -30px;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        list-style: none;
+    }
+    .estimatedTime {
+        padding: 5px 30px;
+    }
+    .textEst {
+        color: #7F7F7F;
+        display: block;
+        line-height: 11px;
+        font-size: 12px !important;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+    }
+    .timeEst {
+        font-size: 14px;
+        color: #000;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+    .prepTime {
+        border-left: 1px solid #E8E8E8;
+        padding: 5px 30px;
+    }
+    .textPrep {
+        color: #7F7F7F;
+        display: block;
+        line-height: 11px;
+        font-size: 12px !important;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+    }
+    .timePrep {
+        font-size: 14px;
+        color: #000;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+    .servings {
+        border-left: 1px solid #E8E8E8;
+        padding: 5px 30px;
+    }
+    .textServings {
+        color: #7F7F7F;
+        display: block;
+        line-height: 11px;
+        font-size: 12px !important;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+    }
+    .timeServings {
+        font-size: 14px;
+        color: #000;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+    .iconsServings {
+        margin-left: 0.5rem !important;
+        cursor: pointer;
+        vertical-align: middle;
+        width: 25px;
+        height: 25px;
+    }
+    .print {
+        border-left: 1px solid #E8E8E8;
+        padding: 5px 30px;
+    }
+    .iconsPrint {
+        cursor: pointer;
+        vertical-align: middle;
+        width: 25px;
+        height: 25px;
+    }
+    .ingredients {
+        margin-top: 3rem !important;
+    }
+    .headIngredients {
+        color: #000;
+        font-size: 30px;
+        font-weight: 700;
+        font-family: "Playfair Display", serif;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+    }
+    .cake {
+        margin-top: 24px;
+        padding-bottom: 0.5rem !important;
+    }
+    .titleCake {
+        font-weight: 600;
+        font-size: 18px;
+        font-family: "Inter", sans-serif;
+        color: #000;
+        line-height: 1.5;
+    }
+    .tickCake {
+        margin-top: 25px;
+        padding-left: 40px;
+        display: block;
+        min-height: 1.5rem;
+        margin-bottom: 0.125rem;
+    }
+    .tickBoxCake {
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        margin-left: -40px;
+        margin-top: 0;
+        border-color: #000;
+        border-width: 2px;
+        float: left;
+        cursor: pointer;
+        background-color: #fff;
+    }
+    .textCake {
+        font-family: "Inter", sans-serif;
+        color: #000;
+        line-height: 1.5;
+        font-weight: 400;
+        font-size: 18px;
+        cursor: pointer;
+        display: inline-block;
+    }
 }
 
 /* ------------------------------------------------- */
