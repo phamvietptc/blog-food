@@ -182,10 +182,10 @@ export function Recipes() {
                                 <img className={RecipesStyles.share} src='/icons/recipes/icons-share.png' />
                             </a>
                             <a
-                             className={RecipesStyles.iconsTag}
+                             className={RecipesStyles.iconsShare}
                              href='/'
                             >
-                                <img className={RecipesStyles.tag} src='/icons/recipes/icons-tag.png' />
+                                <img className={RecipesStyles.share} src='/icons/recipes/icons-tag.png' />
                             </a>
                         </div>
                     </div>
@@ -199,17 +199,17 @@ export function Recipes() {
                 </div>
 
                 <div className={RecipesStyles.author}>
-                    <div className={RecipesStyles.avatarAuthor}>
+                    <div className={RecipesStyles.boxAuthor}>
                         <img className={RecipesStyles.imgAuthor} src='/images/recipes/avatar-author.png' />
                         <small className={RecipesStyles.textAuthor}>Tricia Albert</small>
                     </div>
-                    <div className={RecipesStyles.calendarAuthor}>
-                        <img className={RecipesStyles.iconsCalendar} src='/icons/recipes/icons-calendar.png' />
-                        <small className={RecipesStyles.textCalendar}>Yesterday</small>
+                    <div className={RecipesStyles.boxAuthor}>
+                        <img className={RecipesStyles.iconsAuthor} src='/icons/recipes/icons-calendar.png' />
+                        <small className={RecipesStyles.textAuthor}>Yesterday</small>
                     </div>
-                    <div className={RecipesStyles.commentAuthor}>
-                        <img className={RecipesStyles.iconsComment} src='/icons/recipes/icons-number-comment.png' />
-                        <small className={RecipesStyles.numberComment}>25</small>
+                    <div className={RecipesStyles.boxAuthor}>
+                        <img className={RecipesStyles.iconsAuthor} src='/icons/recipes/icons-number-comment.png' />
+                        <small className={RecipesStyles.textAuthor}>25</small>
                     </div>
                     <div className={RecipesStyles.voted}>
                         ★★★★★
@@ -226,17 +226,17 @@ export function Recipes() {
                         <div className={RecipesStyles.leftBlock}>
                             <div className={RecipesStyles.inLeftBlock}>
                                 <ul className={RecipesStyles.foodPlan}>
-                                    <li className={RecipesStyles.estimatedTime}>
-                                        <small className={RecipesStyles.textEst} >PREP TIME</small>
-                                        <span className={RecipesStyles.timeEst}>15 MIN</span>
+                                    <li className={RecipesStyles.plan}>
+                                        <small className={RecipesStyles.textPlan} >PREP TIME</small>
+                                        <span className={RecipesStyles.timePlan}>15 MIN</span>
                                     </li>
-                                    <li className={RecipesStyles.prepTime}>
-                                        <small className={RecipesStyles.textPrep}>PREP TIME</small>
-                                        <span className={RecipesStyles.timePrep}>15 MIN</span>
+                                    <li className={RecipesStyles.plan}>
+                                        <small className={RecipesStyles.textPlan}>PREP TIME</small>
+                                        <span className={RecipesStyles.timePlan}>15 MIN</span>
                                     </li>
-                                    <li className={RecipesStyles.servings}>
-                                        <small className={RecipesStyles.textServings}>SERVINGS</small>
-                                        <span className={RecipesStyles.timeServings}>
+                                    <li className={RecipesStyles.plan}>
+                                        <small className={RecipesStyles.textPlan}>SERVINGS</small>
+                                        <span className={RecipesStyles.timePlan}>
                                             4 PEOPLE
                                             <img className={RecipesStyles.iconsServings} src='/icons/recipes/icons-servings.png' />
                                         </span>
@@ -331,8 +331,23 @@ export function Recipes() {
                     </div>
                 </div>
 
-                <div></div>
-                <div></div>
+                <div className={RecipesStyles.headFeedback}>
+                    <h2 className={RecipesStyles.titleFeedback}>Already made this?</h2>
+                    <div className={RecipesStyles.btnFeedback}>Share your feedback</div>
+                    <br />
+                    <br />
+                    <hr style={{backgroundColor:'#FF642F', height:'11px', opacity:'1', borderColor:'#E8E8E8', margin:'16px 0', color:'inherit', border:'0'}} />
+                </div>
+
+                <div className={RecipesStyles.comments}>
+                    <div className={RecipesStyles.headComments}>
+                        <h2 className={RecipesStyles.titleComments}>Comments</h2>
+                        <span className={RecipesStyles.numberComments}> (25)</span>
+                    </div>
+                    <ul className={RecipesStyles.blockComments}>
+                        <li></li>
+                    </ul>
+                </div>
                 <div></div>
             </div>
         </>
