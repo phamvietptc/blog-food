@@ -63,6 +63,112 @@ export function Recipes() {
           },
       ];
 
+      const instructions = [
+        {
+            id: 1,
+            text: 'To prepare crust add graham crackers to a food processor and process until you reach fine crumbs. Add melted butter and pulse 3-4 times to coat crumbs with butter.',
+          },
+          {
+            id: 2,
+            text: 'Pour mixture into a 20cm (8”) tart tin. Use the back of a spoon to firmly press the mixture out across the bottom and sides of the tart tin. Chill for 30 min.',
+          },
+          {
+            id: 3,
+            text: 'Begin by adding the marshmallows and melted butter into a microwave safe bowl. Microwave for 30 seconds and mix to combine. Set aside.',
+          },
+          {
+            id: 4,
+            text: 'Next, add the gelatine and water to a small mixing bowl and mix to combine. Microwave for 30 seconds.',
+          },
+          {
+            id: 5,
+            text: 'Add the cream cheese to the marshmallow mixture and use a hand mixer or stand mixer fitted with a paddle attachment to mix until smooth.',
+          },
+          {
+            id: 6,
+            text: 'Add the warm cream and melted gelatin mixture and mix until well combined.',
+          },
+          {
+            id: 7,
+            text: 'Add 1/3 of the mixture to a mixing bowl, add purple food gel and mix until well combined. Colour 1/3 of the mixture blue. Split the remaining mixture into two mixing bowls, colour one pink and leave the other white.',
+          },
+          {
+            id: 8,
+            text: 'Pour half the purple cheesecake mixture into the chill tart crust. Add half the blue and then add the remaining purple and blue in the tart tin. Use a spoon to drizzle some pink cheesecake on top. Use a skewer or the end of a spoon to swirl the pink. Add some small dots of the plain cheesecake mixture to create stars and then sprinkle some more starts on top before chilling for 2 hours.',
+          },
+          {
+            id: 9,
+            text: 'Slice with a knife to serve.',
+          },
+      ]
+
+      const nutrition = [
+        {
+            value: '219.9',
+            text: 'Calories',
+          },
+          {
+            value: '10.7 g',
+            text: 'Total Fat',
+          },
+          {
+            value: '2.2 g',
+            text: 'Saturated Fat',
+          },
+          {
+            value: '37.4 mg',
+            text: 'Cholesterol',
+          },
+          {
+            value: '120.3 mg',
+            text: 'Sodium',
+          },
+          {
+            value: '32.8 mg',
+            text: 'Potassium',
+          },
+          {
+            value: '22.3 g',
+            text: 'Total Carbohydrate',
+          },
+          {
+            value: '8.4 g',
+            text: 'Sugars',
+          },
+          {
+            value: '7.9 g',
+            text: 'Protein',
+          },
+      ]
+
+      const fresh = [
+        {
+          img: '/images/recipes/fresh-images.jpg',
+          voted: '★★★★★',
+          text: 'Spinach and Cheese Pasta',
+        },
+        {
+          img: '/images/recipes/fresh-images.jpg',
+          voted: '★★★★★',
+          text: 'Perfect Fancy Glazed Donuts',
+        },
+        {
+          img: '/images/recipes/fresh-images.jpg',
+          voted: '★★★★★',
+          text: 'Mighty Cheesy Breakfast Burger',
+        },
+        {
+          img: '/images/recipes/fresh-images.jpg',
+          voted: '★★★★★',
+          text: 'Caramel Strawberry Milkshake',
+        },
+        {
+          img: '/images/recipes/fresh-images.jpg',
+          voted: '★★★★★',
+          text: 'Chocolate and Banana Jar Cake',
+        },
+      ];
+
     return (
         <>
             <div className={RecipesStyles.recipes}>
@@ -161,10 +267,67 @@ export function Recipes() {
                                         ))}
                                     </div>
                                 </div>
+                                <div className={RecipesStyles.instructions}>
+                                    <h6 className={RecipesStyles.titleInstructions}>Instructions</h6>
+                                    {instructions.map((item, index) => (
+                                    <ul key={index} className={RecipesStyles.listInstructions}>
+                                        <li className={RecipesStyles.textInstructions}>
+                                            <span className={RecipesStyles.numberInstructions}>{item.id}</span>
+                                            {item.text}
+                                        </li>
+                                    </ul>
+                                    ))} 
+                                </div>
                             </div>
                         </div>
 
-                        <div></div>
+                        <div className={RecipesStyles.rightBlock}>
+                            <div className={RecipesStyles.nutrition}>
+                                <h6 className={RecipesStyles.titleNutrition}>Nutrition Facts</h6>
+                                {nutrition.map((item, index) => (
+                                <ul key={index} className={RecipesStyles.listNutrition}>
+                                    <li className={RecipesStyles.contentNutrition}>
+                                        <span className={RecipesStyles.textNutrition}>{item.text}</span>
+                                        <span className={RecipesStyles.valueNutrition}>{item.value}</span>
+                                    </li>
+                                </ul>
+                                ))}
+                            </div>
+                            <div className={RecipesStyles.fresh}>
+                              <h6 className={RecipesStyles.titleFresh}>Fresh Recipes</h6>
+                              {fresh.map((item, index) => (
+                              <div key={index} className={RecipesStyles.blockFresh}>
+                                <img className={RecipesStyles.imgFresh} src={item.img} />
+                                <div className={RecipesStyles.boxFresh}>
+                                  <div className={RecipesStyles.detailFresh}>
+                                    <div className={RecipesStyles.votedFresh}>{item.voted}</div>
+                                    <h6 className={RecipesStyles.textFresh}>{item.text}</h6>
+                                  </div>
+                                </div>
+                              </div>
+                              ))}
+                            </div>
+                            <div className={RecipesStyles.email}>
+                              <div className={RecipesStyles.boxEmail}>
+                                <h5 className={RecipesStyles.headEmail}>Deliciousness to your inbox</h5>
+                                <p className={RecipesStyles.textEmail}>Enjoy weekly hand picked recipes and recommendations</p>
+                                <div className={RecipesStyles.formEmail}>
+                                  <input
+                                    className={RecipesStyles.inputEmail}
+                                    type="email"
+                                    placeholder="Email Address"
+                                  />
+                                  <div
+                                    className={RecipesStyles.submitEmail}
+                                    onClick={'/...'}
+                                  >
+                                    <button className={RecipesStyles.btnEmail}>JOIN</button>
+                                  </div>
+                                </div>
+                                <small className={RecipesStyles.endEmail}>By joining our newsletter you agree to our <br/> <u className={RecipesStyles.termsEmail}>Terms and Conditions</u></small>
+                              </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

@@ -164,7 +164,11 @@
     }
     .leftBlock {
         flex: 0 0 auto;
-        width: 66.6666666667%;
+        width: 65%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-top: var(--bs-gutter-y);
     }
     .inLeftBlock {
         padding-right: 3rem !important;
@@ -299,6 +303,283 @@
         font-size: 18px;
         cursor: pointer;
         display: inline-block;
+    }
+    .instructions {
+        margin-top: 3rem !important;
+    }
+    .titleInstructions {
+        color: #000;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Playfair Display", serif;
+        line-height: 1.2;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    
+    }
+    .listInstructions {
+        padding-top: 15px;
+        padding-left: 0;
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        }
+    .textInstructions {
+        font-family: "Inter", sans-serif;
+        color: #000;
+        font-weight: 400;
+        line-height: 1.5;
+        font-size: 18px;
+        padding-left: 40px;
+        position: relative;
+        padding-right: 30px;
+    }
+    .numberInstructions {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        background-color: #FF642F;
+        font-weight: 500;
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+        line-height: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .rightBlock {
+        flex: 0 0 auto;
+        width: 35%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-top: var(--bs-gutter-y);
+    }
+    .nutrition {
+        border-radius: 12px;
+        background-color: #f9f9f9 !important;
+        padding: 1.5rem !important;
+    }
+    .titleNutrition {
+        color: #000;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Playfair Display", serif;
+        line-height: 1.2;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+    .listNutrition {
+        padding-top: 5px;
+        padding-left: 0;
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    .contentNutrition {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 6px 0;
+    }
+    .textNutrition {
+        color: #303030;
+        font-size: 16px;
+        width: 50%;
+        font-weight: 300;
+        font-family: "Inter", sans-serif;
+        line-height: 1.5;
+    }
+    .valueNutrition {
+        font-weight: 400;
+        color: #000;
+        text-align: right;
+        font-size: 16px;
+        width: 50%;
+        font-family: "Inter", sans-serif;
+        line-height: 1.5;
+    }
+    .fresh {
+        padding-top: 3rem !important;
+        margin-top: 3rem !important;
+    }
+    .titleFresh {
+        color: #000;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "Playfair Display", serif;
+        line-height: 1.2;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+    .blockFresh {
+        position: relative;
+        padding-bottom: 0.5rem !important;
+        margin-top: 1.5rem !important;
+        align-items: center !important;
+        --bs-gutter-y: 0;
+        --bs-gutter-x: 0;
+        margin-right: calc(var(--bs-gutter-x) / -2);
+        margin-left: calc(var(--bs-gutter-x) / -2);
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 0 1rem;
+    }
+    .imgFresh {
+        flex: 0 0 auto;
+        width: 33%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-top: var(--bs-gutter-y);
+        display: block;
+        overflow: hidden;
+        border-radius: 4px;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    .boxFresh {
+        background-color: #fff !important;
+        flex: 0 0 auto;
+        width: 67%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-top: var(--bs-gutter-y);
+    }
+    .detailFresh {
+        padding-left: 1rem !important;
+    }
+    .votedFresh {
+        width: 100% !important;
+        float: left !important;
+        color: red;
+        cursor: pointer;
+        margin: 5px 5px 10px 0;
+    }
+    .textFresh {
+        color: #000;
+        font-size: 20px;
+        font-weight: 600 !important;
+        font-family: "Inter", sans-serif !important;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+        cursor: pointer;
+    }
+    .email {
+        border-radius: 6px;
+        background-color: #ffd8ca;
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+        padding-right: 1.5rem !important;
+        padding-left: 1.5rem !important;
+        margin-top: 3rem !important;
+    }
+    .boxEmail {
+        text-align: center !important;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+    .headEmail {
+        margin-bottom: 1rem !important;
+        color: #000;
+        font-size: 36px;
+        font-weight: bold;
+        font-family: "Playfair Display", serif;
+        line-height: 1.2;
+        margin-top: 0;
+    }
+    .textEmail {
+        font-family: "Inter", sans-serif;
+        color: #000;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400 !important;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    .formEmail {
+        flex-direction: column;
+        position: relative;
+        border-radius: 3px;
+        overflow: hidden;
+        margin-top: 1.5rem !important;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        width: 100%;
+    }
+    .inputEmail {
+        width: 100%;
+        height: 48px;
+        font-size: 14px;
+        background-image: url(/icons/recipes/icons-email.png);
+        background-repeat: no-repeat;
+        background-position: left 15px center;
+        padding-left: 48px;
+        padding-right: 12px;
+        border-radius: 4px;
+        border: none;
+        position: relative;
+        flex: 1 1 auto;
+        min-width: 0;
+        display: block;
+        min-height: calc(1.5em + 0.75rem + 2px);
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        overflow: visible;
+        margin: 0;
+        font-family: inherit;
+        outline: none;
+    }
+    .submitEmail {
+        margin: 15px 0;
+        /* border: none;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        font-size: 16px;
+        font-family: "Inter", sans-serif;
+        color: #000;
+        font-weight: 400;
+        line-height: 1.5; */
+        
+    }
+    .btnEmail {
+        border-radius: 4px;
+        width: 100%;
+        height: 48px;
+        padding: 5px 42px;
+        font-weight: 600;
+        font-size: 18px;
+        position: relative;
+        z-index: 2;
+        border-color: #ff642b;
+        background-color: #ff642b;
+        color: #fff !important;
+        border: 1px solid transparent;
+        cursor: pointer;
+    }
+    .endEmail {
+        display: block !important;
+        font-size: 12px !important;
+        font-family: "Inter", sans-serif;
+        color: #000;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+    .termsEmail {
+        text-decoration-color: #FF642F;
+        text-underline-position: under;
+        cursor: pointer;
     }
 }
 
