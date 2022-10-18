@@ -226,7 +226,7 @@ export function Recipes() {
                         <div className={RecipesStyles.leftBlock}>
                             <div className={RecipesStyles.inLeftBlock}>
                                 <ul className={RecipesStyles.foodPlan}>
-                                    <li className={RecipesStyles.plan}>
+                                    <li className={RecipesStyles.headPlan}>
                                         <small className={RecipesStyles.textPlan} >PREP TIME</small>
                                         <span className={RecipesStyles.timePlan}>15 MIN</span>
                                     </li>
@@ -324,7 +324,7 @@ export function Recipes() {
                                     <button className={RecipesStyles.btnEmail}>JOIN</button>
                                   </div>
                                 </div>
-                                <small className={RecipesStyles.endEmail}>By joining our newsletter you agree to our <br/> <u className={RecipesStyles.termsEmail}>Terms and Conditions</u></small>
+                                <small className={RecipesStyles.endEmail}>By joining our newsletter you agree to our <br/> <u href='/' className={RecipesStyles.termsEmail}>Terms and Conditions</u></small>
                               </div>
                             </div>
                         </div>
@@ -333,7 +333,7 @@ export function Recipes() {
 
                 <div className={RecipesStyles.headFeedback}>
                     <h2 className={RecipesStyles.titleFeedback}>Already made this?</h2>
-                    <div className={RecipesStyles.btnFeedback}>Share your feedback</div>
+                    <div href='/' className={RecipesStyles.btnFeedback}>Share your feedback</div>
                     <br />
                     <br />
                     <hr style={{backgroundColor:'#FF642F', height:'11px', opacity:'1', borderColor:'#E8E8E8', margin:'16px 0', color:'inherit', border:'0'}} />
