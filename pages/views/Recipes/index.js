@@ -9,7 +9,7 @@ export default function Recipe_Page() {
             <Navbar />
             <div className={RecipesStyles.content}>        
                 <Recipes />
-                {/* <Suggestions />  */}
+                <Suggestions /> 
             </div>
             <Footer />
         </div>
@@ -348,8 +348,75 @@ export function Recipes() {
                         <li></li>
                     </ul>
                 </div>
+                
                 <div></div>
             </div>
         </>
     )
+}
+
+
+// Suggestions
+export function Suggestions() {
+
+  const suggestions = [
+    {
+      link: '/',
+      img: '/images/recipes/suggestions-images.jpg',
+      text: 'Cranberry Macaroon Ice Cream Cake',
+    },
+    {
+      link: '/',
+      img: '/images/recipes/suggestions-images.jpg',
+      text: 'No Bake Cheesecake',
+    },
+    {
+      link: '/',
+      img: '/images/recipes/suggestions-images.jpg',
+      text: 'Double Thick Layered Sponge Cake',
+    },
+    {
+      link: '/',
+      img: '/images/recipes/suggestions-images.jpg',
+      text: 'Caramel Glaze Cake',
+    },
+    {
+      link: '/',
+      img: '/images/recipes/suggestions-images.jpg',
+      text: 'Strawberry Cream Cake Bites',
+    },
+    {
+      link: '/',
+      img: '/images/recipes/suggestions-images.jpg',
+      text: 'Homemade Mixed Berries Wedding Cake',
+    },
+    {
+      link: '/',
+      img: '/images/recipes/suggestions-images.jpg',
+      text: 'M&M’s Chocolate Cake',
+    },
+    {
+      link: '/',
+      img: '/images/recipes/suggestions-images.jpg',
+      text: 'Almond Cinnamon Sponge Cake',
+    },
+  ];
+
+  return (
+    <>
+      <div className={RecipesStyles.suggestions}>
+        <h5 className={RecipesStyles.titleSuggestions}>You might also like</h5>
+        <div className={RecipesStyles.rowSuggestions}>
+          {suggestions.map((item, index) => (
+          <div key={index} className={RecipesStyles.blockSuggestions}>
+            <div className={RecipesStyles.boxSuggestions} href={item.link}>
+              <img className={RecipesStyles.imgSuggestions} src={item.img} />
+              <div className={RecipesStyles.textSuggestions}>{item.text}</div>
+            </div>
+          </div>
+          ))}
+        </div>
+      </div>
+    </>
+  )
 }
