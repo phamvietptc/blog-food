@@ -50,19 +50,8 @@ export default function Categories() {
 
                 <div className={CategoriesStyles.rowCategories}>
                     {content.map((item, index) => (
-                    <div
-                        className={CategoriesStyles.blockCategories}
-                        onClick={() => {
-                            if (item.id === index) {
-                            router.push(
-                                '/'
-                            );
-                            } else {
-                            return;
-                            }
-                        }}
-                    >
-                        <div key={index} className={CategoriesStyles.imgCategories}>
+                    <div key={index} className={CategoriesStyles.blockCategories}>
+                        <div  className={CategoriesStyles.imgCategories}>
                             {index === 0 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
                             {index === 1 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
                             {index === 2 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}

@@ -300,20 +300,7 @@ export function Collections() {
               {index === 4 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 5 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
             <div className={styles.titleHpc}>
-              <h3
-                className={styles.textHpc}
-                onClick={() => {
-                  if (item.id === 6) {
-                    router.push(
-                      '/'
-                    );
-                  } else {
-                    return;
-                  }
-                }}
-              >
-                {item.title}
-              </h3>
+              <h3 className={styles.textHpc}>{item.title}</h3>
               <span className={styles.spanHpc} >156 Recipes</span>
             </div>
           </div>
@@ -370,6 +357,7 @@ export function Recipes() {
         <div className={styles.rowRecipes}>
           {content.map((item, index) => (
           <div
+            key={index}
             className={styles.lr}
             onClick={() => {
               if (item.id === index) {
@@ -381,7 +369,7 @@ export function Recipes() {
               }
             }}
           >
-            <div key={index} className={styles.blockLr}>
+            <div className={styles.blockLr}>
                 {index === 0 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
                 {index === 1 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
                 {index === 2 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
