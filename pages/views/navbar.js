@@ -10,7 +10,7 @@ export default function Navbar() {
     <>
       <div className={NavbarStyles.container}>
         <div className={NavbarStyles.content}>
-          <Link href={``}>
+          <Link href={'/'}>
             <a className="">
               <img src="/images/navbar/Logo.svg"/>
             </a>

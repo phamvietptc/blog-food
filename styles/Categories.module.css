@@ -7,7 +7,6 @@
         background-color: #ffff;
     }
     .content {
-        /* max-width: 1400px; */
         --bs-gutter-x: 1.5rem;
         width: 100%;
         padding-right: calc(var(--bs-gutter-x) / 2);
@@ -20,6 +19,9 @@
     .categories {
         margin-top: 3rem !important;
         margin-bottom: 3rem !important;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1140px;
     }
     .headText {
         color: #000;

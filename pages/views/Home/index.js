@@ -7,7 +7,6 @@ import { useRouter } from 'next/router';
 
 
 export default function Home() {
-
   return (
     <>
       <div className={styles.contain}>
@@ -259,7 +258,7 @@ export function Card_Ctg() {
 
 // Hand-Picked Collections
 export function Collections() {
-
+  const router = useRouter();
   const content = [
     {
       id: 0,
@@ -301,20 +300,7 @@ export function Collections() {
               {index === 4 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
               {index === 5 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
             <div className={styles.titleHpc}>
-              <h3
-                className={styles.textHpc}
-                onClick={() => {
-                  if (item.id === 6) {
-                    router.push(
-                      '/'
-                    );
-                  } else {
-                    return;
-                  }
-                }}
-              >
-                {item.title}
-              </h3>
+              <h3 className={styles.textHpc}>{item.title}</h3>
               <span className={styles.spanHpc} >156 Recipes</span>
             </div>
           </div>
@@ -328,7 +314,7 @@ export function Collections() {
 
 // Latest Recipes
 export function Recipes() {
-
+  const router = useRouter();
   const content = [
     {
       id: 0,
@@ -370,8 +356,20 @@ export function Recipes() {
         <div className={styles.recipes}>Latest Recipes</div>
         <div className={styles.rowRecipes}>
           {content.map((item, index) => (
-          <div className={styles.lr}>
-            <div key={index} className={styles.blockLr}>
+          <div
+            key={index}
+            className={styles.lr}
+            onClick={() => {
+              if (item.id === index) {
+                router.push(
+                  '/views/Recipes'
+                );
+              } else {
+                return;
+              }
+            }}
+          >
+            <div className={styles.blockLr}>
                 {index === 0 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
                 {index === 1 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
                 {index === 2 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
@@ -381,18 +379,7 @@ export function Recipes() {
                 {index === 6 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
                 {index === 7 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
               <figcaption className={styles.titleLr}>
-                <a
-                  className={styles.textLr}
-                  onClick={() => {
-                    if (item.id === 8) {
-                      router.push(
-                        '/'
-                      );
-                    } else {
-                      return;
-                    }
-                  }}
-                >
+                <a className={styles.textLr}>
                   {item.title}
                 </a>
               </figcaption>
