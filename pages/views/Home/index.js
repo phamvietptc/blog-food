@@ -100,9 +100,9 @@ export function Email() {
               </div>
             </div>
             <div className={styles.endEmail}>
-              <a className={styles.endTextEmail}>
+              <small className={styles.endTextEmail}>
                 By joining our newsletter you agree to our <u href='#0' className={styles.termsEmail}>Terms and Conditions</u>
-              </a>
+              </small>
             </div>
           </div>
         </div>
