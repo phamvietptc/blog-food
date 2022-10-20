@@ -117,17 +117,17 @@ export function Card_Food() {
   const router = useRouter();
   const defaultContents = [
     {
-      id: 0,
+      image: '/images/home/card-food.jpg',
       vote: '★★★★',
       text: 'Spinach and Cheese Pasta',
     },
     {
-      id: 1,
+      image: '/images/home/card-food.jpg',
       vote: '★★★',
       text: 'Fancy Glazed Donuts',
     },
     {
-      id: 2,
+      image: '/images/home/card-food.jpg',
       vote: '★★★★★',
       text: 'Mighty Cheesy Breakfast Burger',
     },
@@ -141,40 +141,11 @@ export function Card_Food() {
         {defaultContents.map((item, index) => (
           <div key={index} className={styles.blockCard}>
             <div className={styles.boxImgCard}>
-              {index === 0 && <img className={styles.imageCard} src="/images/home/card-food.jpg" alt="" />}
-              {index === 1 && <img className={styles.imageCard} src="/images/home/card-food.jpg" alt="" />}
-              {index === 2 && <img className={styles.imageCard} src="/images/home/card-food.jpg" alt="" />}
+              <img className={styles.imageCard} src={item.image} alt="" />
             </div>
             <div className={styles.detailCard}>
-              <h3
-                className={styles.voteCard}
-                onClick={() => {
-                  if (item.id === 3) {
-                    router.push(
-                      '/'
-                    );
-                  } else {
-                    return;
-                  }
-                }}
-              >
-                {item.vote}
-              </h3>
-            
-            <h3
-              className={styles.textCard}
-              onClick={() => {
-                if (item.id === 3) {
-                  router.push(
-                    '/'
-                  );
-                } else {
-                  return;
-                }
-              }}
-            >
-              {item.text}
-            </h3>
+              <h3 className={styles.voteCard}>{item.vote}</h3>
+              <h3 className={styles.textCard}>{item.text}</h3>
             </div>
           </div>
         ))}
@@ -190,27 +161,27 @@ export function Card_Ctg() {
   const router = useRouter();
   const content = [
     {
-      id: 0,
+      image: '/images/home/Image_Categories.png',
       title: 'Pasta',
     },
     {
-      id: 1,
+      image: '/images/home/Image_Categories.png',
       title: 'Pizza',
     },
     {
-      id: 2,
+      image: '/images/home/Image_Categories.png',
       title: 'Vegan',
     },
     {
-      id: 3,
+      image: '/images/home/Image_Categories.png',
       title: 'Desserts',
     },
     {
-      id: 4,
+      image: '/images/home/Image_Categories.png',
       title: 'Smoothies',
     },
     {
-      id: 5,
+      image: '/images/home/Image_Categories.png',
       title: 'Breakfast',
     },
   ];
@@ -225,27 +196,16 @@ export function Card_Ctg() {
             key={index}
             className={styles.blockCtg}
             onClick={() => {
-              if (item.id === index) {
                 router.push(
                   '/views/Categories'
                 );
-              } else {
-                return;
-              }
             }}
           >
             <div className={styles.boxImgCtg}>
-              {index === 0 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
-              {index === 1 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
-              {index === 2 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
-              {index === 3 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
-              {index === 4 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
-              {index === 5 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
+              <img className={styles.imageCtg} src={item.image} alt="" />
             </div>
             <div className={styles.detailCtg}>
-              <h3 className={styles.titleCtg}>
-                {item.title}
-              </h3>
+              <h3 className={styles.titleCtg}>{item.title}</h3>
             </div>
           </div>
         ))}
@@ -261,27 +221,27 @@ export function Collections() {
   const router = useRouter();
   const content = [
     {
-      id: 0,
+      image: '/images/home/Picked_Collections.jpg',
       title: 'Sushi Combos for your Next Party',
     },
     {
-      id: 1,
+      image: '/images/home/Picked_Collections.jpg',
       title: 'Everything Bagel',
     },
     {
-      id: 2,
+      image: '/images/home/Picked_Collections.jpg',
       title: 'Cook Like a Chef',
     },
     {
-      id: 3,
+      image: '/images/home/Picked_Collections.jpg',
       title: 'Exquisite Dinner Recipe Ideas',
     },
     {
-      id: 4,
+      image: '/images/home/Picked_Collections.jpg',
       title: 'The Ultimate Cookie Frenzy Cookie ',
     },
     {
-      id: 5,
+      image: '/images/home/Picked_Collections.jpg',
       title: 'For the Love of Donuts',
     },
   ];
@@ -292,18 +252,13 @@ export function Collections() {
       <div className={styles.collections}>Hand-Picked Collections</div>
       <div className={styles.hpc}>
         {content.map((item, index) => (
-          <div key={index} className={styles.blockHpc}>
-              {index === 0 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
-              {index === 1 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
-              {index === 2 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
-              {index === 3 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
-              {index === 4 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
-              {index === 5 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
-            <div className={styles.titleHpc}>
-              <h3 className={styles.textHpc}>{item.title}</h3>
-              <span className={styles.spanHpc} >156 Recipes</span>
-            </div>
+        <div key={index} className={styles.blockHpc}>
+          <img className={styles.imageHpc} src={item.image} alt="" />
+          <div className={styles.titleHpc}>
+            <h3 className={styles.textHpc}>{item.title}</h3>
+            <span className={styles.spanHpc} >156 Recipes</span>
           </div>
+        </div>
         ))}
       </div>
     </div>
@@ -317,35 +272,35 @@ export function Recipes() {
   const router = useRouter();
   const content = [
     {
-      id: 0,
+      image: '/images/home/Recipes.jpg',
       title: 'Caramel Strawberry Milkshake',
     },
     {
-      id: 1,
+      image: '/images/home/Recipes.jpg',
       title: 'Cashew Vegan Rice',
     },
     {
-      id: 2,
+      image: '/images/home/Recipes.jpg',
       title: 'Smoked Salmon Salad Sandwich',
     },
     {
-      id: 3,
+      image: '/images/home/Recipes.jpg',
       title: 'Salmon in Creamy Sun Dried Tomato Sauce',
     },
     {
-      id: 4,
+      image: '/images/home/Recipes.jpg',
       title: 'Healthy Jam Waffle Breakfast',
     },
     {
-      id: 5,
+      image: '/images/home/Recipes.jpg',
       title: 'Chocolate and Banana Jar Cake',
     },
     {
-      id: 6,
+      image: '/images/home/Recipes.jpg',
       title: 'Caramel Blueberry Scones',
     },
     {
-      id: 7,
+      image: '/images/home/Recipes.jpg',
       title: 'Blueberry Carrot Cake',
     },
   ];
@@ -360,28 +315,15 @@ export function Recipes() {
             key={index}
             className={styles.lr}
             onClick={() => {
-              if (item.id === index) {
                 router.push(
                   '/views/Recipes'
                 );
-              } else {
-                return;
-              }
             }}
           >
             <div className={styles.blockLr}>
-                {index === 0 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-                {index === 1 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-                {index === 2 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-                {index === 3 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-                {index === 4 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-                {index === 5 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-                {index === 6 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-                {index === 7 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
+              <img className={styles.imageLr} src={item.image} alt="" />
               <figcaption className={styles.titleLr}>
-                <a className={styles.textLr}>
-                  {item.title}
-                </a>
+                <a className={styles.textLr}>{item.title}</a>
               </figcaption>
             </div>
           </div>

@@ -2,13 +2,13 @@ import RecipesStyles from '../../../styles/Recipes.module.css';
 import Navbar, { MBFooter, Footer } from '../navbar';
 import { useRouter } from 'next/router';
 
-export default function Recipe_Page() {
+export default function Recipe() {
     return (
         <>
         <div className={RecipesStyles.container}>
             <Navbar />
             <div className={RecipesStyles.content}>        
-                <Recipes />
+                <Posts />
                 <Suggestions /> 
             </div>
             <Footer />
@@ -18,8 +18,8 @@ export default function Recipe_Page() {
 }
 
 
-// Recipes
-export function Recipes() {
+// Posts
+export function Posts() {
 
     const cakeCrust = [
         {

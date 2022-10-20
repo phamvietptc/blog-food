@@ -7,35 +7,35 @@ export default function Categories() {
 
     const content = [
         {
-          id: 0,
+          image: '/images/categories/categories-img.png',
           title: 'Seafood',
         },
         {
-          id: 1,
+          image: '/images/categories/categories-img.png',
           title: 'Soup',
         },
         {
-          id: 2,
+          image: '/images/categories/categories-img.png',
           title: 'Pancakes',
         },
         {
-          id: 3,
+          image: '/images/categories/categories-img.png',
           title: 'Meat',
         },
         {
-          id: 4,
+          image: '/images/categories/categories-img.png',
           title: 'Chicken',
         },
         {
-          id: 5,
+          image: '/images/categories/categories-img.png',
           title: 'Pasta',
         },
         {
-          id: 6,
+          image: '/images/categories/categories-img.png',
           title: 'Pizza',
         },
         {
-          id: 7,
+          image: '/images/categories/categories-img.png',
           title: 'Less than 30 min',
         },
       ];
@@ -47,23 +47,13 @@ export default function Categories() {
             <Navbar />
             <div className={CategoriesStyles.categories}>
                 <h5 className={CategoriesStyles.headText}>Categories</h5>
-
                 <div className={CategoriesStyles.rowCategories}>
                     {content.map((item, index) => (
                     <div key={index} className={CategoriesStyles.blockCategories}>
                         <div  className={CategoriesStyles.imgCategories}>
-                            {index === 0 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
-                            {index === 1 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
-                            {index === 2 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
-                            {index === 3 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
-                            {index === 4 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
-                            {index === 5 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
-                            {index === 6 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
-                            {index === 7 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
+                            <img className={CategoriesStyles.image} src={item.image} alt="" />
                         <figcaption className={CategoriesStyles.titleCategories}>
-                            <a className={CategoriesStyles.textCategories}>
-                            {item.title}
-                            </a>
+                            <a className={CategoriesStyles.textCategories}>{item.title}</a>
                         </figcaption>
                         </div>
                     </div>

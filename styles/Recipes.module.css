@@ -16,7 +16,7 @@
         margin-left: auto;
     }
 
-    /* Recipes */
+    /* Posts */
     .recipes {
         margin-top: 3rem !important;
         margin-bottom: 3rem !important;
@@ -657,6 +657,8 @@
         margin-right: auto;
         margin-left: auto;
     }
+
+    /* Posts */
     .recipes {
         margin-top: 1.5rem !important;
         margin-bottom: 1.5rem !important;

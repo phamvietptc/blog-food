@@ -93,7 +93,7 @@ export function Avatar() {
 
 // Footer
 export function Footer({ isNoPadding = false }) {
-  // const router = useRouter();
+  const router = useRouter();
   // const ref = useRef(null);
   // const [shouldAtBottom, setShouldAtBottom] = useState(false);
 
@@ -165,7 +165,7 @@ export function Footer({ isNoPadding = false }) {
               className={NavbarStyles.foodterList}
               onClick={() => {
                 router.push({
-                  pathname: '/' + router.query + '/About us',
+                  pathname: '/views/About',
                 });
               }}
             >
