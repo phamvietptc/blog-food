@@ -9,7 +9,7 @@ export default function About() {
             <Navbar />
             <div className={AboutStyles.content}>
                 <Posts />
-                {/* <Operatring /> */}
+                <Operatring />
             </div>
             <Footer />
         </div>
@@ -62,6 +62,26 @@ export function Posts() {
           name: 'Wen Yahui',
           position: 'Chef Extraordinaire',
         },
+        {
+          image: '/images/about/chefs-image.png',
+          name: 'Jurrien Oldhof',
+          position: 'Chef Extraordinaire',
+        },
+        {
+          image: '/images/about/chefs-image.png',
+          name: 'Tallah Cotton',
+          position: 'Chef Extraordinaire',
+        },
+        {
+          image: '/images/about/chefs-image.png',
+          name: 'Qin Shi',
+          position: 'Chef Extraordinaire',
+        },
+        {
+          image: '/images/about/chefs-image.png',
+          name: 'Su Hua',
+          position: 'Chef Extraordinaire',
+        },    
       ];
 
     return (
@@ -122,6 +142,34 @@ export function Posts() {
                 </div>
             </div>
         </div>
+        </>
+    )
+}
+
+
+// Operatring
+export function Operatring() {
+    return (
+        <>
+        <div className={AboutStyles.operatring}>
+            <div className={AboutStyles.rowOperatring}>
+                <div className={AboutStyles.feftOperatring}>
+                    <strong className={AboutStyles.titleOperatring}>Operatring from NYC, Dubai and London</strong>
+                    <small className={AboutStyles.textOperatring}>Gastronomy atmosphere set aside. Slice butternut cooking home. Delicious romantic undisturbed raw platter will meld. Thick Skewers skillet natural, smoker soy sauce wait roux. slices rosette bone-in simmer precision alongside baby leeks. Crafting renders aromatic enjoyment.</small>
+                    <br/>
+                    <br/>
+                    <hr style={{borderColor:'#E8E8E8', backgroundColor:'currentcolor', color:'inherit', opacity:'0.3', height:'1px', margin:'1rem 0'}} />
+                    <br/>
+                    <div className={AboutStyles.boxIcons}>
+                      <a href='' style={{cursor:'pointer'}}><Image width='20px' height='20px' src='/icons/about/icons-facebook.svg' /></a>
+                      <a href='' style={{marginLeft:'1.5rem', cursor:'pointer'}}><Image width='20px' height='20px' src='/icons/about/icons-twitter.svg' /></a>
+                      <a href='' style={{marginLeft:'1.5rem', cursor:'pointer'}}><Image width='20px' height='20px' src='/icons/about/icons-instagram.svg' /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <br/>
         </>
     )
 }
