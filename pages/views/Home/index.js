@@ -39,6 +39,7 @@ export function Spotlight_Food() {
               src="/images/home/Image_Spotlight.png"
               width='650px'
               height='488px'
+              alt=''
             />
           </Link> 
         </div>
@@ -49,6 +50,7 @@ export function Spotlight_Food() {
                 src='/icons/home/icons-chart-up.png'
                 width='24px'
                 height='24px'
+                alt=''
             />
             <p style={{color:'black', fontWeight:'600', lineHeight:'0', paddingLeft:'5px'}}>
               85% would make this again
@@ -66,6 +68,7 @@ export function Spotlight_Food() {
               src='/icons/home/icons-right.png'
               width='24px'
               height='24px'
+              alt=''
             />
           </div>
         </div>    

@@ -98,6 +98,7 @@ export function Posts() {
                     width='1112px'
                     height='455px'
                     src='/images/about/intro-image.jpg'
+                    alt=''
                 />
                 <br/>
                 <br/>
@@ -114,6 +115,7 @@ export function Posts() {
                             width='571px'
                             height='466px'
                             src='/images/about/body-image.jpg'
+                            alt=''
                         />
                     </div>
                 </div>
@@ -131,6 +133,7 @@ export function Posts() {
                                 width='163px'
                                 height='163px'
                                 src={item.image}
+                                alt=''
                             />
                             <div className={AboutStyles.detailChefs}>
                                 <h6 className={AboutStyles.nameChefs}>{item.name}</h6>
@@ -153,7 +156,7 @@ export function Operatring() {
         <>
         <div className={AboutStyles.operatring}>
             <div className={AboutStyles.rowOperatring}>
-                <div className={AboutStyles.feftOperatring}>
+                <div className={AboutStyles.leftOperatring}>
                     <strong className={AboutStyles.titleOperatring}>Operatring from NYC, Dubai and London</strong>
                     <small className={AboutStyles.textOperatring}>Gastronomy atmosphere set aside. Slice butternut cooking home. Delicious romantic undisturbed raw platter will meld. Thick Skewers skillet natural, smoker soy sauce wait roux. slices rosette bone-in simmer precision alongside baby leeks. Crafting renders aromatic enjoyment.</small>
                     <br/>
@@ -161,9 +164,9 @@ export function Operatring() {
                     <hr style={{borderColor:'#E8E8E8', backgroundColor:'currentcolor', color:'inherit', opacity:'0.3', height:'1px', margin:'1rem 0'}} />
                     <br/>
                     <div className={AboutStyles.boxIcons}>
-                      <a href='' style={{cursor:'pointer'}}><Image width='20px' height='20px' src='/icons/about/icons-facebook.svg' /></a>
-                      <a href='' style={{marginLeft:'1.5rem', cursor:'pointer'}}><Image width='20px' height='20px' src='/icons/about/icons-twitter.svg' /></a>
-                      <a href='' style={{marginLeft:'1.5rem', cursor:'pointer'}}><Image width='20px' height='20px' src='/icons/about/icons-instagram.svg' /></a>
+                      <a href='' style={{cursor:'pointer'}}><Image width='20px' height='20px' src='/icons/about/icons-facebook.svg' alt=''/></a>
+                      <a href='' style={{marginLeft:'1.5rem', cursor:'pointer'}}><Image width='20px' height='20px' src='/icons/about/icons-twitter.svg' alt=''/></a>
+                      <a href='' style={{marginLeft:'1.5rem', cursor:'pointer'}}><Image width='20px' height='20px' src='/icons/about/icons-instagram.svg' alt=''/></a>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 import CategoriesStyles from '../../../styles/Categories.module.css';
 import Navbar, { MBFooter, Footer } from '../navbar';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 
 export default function Categories() {
@@ -51,7 +52,7 @@ export default function Categories() {
                     {content.map((item, index) => (
                     <div key={index} className={CategoriesStyles.blockCategories}>
                         <div  className={CategoriesStyles.imgCategories}>
-                            <img className={CategoriesStyles.image} src={item.image} alt="" />
+                            <Image className={CategoriesStyles.image} width='255px' height='255px' src={item.image} alt="" />
                         <figcaption className={CategoriesStyles.titleCategories}>
                             <a className={CategoriesStyles.textCategories}>{item.title}</a>
                         </figcaption>
