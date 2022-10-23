@@ -18,7 +18,8 @@
     padding-left: 200px;
   }
   .titletext {
-  color: #000000;
+    color: #000000;
+    margin-left: 40px;
   }
   .box {
     margin-top: 15px;

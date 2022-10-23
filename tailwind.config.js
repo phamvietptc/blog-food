@@ -5,12 +5,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        tanpearl: ['Tan Pearl', ...defaultTheme.fontFamily.sans],
-        tenor: ['Tenor Sans', ...defaultTheme.fontFamily.sans],
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }

@@ -11,36 +11,35 @@ export default function Navbar() {
       <div className={NavbarStyles.container}>
         <div className={NavbarStyles.content}>
           <Link href={'/'}>
-            <a className="">
+            <a>
               <img src="/images/navbar/Logo.svg"/>
             </a>
           </Link>
-        
-            <div className={NavbarStyles.title}>
+            <div  className={`hidden md:block ${NavbarStyles.title}`}>
               <ul className={NavbarStyles.titletext}>
-                <Link href={``}>
-                  <a className="">
+                <Link href={`/`}>
+                  <a>
                     Home Page
                   </a>
                 </Link>
               </ul>
               <ul className={NavbarStyles.titletext}>
-                <Link href={``}>
-                  <a className="">
+                <Link href={`/`}>
+                  <a>
                     Recipe Page
                   </a>
                 </Link>
               </ul>
               <ul className={NavbarStyles.titletext}>
-                <Link href={``}>
-                  <a className="">
+                <Link href={`/`}>
+                  <a>
                     Pages
                   </a>
                 </Link>
               </ul>
               <ul className={NavbarStyles.titletext}>
-                <Link href={``}>
-                  <a className="">
+                <Link href={`/`}>
+                  <a>
                     Buy
                   </a>
                 </Link>
@@ -94,62 +93,13 @@ export function Avatar() {
 // Footer
 export function Footer({ isNoPadding = false }) {
   const router = useRouter();
-  // const ref = useRef(null);
-  // const [shouldAtBottom, setShouldAtBottom] = useState(false);
-
-  // const updateSize = () => {
-  //   const windowInnerHeight = window.innerHeight;
-  //   const footerHeight =
-  //     document.getElementById('normal-footer')?.offsetHeight || 0;
-  //   const isAtBottom =
-  //     windowInnerHeight >=
-  //     document.body.offsetHeight - footerHeight + ref.current?.offsetHeight;
-  //   console.log(
-  //     'updateSize',
-  //     isAtBottom,
-  //     windowInnerHeight, footerHeight,
-  //     document.body.offsetHeight - footerHeight + ref.current?.offsetHeight
-  //   );
-  //   console.log(
-  //     'normal-footer',
-  //     windowInnerHeight -
-  //       (document.body.offsetHeight - footerHeight + ref.current?.offsetHeight)
-  //   );
-  //   setShouldAtBottom(isAtBottom);
-  //   if (isAtBottom) {
-  //     document.getElementById('normal-footer')?.style.height =`${windowInnerHeight -
-  //       (document.body.offsetHeight - footerHeight + ref.current?.offsetHeight)}px`
-
-  //   } else {
-  //     document.getElementById('normal-footer')?.style.height = '';
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   const observer = new ResizeObserver(() => updateSize());
-  //   observer.observe(document.body);
-  //   return () => {
-  //     observer.disconnect();
-  //   };
-  // }, []);
 
   return (
     <div
       id="normal-footer"
-      className={NavbarStyles.foodter}
-      // style={shouldAtBottom ? { height: footerHeight } : undefined}
-    >
-      <div
-        // ref={ref}
-        // className={
-        //   'min-w-full hidden md:block ' +
-        //   (shouldAtBottom ? 'fixed bottom-0 left-0 right-0' : '')
-        // }
-      >
+      className={NavbarStyles.foodter}>
+      <div>
         <div
-          // className={`w-full pt-8 pb-8 hidden md:flex md:flex-row md:justify-between container ${
-          //   isNoPadding ? 'px-0' : ''
-          // }`}
           className={NavbarStyles.containerFoodter}
         >
           <div className={NavbarStyles.foodterLogo}>
@@ -159,7 +109,7 @@ export function Footer({ isNoPadding = false }) {
             </p>
           </div>
 
-          <div className="float-left flex flex-row">
+          <div className='hidden md:block'>
             <div className={NavbarStyles.foodterListHead} >Tastebite</div>
             <div
               className={NavbarStyles.foodterList}
@@ -203,7 +153,7 @@ export function Footer({ isNoPadding = false }) {
             </div>
           </div>
           
-          <div className="float-left flex flex-row">
+          <div className='hidden md:block'>
             <div className={NavbarStyles.foodterListHead} >Legal</div>
             <div
               className={NavbarStyles.foodterList}
@@ -247,7 +197,7 @@ export function Footer({ isNoPadding = false }) {
             </div>
           </div>
 
-          <div className="float-left flex flex-row">
+          <div className='hidden md:block'>
             <div className={NavbarStyles.foodterListHead} >Follow</div>
             <div
               className={NavbarStyles.foodterList}
@@ -294,12 +244,7 @@ export function Footer({ isNoPadding = false }) {
 
         <div style={{ width: '93%'}}>
         <hr style={{ color:'#a2aaaf'}} />
-        <div
-          // className={`w-full pt-8 pb-4 hidden md:flow-root nearwhite text-xs container ${
-          //   isNoPadding ? 'px-0' : ''
-          // }`}
-          className={NavbarStyles.foodterEnd}
-        >
+        <div className={NavbarStyles.foodterEnd}>
           <div className={NavbarStyles.copyright}>©2022 Tastebite - All rights reserved</div>
           <div className={NavbarStyles.foodterIcon}>
               <a
