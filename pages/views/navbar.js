@@ -12,9 +12,7 @@ export default function Navbar() {
         <div className={NavbarStyles.content}>
           <div className={NavbarStyles.boxMenu}>
             <Link href={'/'}>
-              <a >
-                <Image width='255px' height='78px' src="/images/navbar/Logo.svg"/>
-              </a>
+              <Image width='255px' height='78px' src="/images/navbar/Logo.svg" alt='Logo' />
             </Link>
             <div  className={`hidden md:block ${NavbarStyles.title}`}>
               <ul className={NavbarStyles.menuHead}>
@@ -89,8 +87,8 @@ export function Avatar() {
         <Image
           className={NavbarStyles.imgavatar}
           src="/images/navbar/avt.png"
-          width='50px'
-          height='50px'
+          width='70px'
+          height='70px'
           alt='avatar'
         />
       </div>
@@ -100,22 +98,20 @@ export function Avatar() {
 
 
 // Footer
-export function Footer({ isNoPadding = false }) {
+export function Footer() {
   const router = useRouter();
 
   return (
-    <div
-      id="normal-footer"
-      className={NavbarStyles.foodter}>
-      <div>
-        <div
-          className={NavbarStyles.containerFoodter}
-        >
+    <div className={NavbarStyles.foodter}>
+      <div className={NavbarStyles.contentFoodter}>
+        <div className={NavbarStyles.containerFoodter}>
           <div className={NavbarStyles.foodterLogo}>
-            <Image src="/images/navbar/Logo.svg" height={60} width={180} alt="Tastebite" />
-            <p className={NavbarStyles.foodterTitle} style={{ color: '#7a8186' }}>
+            <div className={NavbarStyles.detailLogo}>
+            <Image src="/images/navbar/Logo.svg" height={50} width={161} alt="Tastebite" />
+            <p className={NavbarStyles.foodterTitle}>
               "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment
             </p>
+            </div>
           </div>
 
           <div className='hidden md:block'>
@@ -251,8 +247,8 @@ export function Footer({ isNoPadding = false }) {
           </div>
         </div>
 
-        <div style={{ width: '93%'}}>
-        <hr style={{ color:'#a2aaaf'}} />
+        <div>
+        <hr style={{ color:'#E8E8E8', height:'1px'}} />
         <div className={NavbarStyles.foodterEnd}>
           <div className={NavbarStyles.copyright}>©2022 Tastebite - All rights reserved</div>
           <div className={NavbarStyles.foodterIcon}>
