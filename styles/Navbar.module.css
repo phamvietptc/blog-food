@@ -1,30 +1,75 @@
 /* Desktop */
 @media only screen and (min-width: 768px) {
   .container {
+    max-width: 1140px;
     background-color: #ffffff;
-    /* width: 100vw; */
-    /* height: 100vh; */
-    padding: 25px 0 25px 30px;
-    margin: 0;
-    
+    --bs-gutter-x: 1.5rem;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin-right: auto;
+    margin-left: auto;
   }
   .content {
+    background-color: #fff !important;
+    padding: 24px 0;
+  }
+  .boxMenu {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    position: relative;
     display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .logoHead {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .imgHead {
+    max-width: 161px;
+    vertical-align: middle;
   }
   .title {
-    flex-direction: row;
+    display: flex !important;
     align-items: center;
-    display: flex;
-    padding-left: 200px;
+    width: 100%;
   }
-  .titletext {
-    color: #000000;
-    margin-left: 40px;
+  .menuHead {
+    flex-direction: row;
+    padding-top: 0 !important;
+    margin: auto !important;
+    display: flex;
+    list-style: none;
+  }
+  .titleMenu {
+    padding: 0 15px;
+    position: relative;
+  }
+  .textMenu {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    color: #000;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+    font-weight: 500;
+    transition: none;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
   }
   .box {
-    margin-top: 15px;
-    padding-left: 50px;
-    padding-right: 20px;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 10px;
   }
   .container1{
     width: 300px;
@@ -73,7 +118,7 @@
     cursor: pointer;
     top: 50%;
     margin-left: 265px;
-    margin-top: 17px;
+    margin-top: 15px;
     z-index: 1;
     color: #4f5b66;
   }
@@ -90,8 +135,8 @@
     color: #93a2ad;
   }
 .avatar {
-  margin-top: 15px;
   cursor: pointer;
+  align-items: center;
 }
 .imgavatar {
   border-radius: 50% 50% 50% 50%;

@@ -10,43 +10,50 @@ export default function Navbar() {
     <>
       <div className={NavbarStyles.container}>
         <div className={NavbarStyles.content}>
-          <Link href={'/'}>
-            <a>
-              <img src="/images/navbar/Logo.svg"/>
-            </a>
-          </Link>
+          <div className={NavbarStyles.boxMenu}>
+            <Link href={'/'}>
+              <a >
+                <Image width='255px' height='78px' src="/images/navbar/Logo.svg"/>
+              </a>
+            </Link>
             <div  className={`hidden md:block ${NavbarStyles.title}`}>
-              <ul className={NavbarStyles.titletext}>
-                <Link href={`/`}>
-                  <a>
-                    Home Page
-                  </a>
-                </Link>
-              </ul>
-              <ul className={NavbarStyles.titletext}>
-                <Link href={`/`}>
-                  <a>
-                    Recipe Page
-                  </a>
-                </Link>
-              </ul>
-              <ul className={NavbarStyles.titletext}>
-                <Link href={`/`}>
-                  <a>
-                    Pages
-                  </a>
-                </Link>
-              </ul>
-              <ul className={NavbarStyles.titletext}>
-                <Link href={`/`}>
-                  <a>
-                    Buy
-                  </a>
-                </Link>
+              <ul className={NavbarStyles.menuHead}>
+                <li className={NavbarStyles.titleMenu}>
+                  <Link href={`/`}>
+                    <a className={NavbarStyles.textMenu}>
+                      <span>Home Page</span>
+                      <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Home Page' />
+                    </a>
+                  </Link>
+                </li>
+                <li className={NavbarStyles.titleMenu}>
+                  <Link href={`/`}>
+                    <a className={NavbarStyles.textMenu}>
+                      <span>Recipe Page</span>
+                      <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Recipe Page' />
+                    </a>
+                  </Link>
+                </li>
+                <li className={NavbarStyles.titleMenu}>
+                  <Link href={`/`}>
+                    <a className={NavbarStyles.textMenu}>
+                      <span>Pages</span>
+                      <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Pages' />
+                    </a>
+                  </Link>
+                </li>
+                <li className={NavbarStyles.titleMenu}>
+                  <Link href={`/`}>
+                    <a className={NavbarStyles.textMenu}>
+                      <span>Buy</span>
+                    </a>
+                  </Link>
+                </li>
               </ul>
             </div>
             <Search />
             <Avatar />
+          </div>
         </div>
       </div>
     </>
@@ -64,8 +71,9 @@ export function Search() {
             <Image
               src='/icons/navbar/icons-search.svg'
               width="20px"
-              height="20px">
-            </Image>
+              height="20px"
+              alt='search'
+            />
           </span>
           <input type="search" id="search" placeholder="Search..." />
         </div>
@@ -83,6 +91,7 @@ export function Avatar() {
           src="/images/navbar/avt.png"
           width='50px'
           height='50px'
+          alt='avatar'
         />
       </div>
     </>
