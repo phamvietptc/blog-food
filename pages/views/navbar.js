@@ -50,7 +50,9 @@ export default function Navbar() {
               </ul>
             </div>
             <Search />
+            <Search_MB />
             <Avatar />
+            <Menu />
           </div>
         </div>
       </div>
@@ -63,7 +65,7 @@ export function Search() {
 
   return (
     <>
-      <div className={NavbarStyles.box}>
+      <div className={`hidden md:block ${NavbarStyles.box}`}>
         <div className={NavbarStyles.container1}>
           <span className={NavbarStyles.icon}>
             <Image
@@ -80,6 +82,21 @@ export function Search() {
   );
 }
 
+export function Search_MB() {
+  return (
+    <>
+    <div className='md:hidden'>
+      <Image
+        src='/icons/navbar/icons-search.svg'
+        width="30px"
+        height="30px"
+        alt='search'
+      />
+    </div>
+    </>
+  )
+}
+
 export function Avatar() {
   return (
     <>
@@ -87,11 +104,26 @@ export function Avatar() {
         <Image
           className={NavbarStyles.imgavatar}
           src="/images/navbar/avt.png"
-          width='70px'
-          height='70px'
+          width='60px'
+          height='60px'
           alt='avatar'
         />
       </div>
+    </>
+  )
+}
+
+export function Menu() {
+  return (
+    <>
+    <div className={`md:hidden ${NavbarStyles.menu}`}>
+      <Image
+        width='24px'
+        height='24px'
+        src='/icons/navbar/icons-menu.svg'
+        alt='Menu'
+      />
+    </div>
     </>
   )
 }
