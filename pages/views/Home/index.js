@@ -52,7 +52,7 @@ export function Spotlight_Food() {
                 height='24px'
                 alt=''
             />
-            <p style={{color:'black', fontWeight:'600', lineHeight:'0', paddingLeft:'5px'}}>
+            <p style={{color:'black', fontWeight:'600', paddingLeft:'5px'}}>
               85% would make this again
             </p>
             </div>

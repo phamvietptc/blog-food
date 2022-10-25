@@ -11,9 +11,31 @@ export default function Navbar() {
       <div className={NavbarStyles.container}>
         <div className={NavbarStyles.content}>
           <div className={NavbarStyles.boxMenu}>
+
+            {/* Desktop */}
             <Link href={'/'}>
-              <Image width='255px' height='78px' src="/images/navbar/Logo.svg" alt='Logo' />
+              <a className='hidden md:block'>
+              <Image
+               width={301} 
+               height={190} 
+               src="/images/navbar/Logo.svg" 
+               alt='Logo' 
+              />
+              </a>
             </Link>
+
+            {/* Mobile */}
+            <Link href={'/'}>
+              <a className='md:hidden'>
+              <Image
+               width={110} 
+               height={35} 
+               src="/images/navbar/Logo.svg" 
+               alt='Logo' 
+              />
+              </a>
+            </Link>
+
             <div  className={`hidden md:block ${NavbarStyles.title}`}>
               <ul className={NavbarStyles.menuHead}>
                 <li className={NavbarStyles.titleMenu}>
@@ -62,7 +84,6 @@ export default function Navbar() {
 
 
 export function Search() {
-
   return (
     <>
       <div className={`hidden md:block ${NavbarStyles.box}`}>
@@ -85,11 +106,11 @@ export function Search() {
 export function Search_MB() {
   return (
     <>
-    <div className='md:hidden'>
+    <div className='md:hidden ml-36'>
       <Image
         src='/icons/navbar/icons-search.svg'
-        width="30px"
-        height="30px"
+        width="25px"
+        height="25px"
         alt='search'
       />
     </div>
@@ -145,6 +166,8 @@ export function Footer() {
             </p>
             </div>
           </div>
+
+          <Footer_MB />
 
           <div className='hidden md:block'>
             <div className={NavbarStyles.foodterListHead} >Tastebite</div>
@@ -338,4 +361,73 @@ export function Footer() {
       </div>
     </div>
   );
+}
+
+
+export function Footer_MB() {
+
+  const list = [
+    {
+      link: '/',
+      link1: '/',
+      link2: '/',
+      link3: '/',
+      title: 'Tastebite',
+      text: 'About us',
+      text1: 'Careers',
+      text2: 'Contact us',
+      text3: 'FeedBack',
+    },
+    {
+      link: '/',
+      link1: '/',
+      link2: '/',
+      link3: '/',
+      title: 'Legal',
+      text: 'Terms',
+      text1: 'Conditions',
+      text2: 'Cookies',
+      text3: 'Copyright',
+    },
+    {
+      link: '/',
+      link1: '/',
+      link2: '/',
+      link3: '/',
+      title: 'Follow',
+      text: 'Facebook',
+      text1: 'Twitter',
+      text2: 'Instagram',
+      text3: 'Youtube',
+    },
+  ];
+
+  return (
+    <>
+    <div>
+    {list.map((item, index) => (
+      <div key={index} className={NavbarStyles.listMB}>
+        <h6 className={NavbarStyles.titleMB}>
+          <span>{item.title}</span>
+          <a className={NavbarStyles.dropDown}><Image width='24px' height='18px' src='/icons/navbar/icons-drop-down.png' alt='Drop Down' /></a>
+        </h6>
+        <ul className={NavbarStyles.boxList}>
+          <li className={NavbarStyles.itemList}>
+            <a href={item.link} className={NavbarStyles.textList}>{item.text}</a>
+          </li>
+          <li className={NavbarStyles.itemList}>
+            <a href={item.link1} className={NavbarStyles.textList}>{item.text1}</a>
+          </li>
+          <li className={NavbarStyles.itemList}>
+            <a href={item.link2} className={NavbarStyles.textList}>{item.text2}</a>
+          </li>
+          <li className={NavbarStyles.itemList}>
+            <a href={item.link3} className={NavbarStyles.textList}>{item.text3}</a>
+          </li>
+        </ul>
+      </div>
+    ))}
+    </div>
+    </>
+  )
 }
