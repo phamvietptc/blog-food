@@ -305,7 +305,7 @@ export function Footer() {
         <div>
         <hr style={{ color:'#E8E8E8', height:'1px'}} />
         <div className={NavbarStyles.foodterEnd}>
-          <div className={NavbarStyles.copyright}>©2022 Tastebite - All rights reserved</div>
+          <div className={NavbarStyles.copyright}>© 2022 Tastebite - All rights reserved</div>
           <div className={NavbarStyles.foodterIcon}>
               <a
                 className={NavbarStyles.foodterIcon}
@@ -404,7 +404,7 @@ export function Footer_MB() {
 
   return (
     <>
-    <div>
+    <div className='md:hidden'>
     {list.map((item, index) => (
       <div key={index} className={NavbarStyles.listMB}>
         <h6 className={NavbarStyles.titleMB}>
@@ -431,3 +431,6 @@ export function Footer_MB() {
     </>
   )
 }
+
+
+

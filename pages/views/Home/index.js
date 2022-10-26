@@ -10,17 +10,17 @@ export default function Home() {
   return (
     <>
       <div className={styles.contain}>
-        <div className={styles.content}>
-          <Navbar />
+        <Navbar />
+        <div className={styles.content}>        
           <Spotlight_Food />
           <Card_Food />
           <Card_Food />
           <Card_Ctg />
           <Email />
           <Collections />
-          <Recipes />
-          <Footer />
+          <Recipes />   
         </div>
+        <Footer />
       </div>
     </>
   );

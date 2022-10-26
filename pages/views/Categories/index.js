@@ -44,8 +44,8 @@ export default function Categories() {
     return (
         <>
         <div className={CategoriesStyles.container}>
+          <Navbar />
           <div className={CategoriesStyles.content}>
-            <Navbar />
             <div className={CategoriesStyles.categories}>
                 <h5 className={CategoriesStyles.headText}>Categories</h5>
                 <div className={CategoriesStyles.rowCategories}>
@@ -61,8 +61,8 @@ export default function Categories() {
                     ))}
                 </div>
             </div>
-            <Footer />
           </div>
+          <Footer />
         </div>
         </>
     )
