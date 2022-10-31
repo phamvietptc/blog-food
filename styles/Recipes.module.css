@@ -686,6 +686,7 @@
         vertical-align: middle;
     }
     .chart {
+        display: inherit;
         vertical-align: middle;
         width: 20;
         height: 20;

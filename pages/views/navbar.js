@@ -138,12 +138,50 @@ export function Menu() {
   return (
     <>
     <div className={`md:hidden ${NavbarStyles.menu}`}>
-      <Image
-        width='24px'
-        height='24px'
-        src='/icons/navbar/icons-menu.svg'
-        alt='Menu'
-      />
+      <div className="dropdown dropdown-end">
+        <label tabIndex={0}>
+          <Image
+              width='24px'
+              height='24px'
+              src='/icons/navbar/icons-menu.svg'
+              alt='Menu'
+            />
+        </label>
+        <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-primary-content rounded-box w-52">
+          <li>
+            <Link href={`/`}>
+              <a className='text-neutral'>
+                <span>Home Page</span> 
+                <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Home Page' />
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href={`/`}>
+              <a className='text-neutral'>
+                <span>Recipe Page</span> 
+                <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Recipe Page' />
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href={`/`}>
+              <a className='text-neutral'>
+                <span>Pages</span> 
+                <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Pages' />
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href={`/`}>
+              <a className='text-neutral'>
+                <span>Buy</span> 
+                <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Buy' />
+              </a>
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
     </>
   )
