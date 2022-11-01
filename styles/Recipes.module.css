@@ -42,6 +42,7 @@
         height: 32px;
     }
     .chart {
+        display: inherit;
         vertical-align: middle;
         line-height: 1.5;
         width: 20px;
@@ -77,6 +78,7 @@
         margin-bottom: 0.5rem !important;
     }
     .imgAuthor {
+        display: revert;
         border-radius: 50% !important;
         vertical-align: middle;
         max-width: 100%;
@@ -89,6 +91,7 @@
         font-weight: 400;
     }
     .iconsAuthor {
+        display: revert;
         vertical-align: middle;
         width: 20px;
         height: 20px;
@@ -719,6 +722,7 @@
         margin-bottom: 0.5rem !important;
     }
     .imgAuthor {
+        display: revert;
         border-radius: 50% !important;
         max-width: 100%;
         vertical-align: middle;
@@ -732,6 +736,7 @@
         font-size: 12px !important;
     }
     .iconsAuthor {
+        display: revert;
         vertical-align: middle;
         width: 20px;
         height: 20px;
@@ -819,6 +824,7 @@
         line-height: 1.5;
     }
     .iconsServings {
+        display: inherit;
         margin-left: 0.5rem !important;
         cursor: pointer;
         vertical-align: middle;

@@ -106,14 +106,9 @@ export function Search() {
 export function Search_MB() {
   return (
     <>
-    <div className='md:hidden ml-36'>
-      <Image
-        src='/icons/navbar/icons-search.svg'
-        width="25px"
-        height="25px"
-        alt='search'
-      />
-    </div>
+    <button className="md:hidden btn btn-ghost btn-circle ml-36">
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-neutral" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+    </button>
     </>
   )
 }
@@ -121,15 +116,18 @@ export function Search_MB() {
 export function Avatar() {
   return (
     <>
-      <div className={NavbarStyles.avatar} >
-        <Image
-          className={NavbarStyles.imgavatar}
-          src="/images/navbar/avt.png"
-          width='60px'
-          height='60px'
-          alt='avatar'
-        />
-      </div>
+    <div className="dropdown dropdown-end">
+      <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+        <div className="w-10 rounded-full">
+          <img src="https://placeimg.com/80/80/people" />
+        </div>
+      </label>
+      <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-primary-content rounded-box w-52">
+        <li><a className="text-neutral">Profile</a></li>
+        <li><a className="text-neutral">Settings</a></li>
+        <li><a className="text-neutral">Logout</a></li>
+      </ul>
+    </div>
     </>
   )
 }
@@ -139,22 +137,12 @@ export function Menu() {
     <>
     <div className={`md:hidden ${NavbarStyles.menu}`}>
       <div className="dropdown dropdown-end">
-
-      {/* <label tabIndex={0} className="btn border-transparent bg-inherit  swap swap-rotate">
-        <input type="checkbox" />        
-        <svg className="bg-inherit swap-off" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>       
-        <svg className="bg-inherit swap-on" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
-      </label> */}
-
-        <label tabIndex={0}>
-          <Image
-              width='24px'
-              height='24px'
-              src='/icons/navbar/icons-menu.svg'
-              alt='Menu'
-            />
+        <label tabIndex={0} className="border-transparent bg-inherit  swap swap-rotate">
+          <input type="checkbox" />        
+          <svg className="bg-inherit swap-off" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>       
+          <svg className="bg-inherit swap-on" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
         </label>
-        <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-primary-content rounded-box w-52">
+        <ul tabIndex={0} className="mt-5 dropdown-content menu p-2 shadow bg-primary-content rounded-box w-52">
           <li>
             <Link href={`/`}>
               <a className='text-neutral'>
@@ -451,26 +439,15 @@ export function Footer_MB() {
     <>
     <div className='md:hidden'>
     {list.map((item, index) => (
-      <div key={index} className={NavbarStyles.listMB}>
-        <h6 className={NavbarStyles.titleMB}>
-          <span>{item.title}</span>
-          <a className={NavbarStyles.dropDown}><Image width='24px' height='18px' src='/icons/navbar/icons-drop-down.png' alt='Drop Down' /></a>
-        </h6>
-        <ul className={NavbarStyles.boxList}>
-          <li className={NavbarStyles.itemList}>
-            <a href={item.link} className={NavbarStyles.textList}>{item.text}</a>
-          </li>
-          <li className={NavbarStyles.itemList}>
-            <a href={item.link1} className={NavbarStyles.textList}>{item.text1}</a>
-          </li>
-          <li className={NavbarStyles.itemList}>
-            <a href={item.link2} className={NavbarStyles.textList}>{item.text2}</a>
-          </li>
-          <li className={NavbarStyles.itemList}>
-            <a href={item.link3} className={NavbarStyles.textList}>{item.text3}</a>
-          </li>
-        </ul>
+    <div key={index} tabIndex={0} className="collapse collapse-arrow border-b">
+      <div className="collapse-title text-x font-medium text-neutral-focus">{item.title}</div>
+      <div className="collapse-content"> 
+        <p href={item.link} tabIndex={0} className="text-neutral">{item.text}</p>
+        <p href={item.link1} tabIndex={0} className="text-neutral">{item.text1}</p>
+        <p href={item.link2} tabIndex={0} className="text-neutral">{item.text2}</p>
+        <p href={item.link3} tabIndex={0} className="text-neutral">{item.text3}</p>
       </div>
+    </div>
     ))}
     </div>
     </>
