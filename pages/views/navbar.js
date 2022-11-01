@@ -89,12 +89,13 @@ export function Search() {
       <div className={`hidden md:block ${NavbarStyles.box}`}>
         <div className={NavbarStyles.container1}>
           <span className={NavbarStyles.icon}>
-            <Image
+            {/* <Image
               src='/icons/navbar/icons-search.svg'
               width="20px"
               height="20px"
               alt='search'
-            />
+            /> */}
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-neutral" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
           </span>
           <input type="search" id="search" placeholder="Search..." />
         </div>
@@ -119,13 +120,13 @@ export function Avatar() {
     <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img src="https://placeimg.com/80/80/people" />
+          <Image width='40px' height='40px' src="/images/navbar/avt.png" alt='Avatar' />
         </div>
       </label>
       <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-primary-content rounded-box w-52">
-        <li><a className="text-neutral">Profile</a></li>
-        <li><a className="text-neutral">Settings</a></li>
-        <li><a className="text-neutral">Logout</a></li>
+        <li><a className="link link-hover text-neutral">Profile</a></li>
+        <li><a className="link link-hover text-neutral">Settings</a></li>
+        <li><a className="link link-hover text-neutral">Logout</a></li>
       </ul>
     </div>
     </>
@@ -145,7 +146,7 @@ export function Menu() {
         <ul tabIndex={0} className="mt-5 dropdown-content menu p-2 shadow bg-primary-content rounded-box w-52">
           <li>
             <Link href={`/`}>
-              <a className='text-neutral'>
+              <a className='link link-hover text-neutral'>
                 <span>Home Page</span> 
                 <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Home Page' />
               </a>
@@ -153,7 +154,7 @@ export function Menu() {
           </li>
           <li>
             <Link href={`/`}>
-              <a className='text-neutral'>
+              <a className='link link-hover text-neutral'>
                 <span>Recipe Page</span> 
                 <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Recipe Page' />
               </a>
@@ -161,7 +162,7 @@ export function Menu() {
           </li>
           <li>
             <Link href={`/`}>
-              <a className='text-neutral'>
+              <a className='link link-hover text-neutral'>
                 <span>Pages</span> 
                 <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Pages' />
               </a>
@@ -169,7 +170,7 @@ export function Menu() {
           </li>
           <li>
             <Link href={`/`}>
-              <a className='text-neutral'>
+              <a className='link link-hover text-neutral'>
                 <span>Buy</span> 
                 <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Buy' />
               </a>
@@ -193,7 +194,7 @@ export function Footer() {
         <div className={NavbarStyles.containerFoodter}>
           <div className={NavbarStyles.foodterLogo}>
             <div className={NavbarStyles.detailLogo}>
-            <Image src="/images/navbar/Logo.svg" height={50} width={161} alt="Tastebite" />
+            <Image src="/images/navbar/Logo.svg" height={50} width={161} alt="Logo" />
             <p className={NavbarStyles.foodterTitle}>
               "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment
             </p>
@@ -401,7 +402,7 @@ export function Footer_MB() {
 
   const list = [
     {
-      link: '/',
+      link: '/views/About',
       link1: '/',
       link2: '/',
       link3: '/',
@@ -442,10 +443,10 @@ export function Footer_MB() {
     <div key={index} tabIndex={0} className="collapse collapse-arrow border-b">
       <div className="collapse-title text-x font-medium text-neutral-focus">{item.title}</div>
       <div className="collapse-content"> 
-        <p href={item.link} tabIndex={0} className="text-neutral">{item.text}</p>
-        <p href={item.link1} tabIndex={0} className="text-neutral">{item.text1}</p>
-        <p href={item.link2} tabIndex={0} className="text-neutral">{item.text2}</p>
-        <p href={item.link3} tabIndex={0} className="text-neutral">{item.text3}</p>
+        <Link href={item.link}><p className="link link-hover text-neutral my-1.5">{item.text}</p></Link>
+        <Link href={item.link1}><p className="link link-hover text-neutral my-1.5">{item.text1}</p></Link>
+        <Link href={item.link2}><p className="link link-hover text-neutral my-1.5">{item.text2}</p></Link>
+        <Link href={item.link3}><p className="link link-hover text-neutral my-1.5">{item.text3}</p></Link>
       </div>
     </div>
     ))}

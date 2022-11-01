@@ -211,7 +211,7 @@
     }
     .tickCake {
         margin-top: 25px;
-        padding-left: 40px;
+        /* padding-left: 40px; */
         display: block;
         min-height: 1.5rem;
         margin-bottom: 0.125rem;
@@ -866,7 +866,7 @@
     }
     .tickCake {
         margin-top: 25px;
-        padding-left: 40px;
+        /* padding-left: 40px; */
         display: block;
         min-height: 1.5rem;
         margin-bottom: 0.125rem;
@@ -890,6 +890,8 @@
         line-height: 1.5;
         cursor: pointer;
         display: inline-block;
+        padding-left: 2.25rem;
+        display: block;
     }
     .instructions {
         margin-top: 1rem !important;
