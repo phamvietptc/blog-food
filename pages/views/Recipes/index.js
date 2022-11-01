@@ -251,7 +251,7 @@ export function Posts() {
                                         <strong className={RecipesStyles.titleCake}>For the crust</strong>
                                         {cakeCrust.map((item, index) => (
                                         <div key={index} className={RecipesStyles.tickCake}>
-                                            <input className={RecipesStyles.tickBoxCake} />
+                                            <input type="checkbox" className="checkbox checkbox-accent rounded-full float-left mr-3" />
                                             <label className={RecipesStyles.textCake}>{item.text}</label>
                                         </div>
                                         ))}
@@ -261,7 +261,7 @@ export function Posts() {
                                         <strong className={RecipesStyles.titleCake}>For the cheescake</strong>
                                         {cake.map((item, index) => (
                                         <div key={index} className={RecipesStyles.tickCake}>
-                                            <input className={RecipesStyles.tickBoxCake} />
+                                            <input type="checkbox" className="checkbox checkbox-accent rounded-full float-left mr-3" />
                                             <label className={RecipesStyles.textCake}>{item.text}</label>
                                         </div>
                                         ))}
