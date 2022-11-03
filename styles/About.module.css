@@ -7,6 +7,7 @@
         box-sizing: border-box;
     }
     .content {
+        max-width: 1152px;
         --bs-gutter-x: 1.5rem;
         width: 100%;
         padding-right: calc(var(--bs-gutter-x) / 2);
