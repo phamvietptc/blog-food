@@ -86,15 +86,15 @@ export function Posts() {
 
     return (
         <>
-        <div className={AboutStyles.about}>
-            <h5 className={AboutStyles.titleAbout}>About</h5>
+        <div className='my-6 md:my-12'>
+            <h5 className='text-black text-2xl leading-tight font-bold font-serif py-4 my-0 md:text-4xl'>About</h5>
             <div class='detail'>
-                <hr className={AboutStyles.lines} />
+                <hr className='h-px my-0 opacity-50 md:my-6'/>
                 <br/>
-                <h2 className={AboutStyles.headAbout}>We’re a group of foodies who love cooking and the internet</h2>
+                <h2 className='text-black text-2xl leading-tight font-bold font-serif mt-0 mb-2 md:text-6xl md:leading-tight'>We’re a group of foodies who love cooking and the internet</h2>
                 <br/>
                 <Image
-                    className={AboutStyles.imgHead}
+                    className='w-full max-w-full'
                     width='1112px'
                     height='455px'
                     src='/images/about/intro-image.jpg'
@@ -102,16 +102,16 @@ export function Posts() {
                 />
                 <br/>
                 <br/>
-                <p className={AboutStyles.textHead}>Food qualities braise chicken cuts bowl through slices butternut snack. Tender meat juicy dinners. One-pot low heat plenty of time adobo fat raw soften fruit. sweet renders bone-in marrow richness kitchen, fricassee basted pork shoulder. Delicious butternut squash hunk.</p>
+                <p className='text-black font-sans text-sm leading-6 font-normal mt-0 mb-4 md:text-2xl md:leading-9 '>Food qualities braise chicken cuts bowl through slices butternut snack. Tender meat juicy dinners. One-pot low heat plenty of time adobo fat raw soften fruit. sweet renders bone-in marrow richness kitchen, fricassee basted pork shoulder. Delicious butternut squash hunk.</p>
                 <br/>
                 <div className={AboutStyles.bodyAbout}>
                     <div className={AboutStyles.leftBody}>
-                        <h2 className={AboutStyles.titleBody}>Simple, Easy Recipes for all</h2>
-                        <p className={AboutStyles.textBody}>Juicy meatballs brisket slammin' baked shoulder. Juicy smoker soy sauce burgers brisket. polenta mustard hunk greens. Wine technique snack skewers chuck excess. Oil heat slowly. slices natural delicious, set aside magic tbsp skillet, bay leaves brown centerpiece.</p>
+                        <h2 className='text-black text-2xl leading-tight font-bold font-serif mt-0 mb-2 md:text-6xl md:leading-tight'>Simple, Easy Recipes for all</h2>
+                        <p className='text-black font-sans text-sm leading-6 font-normal mt-0 mb-4 md:text-2xl md:leading-9'>Juicy meatballs brisket slammin' baked shoulder. Juicy smoker soy sauce burgers brisket. polenta mustard hunk greens. Wine technique snack skewers chuck excess. Oil heat slowly. slices natural delicious, set aside magic tbsp skillet, bay leaves brown centerpiece.</p>
                     </div>
                     <div className={AboutStyles.rightBody}>
                         <Image
-                            className={AboutStyles.imgBody}
+                            className='w-full max-w-full align-middle'
                             width='571px'
                             height='466px'
                             src='/images/about/body-image.jpg'
@@ -122,22 +122,22 @@ export function Posts() {
                 <br/>
                 <br/>
             </div>
-            <div className={AboutStyles.teamChefs}>
-                <h2 className={AboutStyles.titleTeam}>An incredible team of talented chefs and foodies</h2>
+            <div className='pt-4 mt-6 md:pt-6 md:mt-12'>
+                <h2 className='text-black text-2xl font-bold leading-tight font-serif pr-0 mt-0 mb-2 md:text-6xl md:leading-tight md:pr-12'>An incredible team of talented chefs and foodies</h2>
                 <div className={AboutStyles.rowTeam}>
                     {chefs.map((item, index) => (
                     <div key={index} className={AboutStyles.boxChefs}>
-                        <div className={AboutStyles.chefs}>
+                        <div className='mb-10 text-center'>
                             <Image
-                                className={AboutStyles.imgChefs}
+                                className='relative rounded-full overflow-hidden inline-block max-w-full align-middle'
                                 width='163px'
                                 height='163px'
                                 src={item.image}
                                 alt=''
                             />
-                            <div className={AboutStyles.detailChefs}>
-                                <h6 className={AboutStyles.nameChefs}>{item.name}</h6>
-                                <small className={AboutStyles.position}>{item.position}</small>
+                            <div className='mt-2 md:mt-4'>
+                                <h6 className='text-black text-sm font-medium leading-tight font-sans my-0 md:text-base'>{item.name}</h6>
+                                <small className='text-slate-500 text-xs font-sans font-normal leading-3 block mt-1 md:leading-6'>{item.position}</small>
                             </div>
                         </div>
                     </div>
@@ -154,16 +154,16 @@ export function Posts() {
 export function Operatring() {
     return (
         <>
-        <div className={AboutStyles.operatring}>
+        <div className='py-1 my-1 md:py-12 md:my-12'>
             <div className={AboutStyles.rowOperatring}>
                 <div className={AboutStyles.leftOperatring}>
-                    <strong className={AboutStyles.titleOperatring}>Operatring from NYC, Dubai and London</strong>
-                    <small className={AboutStyles.textOperatring}>Gastronomy atmosphere set aside. Slice butternut cooking home. Delicious romantic undisturbed raw platter will meld. Thick Skewers skillet natural, smoker soy sauce wait roux. slices rosette bone-in simmer precision alongside baby leeks. Crafting renders aromatic enjoyment.</small>
+                    <strong className='text-black text-sm leading-6 font-semibold font-sans mb-2 block md:text-base md:leading-6'>Operatring from NYC, Dubai and London</strong>
+                    <small className='text-slate-800 text-xs font-sans leading-6 font-normal'>Gastronomy atmosphere set aside. Slice butternut cooking home. Delicious romantic undisturbed raw platter will meld. Thick Skewers skillet natural, smoker soy sauce wait roux. slices rosette bone-in simmer precision alongside baby leeks. Crafting renders aromatic enjoyment.</small>
                     <br/>
                     <br/>
-                    <hr style={{borderColor:'#E8E8E8', backgroundColor:'currentcolor', color:'inherit', opacity:'0.3', height:'1px', margin:'1rem 0'}} />
+                    <hr className='h-px my-4 opacity-50'/>
                     <br/>
-                    <div className={AboutStyles.boxIcons}>
+                    <div className='items-center flex'>
                       <a href='' style={{cursor:'pointer'}}><Image width='20px' height='20px' src='/icons/about/icons-facebook.svg' alt=''/></a>
                       <a href='' style={{marginLeft:'1.5rem', cursor:'pointer'}}><Image width='20px' height='20px' src='/icons/about/icons-twitter.svg' alt=''/></a>
                       <a href='' style={{marginLeft:'1.5rem', cursor:'pointer'}}><Image width='20px' height='20px' src='/icons/about/icons-instagram.svg' alt=''/></a>
