@@ -283,69 +283,69 @@ export function Posts() {
                         </div>
 
                         <div className={RecipesStyles.rightBlock}>
-                            <div className={RecipesStyles.nutrition}>
-                                <h6 className={RecipesStyles.titleNutrition}>Nutrition Facts</h6>
+                            <div className='bg-slate-100 rounded-xl p-6'>
+                                <h6 className='text-black text-xl font-bold font-serif leading-tight mt-0 mb-6 md:text-3xl md:leading-tight'>Nutrition Facts</h6>
                                 {nutrition.map((item, index) => (
-                                <ul key={index} className={RecipesStyles.listNutrition}>
-                                    <li className={RecipesStyles.contentNutrition}>
-                                        <span className={RecipesStyles.textNutrition}>{item.text}</span>
-                                        <span className={RecipesStyles.valueNutrition}>{item.value}</span>
+                                <ul key={index} className='pl-0 list-none my-0'>
+                                    <li className='flex flex-wrap items-center py-1.5 border-t border-solid border-inherit'>
+                                        <span className='text-gray-800 text-base font-sans font-light leading-normal w-1/2'>{item.text}</span>
+                                        <span className='text-black text-base font-sans font-normal leading-6 w-1/2 text-right'>{item.value}</span>
                                     </li>
                                 </ul>
                                 ))}
                             </div>
-                            <div className={RecipesStyles.fresh}>
-                              <h6 className={RecipesStyles.titleFresh}>Fresh Recipes</h6>
+                            <div className='pt-4 mt-6 md:pt-12 md:mt-12'>
+                              <h6 className='text-black text-xl font-bold font-serif leading-tight mt-0 mb-2 md:text-3xl md:leading-tight'>Fresh Recipes</h6>
                               {fresh.map((item, index) => (
                               <div key={index} className={RecipesStyles.blockFresh}>
                                 <img className={RecipesStyles.imgFresh} src={item.img} />
                                 <div className={RecipesStyles.boxFresh}>
-                                  <div className={RecipesStyles.detailFresh}>
-                                    <div className={RecipesStyles.votedFresh}>{item.voted}</div>
-                                    <h6 className={RecipesStyles.textFresh}>{item.text}</h6>
+                                  <div className='pl-4'>
+                                    <div className='w-full float-left text-red-600 leading-loose font-bold cursor-pointer md:mt-1 md:mr-1 md:mb-2.5 md:ml-0'>{item.voted}</div>
+                                    <h6 className='text-black text-base font-semibold leading-tight font-sans my-2 cursor-pointer md:text-xl md:leading-tight'>{item.text}</h6>
                                   </div>
                                 </div>
                               </div>
                               ))}
                             </div>
-                            <div className={RecipesStyles.email}>
-                              <div className={RecipesStyles.boxEmail}>
-                                <h5 className={RecipesStyles.headEmail}>Deliciousness to your inbox</h5>
-                                <p className={RecipesStyles.textEmail}>Enjoy weekly hand picked recipes and recommendations</p>
-                                <div className={RecipesStyles.formEmail}>
+                            <div className='bg-orange-100 rounded-md py-12 px-6 mt-12'>
+                              <div className='text-center py-4'>
+                                <h5 className='text-black text-2xl font-bold font-serif leading-tight mt-0 mb-4 md:text-4xl md:leading-tight'>Deliciousness to your inbox</h5>
+                                <p className='text-black text-sm leading-6 font-sans font-normal mt-0 mb-4 md:text-base md:leading-6'>Enjoy weekly hand picked recipes and recommendations</p>
+                                <div className='relative flex flex-wrap flex-col rounded overflow-hidden items-stretch w-full mt-6'>
                                   <input
                                     className={RecipesStyles.inputEmail}
                                     type="email"
                                     placeholder="Email Address"
                                   />
                                   <div
-                                    className={RecipesStyles.submitEmail}
+                                    className='my-3.5'
                                     onClick={'/...'}
                                   >
-                                    <button className={RecipesStyles.btnEmail}>JOIN</button>
+                                    <button className='bg-orange-500 cursor-pointer text-lg font-semibold py-1 px-10 h-12 w-full rounded'>JOIN</button>
                                   </div>
                                 </div>
-                                <small className={RecipesStyles.endEmail}>By joining our newsletter you agree to our <br/> <u href='/' className={RecipesStyles.termsEmail}>Terms and Conditions</u></small>
+                                <small className='block text-black text-xs font-sans leading-normal font-normal'>By joining our newsletter you agree to our <br/> <u href='/' className='hover:text-red-400 decoration-red-400 underline-offset-4 cursor-pointer'>Terms and Conditions</u></small>
                               </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className={RecipesStyles.headFeedback}>
-                    <h2 className={RecipesStyles.titleFeedback}>Already made this?</h2>
-                    <div href='/' className={RecipesStyles.btnFeedback}>Share your feedback</div>
+                <div className='pb-6 pt-12 my-6 md:py-12 md:my-12'>
+                    <h2 className='text-black text-3xl font-bold font-serif leading-tight mt-0 mb-4 md:text-6xl md:leading-tight'>Already made this?</h2>
+                    <div href='/' className='text-black text-base font-sans leading-normal font-medium px-12 py-1.5 inline-block cursor-pointer border border-solid border-black rounded'>Share your feedback</div>
                     <br />
                     <br />
                     <hr style={{backgroundColor:'#FF642F', height:'11px', opacity:'1', borderColor:'#E8E8E8', margin:'16px 0', color:'inherit', border:'0'}} />
                 </div>
 
-                <div className={RecipesStyles.comments}>
-                    <div className={RecipesStyles.headComments}>
-                        <h2 className={RecipesStyles.titleComments}>Comments</h2>
-                        <span className={RecipesStyles.numberComments}> (25)</span>
+                <div className='pt-0 my-12 md:pt-4'>
+                    <div className='pb-4 mb-6 border-b border-solid border-gray-300'>
+                        <h2 className='inline-block text-black text-3xl font-bold leading-tight font-serif mt-0 mb-2 md:text-6xl md:leading-tight'>Comments</h2>
+                        <span className='text-black text-base font-sans font-normal leading-normal md:text-2xl md:leading-normal'> (25)</span>
                     </div>
-                    <ul className={RecipesStyles.blockComments}>
+                    <ul className='my-0 pl-0'>
                         <li></li>
                     </ul>
                 </div>
@@ -405,14 +405,14 @@ export function Suggestions() {
 
   return (
     <>
-      <div className={RecipesStyles.suggestions}>
-        <h5 className={RecipesStyles.titleSuggestions}>You might also like</h5>
+      <div className='my-6 md:my-12'>
+        <h5 className='text-black font-bold font-serif text-2xl leading-tight py-4 my-0 md:text-4xl md:leading-tight'>You might also like</h5>
         <div className={RecipesStyles.rowSuggestions}>
           {suggestions.map((item, index) => (
           <div key={index} className={RecipesStyles.blockSuggestions}>
-            <div className={RecipesStyles.boxSuggestions} href={item.link}>
-              <img className={RecipesStyles.imgSuggestions} src={item.img} />
-              <div className={RecipesStyles.textSuggestions}>{item.text}</div>
+            <div className='relative my-4 md:my-6' href={item.link}>
+              <img className='block overflow-hidden rounded-md w-full max-w-full cursor-pointer' src={item.img} />
+              <div className='block text-black text-sm font-sans leading-normal font-semibold mt-2 cursor-pointer md:text-lg md:leading-normal'>{item.text}</div>
             </div>
           </div>
           ))}

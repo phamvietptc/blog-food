@@ -1,354 +1,132 @@
+.container {
+    background-color: #ffff;
+    padding: 0 !important;
+    outline: none;
+    box-sizing: border-box;
+}
+.content {
+    --bs-gutter-x: 1.5rem;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+ /* Posts */
+ .blockDetail {
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.leftBlock {
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin-top: var(--bs-gutter-y);
+}
+.rightBlock {
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin-top: var(--bs-gutter-y);
+}
+.blockFresh {
+    position: relative;
+    padding-bottom: 0.5rem !important;
+    margin-top: 1.5rem !important;
+    align-items: center !important;
+    --bs-gutter-y: 0;
+    --bs-gutter-x: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 1rem;
+}
+.imgFresh {
+    flex: 0 0 auto;
+    width: 33%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin-top: var(--bs-gutter-y);
+    display: block;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.boxFresh {
+    background-color: #fff !important;
+    flex: 0 0 auto;
+    width: 67%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin-top: var(--bs-gutter-y);
+}
+.inputEmail {
+    width: 100%;
+    height: 48px;
+    font-size: 14px;
+    background-image: url(/icons/recipes/icons-email.png);
+    background-repeat: no-repeat;
+    background-position: left 15px center;
+    border-radius: 4px !important;
+    padding-left: 48px;
+    border: none;
+    position: relative;
+    flex: 1 1 auto;
+    min-width: 0;
+    display: block;
+    min-height: calc(1.5em + 0.75rem + 2px);
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    font-family: inherit;
+    outline: none;
+}
+
+/* Suggestions */
+.rowSuggestions {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+}
+.blockSuggestions {
+    flex: 0 0 auto;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin-top: var(--bs-gutter-y);
+}
+
+
 /* Desktop */
 @media only screen and (min-width: 768px) {
-    .container {
-        background-color: #ffff;
-        padding: 0 !important;
-        outline: none;
-        box-sizing: border-box;
-    }
+    
     .content {
-        max-width: 1140px;
-        --bs-gutter-x: 1.5rem;
-        width: 100%;
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        padding-left: calc(var(--bs-gutter-x) / 2);
-        margin-right: auto;
-        margin-left: auto;
+        max-width: 1152px;
     }
 
     /* Posts */
-    .recipes {
-        margin-top: 3rem !important;
-        margin-bottom: 3rem !important;
-    }
-    .head {
-        display: flex !important;
-    }
-    .iconsHead {
-        order: 2 !important;
-        margin-left: auto !important;
-    }
-    .iconsBlock {
-        display: flex;
-        padding-top: 0 !important;
-    }
-    .iconsShare {
-        margin-left: 35px;
-        cursor: pointer;
-    }
-    .share {
-        vertical-align: middle;
-        width: 32px;
-        height: 32px;
-    }
-    .chart {
-        display: inherit;
-        vertical-align: middle;
-        line-height: 1.5;
-        width: 20px;
-        height: 20px;
-    }
-    .spanHead {
-        font-size: 14px !important;
-        font-weight: 500 !important;
-        margin-left: 0.5rem !important;
-        font-family: "Inter", sans-serif;
-        color: #000;
-        line-height: 1.5;
-    }
-    .textHead {
-        font-size: 60px;
-        color: #000;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-        margin-bottom: 0 !important;
-        margin-top: 0;
-        line-height: 1.2;
-    }
-    .author {
-        flex-wrap: wrap !important;
-        display: flex !important;
-        line-height: 1.5;
-    }
-    .boxAuthor {
-        margin-right: 1.5rem !important;
-        margin-top: 0.5rem !important;
-        margin-bottom: 0.5rem !important;
-    }
-    .imgAuthor {
-        display: revert;
-        border-radius: 50% !important;
-        vertical-align: middle;
-        max-width: 100%;
-    }
-    .textAuthor {
-        padding-left: 0.25rem !important;
-        font-size: 12px !important;
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-weight: 400;
-    }
-    .iconsAuthor {
-        display: revert;
-        vertical-align: middle;
-        width: 20px;
-        height: 20px;
-    }
-    .voted {
-        margin-top: 0.5rem !important;
-        margin-bottom: 0.5rem !important;
-        line-height: 1.5;
-        color: red;
-        font-weight: bold;
-    }
-    .preface {
-        font-size: 20px;
-        line-height: 37px;
-        margin-top: 0;
-        margin-bottom: 1rem;
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-weight: 400;
-    }
-    .imgIntro {
-        border-radius: 12px;
-        position: relative !important;
-        overflow: hidden !important;
-        width: 100% !important;
-        max-width: 100%;
-        vertical-align: middle;
-    }
     .blockDetail {
         margin-top: 3rem !important;
-        margin-right: calc(var(--bs-gutter-x) / -2);
-        margin-left: calc(var(--bs-gutter-x) / -2);
-        --bs-gutter-x: 1.5rem;
-        --bs-gutter-y: 0;
-        display: flex;
-        flex-wrap: wrap;
     }
     .leftBlock {
         flex: 0 0 auto;
         width: 65%;
-        max-width: 100%;
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        padding-left: calc(var(--bs-gutter-x) / 2);
-        margin-top: var(--bs-gutter-y);
-    }
-    .inLeftBlock {
-        padding-right: 3rem !important;
-    }
-    .foodPlan {
-        margin: 0 -30px;
-        display: flex;
-        flex-wrap: wrap;
-        padding-left: 0;
-        list-style: none;
-    }
-    .headPlan {
-        padding: 5px 30px;
-    }
-    .plan {
-        padding: 5px 30px;
-        border-left: 1px solid #E8E8E8;
-    }
-    .textPlan {
-        color: #7F7F7F;
-        display: block;
-        line-height: 11px;
-        font-size: 12px !important;
-        font-family: "Inter", sans-serif;
-        font-weight: 400;
-    }
-    .timePlan {
-        font-size: 14px;
-        color: #000;
-        font-family: "Inter", sans-serif;
-        font-weight: 400;
-        line-height: 1.5;
-    }
-    .iconsServings {
-        margin-left: 0.5rem !important;
-        cursor: pointer;
-        vertical-align: middle;
-        width: 25px;
-        height: 25px;
-    }
-    .print {
-        border-left: 1px solid #E8E8E8;
-        padding: 5px 30px;
-    }
-    .iconsPrint {
-        cursor: pointer;
-        vertical-align: middle;
-        width: 25px;
-        height: 25px;
-    }
-    .ingredients {
-        margin-top: 3rem !important;
-    }
-    .headIngredients {
-        color: #000;
-        font-size: 30px;
-        font-weight: 700;
-        font-family: "Playfair Display", serif;
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-        line-height: 1.2;
-    }
-    .cake {
-        margin-top: 24px;
-        padding-bottom: 0.5rem !important;
-    }
-    .titleCake {
-        font-weight: 600;
-        font-size: 18px;
-        font-family: "Inter", sans-serif;
-        color: #000;
-        line-height: 1.5;
-    }
-    .tickCake {
-        margin-top: 25px;
-        /* padding-left: 40px; */
-        display: block;
-        min-height: 1.5rem;
-        margin-bottom: 0.125rem;
-    }
-    .tickBoxCake {
-        border-radius: 50%;
-        width: 24px;
-        height: 24px;
-        margin-left: -40px;
-        margin-top: 0;
-        border-color: #000;
-        border-width: 2px;
-        float: left;
-        cursor: pointer;
-        background-color: #fff;
-    }
-    .textCake {
-        font-family: "Inter", sans-serif;
-        color: #000;
-        line-height: 1.5;
-        font-weight: 400;
-        font-size: 18px;
-        cursor: pointer;
-        display: inline-block;
-    }
-    .instructions {
-        margin-top: 3rem !important;
-    }
-    .titleInstructions {
-        color: #000;
-        font-size: 30px;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        line-height: 1.2;
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-    
-    }
-    .listInstructions {
-        padding-top: 15px;
-        padding-left: 0;
-        list-style: none;
-        margin-top: 0;
-        margin-bottom: 1rem;
-        }
-    .textInstructions {
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-weight: 400;
-        line-height: 1.5;
-        font-size: 18px;
-        padding-left: 40px;
-        position: relative;
-        padding-right: 30px;
-    }
-    .numberInstructions {
-        position: absolute;
-        top: 2px;
-        left: 0;
-        width: 24px;
-        height: 24px;
-        border-radius: 100%;
-        background-color: #FF642F;
-        font-weight: 500;
-        font-size: 14px;
-        color: #fff;
-        text-align: center;
-        line-height: 22px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
     }
     .rightBlock {
         flex: 0 0 auto;
-        width: 35%;
-        max-width: 100%;
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        padding-left: calc(var(--bs-gutter-x) / 2);
-        margin-top: var(--bs-gutter-y);
-    }
-    .nutrition {
-        border-radius: 12px;
-        background-color: #f9f9f9 !important;
-        padding: 1.5rem !important;
-    }
-    .titleNutrition {
-        color: #000;
-        font-size: 30px;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        line-height: 1.2;
-        margin-top: 0;
-        margin-bottom: 1.5rem;
-    }
-    .listNutrition {
-        padding-left: 0;
-        list-style: none;
-        margin-top: 0;
-        margin-bottom: 0rem;
-    }
-    .contentNutrition {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 6px 0;
-        border-top: 1px solid #E8E8E8;
-    }
-    .textNutrition {
-        color: #303030;
-        font-size: 16px;
-        width: 50%;
-        font-weight: 300;
-        font-family: "Inter", sans-serif;
-        line-height: 1.5;
-    }
-    .valueNutrition {
-        font-weight: 400;
-        color: #000;
-        text-align: right;
-        font-size: 16px;
-        width: 50%;
-        font-family: "Inter", sans-serif;
-        line-height: 1.5;
-    }
-    .fresh {
-        padding-top: 3rem !important;
-        margin-top: 3rem !important;
-    }
-    .titleFresh {
-        color: #000;
-        font-size: 30px;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        line-height: 1.2;
-        margin-top: 0;
-        margin-bottom: 0.5rem;
+        width: 35%;    
     }
     .blockFresh {
         position: relative;
@@ -363,283 +141,15 @@
         flex-wrap: wrap;
         margin: 0 0 1rem;
     }
-    .imgFresh {
-        flex: 0 0 auto;
-        width: 33%;
-        max-width: 100%;
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        padding-left: calc(var(--bs-gutter-x) / 2);
-        margin-top: var(--bs-gutter-y);
-        display: block;
-        overflow: hidden;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-    .boxFresh {
-        background-color: #fff !important;
-        flex: 0 0 auto;
-        width: 67%;
-        max-width: 100%;
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        padding-left: calc(var(--bs-gutter-x) / 2);
-        margin-top: var(--bs-gutter-y);
-    }
-    .detailFresh {
-        padding-left: 1rem !important;
-    }
-    .votedFresh {
-        width: 100% !important;
-        float: left !important;
-        color: red;
-        cursor: pointer;
-        margin: 5px 5px 10px 0;
-        font-weight: bold;
-    }
-    .textFresh {
-        color: #000;
-        font-size: 20px;
-        font-weight: 600 !important;
-        font-family: "Inter", sans-serif !important;
-        margin-top: 0.5rem !important;
-        margin-bottom: 0.5rem;
-        line-height: 1.2;
-        cursor: pointer;
-    }
-    .email {
-        border-radius: 6px;
-        background-color: #ffd8ca;
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-        padding-right: 1.5rem !important;
-        padding-left: 1.5rem !important;
-        margin-top: 3rem !important;
-    }
-    .boxEmail {
-        text-align: center !important;
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-    }
-    .headEmail {
-        margin-bottom: 1rem !important;
-        color: #000;
-        font-size: 36px;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        line-height: 1.2;
-        margin-top: 0;
-    }
-    .textEmail {
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 400 !important;
-        margin-top: 0;
-        margin-bottom: 1rem;
-    }
-    .formEmail {
-        flex-direction: column;
-        position: relative;
-        border-radius: 3px;
-        overflow: hidden;
-        margin-top: 1.5rem !important;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-        width: 100%;
-    }
     .inputEmail {
-        width: 100%;
-        height: 48px;
-        font-size: 14px;
-        background-image: url(/icons/recipes/icons-email.png);
-        background-repeat: no-repeat;
-        background-position: left 15px center;
-        padding-left: 48px;
         padding-right: 12px;
-        border-radius: 4px;
-        border: none;
-        position: relative;
-        flex: 1 1 auto;
-        min-width: 0;
-        display: block;
-        min-height: calc(1.5em + 0.75rem + 2px);
-        font-weight: 400;
-        line-height: 1.5;
-        color: #495057;
-        background-color: #fff;
-        background-clip: padding-box;
         overflow: visible;
         margin: 0;
-        font-family: inherit;
-        outline: none;
-    }
-    .submitEmail {
-        margin: 15px 0;
-        /* border: none;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-        font-size: 16px;
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-weight: 400;
-        line-height: 1.5; */
-        
-    }
-    .btnEmail {
-        border-radius: 4px;
-        width: 100%;
-        height: 48px;
-        padding: 5px 42px;
-        font-weight: 600;
-        font-size: 18px;
-        position: relative;
-        z-index: 2;
-        border-color: #ff642b;
-        background-color: #ff642b;
-        color: #fff !important;
-        border: 1px solid transparent;
-        cursor: pointer;
-    }
-    .endEmail {
-        display: block !important;
-        font-size: 12px !important;
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-weight: 400;
-        line-height: 1.5;
-    }
-    .termsEmail {
-        text-decoration-color: #FF642F;
-        text-underline-position: under;
-        cursor: pointer;
-    }
-    .headFeedback {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-        margin-top: 3rem !important;
-        margin-bottom: 3rem !important;
-    }
-    .titleFeedback {
-        color: #000;
-        font-size: 60px;
-        font-weight: bold;
-        line-height: 1.2;
-        font-family: "Playfair Display", serif;
-        margin-bottom: 1rem !important;
-        margin-top: 0;
-    }
-    .btnFeedback {
-        color: #000;
-        font-size: 16px;
-        font-family: "Inter", sans-serif;
-        font-weight: 500;
-        line-height: 1.5;
-        /* background-color: transparent; */
-        border-color: #000;
-        padding-right: 3rem !important;
-        padding-left: 3rem !important;
-        display: inline-block;
-        text-align: center;
-        text-decoration: none;
-        vertical-align: middle;
-        cursor: pointer;
-        border: 1px solid #000;
-        padding: 0.375rem 0.75rem;
-        border-radius: 0.25rem;
-    }
-    .comments {
-        padding-top: 1rem !important;
-        margin-top: 3rem !important;
-        margin-bottom: 3rem !important;
-    }
-    .headComments {
-        border-color: rgba(0, 0, 0, 0.2);
-        padding-bottom: 1rem !important;
-        margin-bottom: 1.5rem !important;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
-    }
-    .titleComments {
-        color: #000;
-        font-size: 60px;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        line-height: 1.2;
-        display: inline-block !important;
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-    }
-    .numberComments {
-        font-size: 24px;
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-weight: 400;
-        line-height: 1.5;
-    }
-    .blockComments {
-        margin-bottom: 0 !important;
-        padding-left: 0;
-        list-style: none;
-        margin-top: 0;
     }
 
     /* Suggestions */
-    .suggestions {
-        margin-top: 3rem !important;
-        margin-bottom: 3rem !important;
-        outline: none;
-    }
-    .titleSuggestions {
-        color: #000;
-        font-size: 36px;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        line-height: 1.2;
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-        margin-bottom: 0 !important;
-        margin-top: 0;
-    }
-    .rowSuggestions {
-        --bs-gutter-x: 1.5rem;
-        --bs-gutter-y: 0;
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: calc(var(--bs-gutter-y) * -1);
-        margin-right: calc(var(--bs-gutter-x) / -2);
-        margin-left: calc(var(--bs-gutter-x) / -2);
-    }
     .blockSuggestions {
-        flex: 0 0 auto;
         width: 25%;
-        max-width: 100%;
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        padding-left: calc(var(--bs-gutter-x) / 2);
-        margin-top: var(--bs-gutter-y);
-    }
-    .boxSuggestions {
-        position: relative;
-        margin-top: 1.5rem !important;
-        margin-bottom: 1.5rem !important;
-        margin: 0 0 1rem;
-    }
-    .imgSuggestions {
-        display: block;
-        overflow: hidden;
-        border-radius: 6px;
-        width: 100% !important;
-        max-width: 100%;
-        cursor: pointer;
-    }
-    .textSuggestions {
-        display: block !important;
-        margin-top: 0.75rem !important;
-        cursor: pointer;
-        color: #000;
-        font-size: 18px;
-        font-weight: 600 !important;
-        font-family: "Inter", sans-serif;
-        line-height: 1.5;
     }
 }
 
@@ -647,648 +157,27 @@
 
 /* Mobile */
 @media only screen and (max-width: 768px) {
-    .container {
-        background-color: #fff;
-        padding: 0 !important;
-        outline: none;
-    }
-    .content {
-        --bs-gutter-x: 1.5rem;
-        width: 100%;
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        padding-left: calc(var(--bs-gutter-x) / 2);
-        margin-right: auto;
-        margin-left: auto;
-    }
 
     /* Posts */
-    .recipes {
-        margin-top: 1.5rem !important;
-        margin-bottom: 1.5rem !important;
-    }
-    .head {
-        outline: none;
-    }
-    .iconsHead {
-        margin-left: auto !important;
-    }
-    .iconsBlock {
-        margin-bottom: -23px;
-        justify-content: flex-end;
-        display: flex;
-        padding-top: 0 !important;
-    }
-    .iconsShare {
-        margin-left: 18px;
-    }
-    .share {
-        cursor: pointer;
-        line-height: 1.5;
-        width: 20px;
-        height: 20px;
-        vertical-align: middle;
-    }
-    .chart {
-        display: inherit;
-        vertical-align: middle;
-        width: 20;
-        height: 20;
-    }
-    .spanHead {
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-size: 10px !important;
-        font-weight: 500 !important;
-        margin-left: 0.5rem !important;
-    }
-    .textHead {
-        color: #000;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        font-size: 24px;
-        line-height: 1.2;
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-        margin-bottom: 0 !important;
-        margin-top: 0;
-    }
-    .author {
-        flex-wrap: wrap !important;
-        display: flex !important;
-    }
-    .boxAuthor {
-        margin-right: 1.5rem !important;
-        margin-top: 0.5rem !important;
-        margin-bottom: 0.5rem !important;
-    }
-    .imgAuthor {
-        display: revert;
-        border-radius: 50% !important;
-        max-width: 100%;
-        vertical-align: middle;
-    }
-    .textAuthor {
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-weight: 400;
-        line-height: 1.5;
-        padding-left: 0.25rem !important;
-        font-size: 12px !important;
-    }
-    .iconsAuthor {
-        display: revert;
-        vertical-align: middle;
-        width: 20px;
-        height: 20px;
-    }
-    .textAuthor {
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-size: 12px !important;
-        font-weight: 400;
-        line-height: 1.5;
-    }
-    .voted {
-        margin-top: 0.5rem !important;
-        margin-bottom: 0.5rem !important;
-        width: 100% !important;
-        float: left !important;
-        line-height: 1.5;
-        color: red;
-        font-weight: bold;
-    }
-    .preface {
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-size: 14px;
-        line-height: 23px;
-        font-weight: 400;
-        margin-top: 0;
-        margin-bottom: 1rem;
-    }
-    .imgIntro {
-        border-radius: 12px;
-        position: relative !important;
-        overflow: hidden !important;
-        width: 100% !important;
-        max-width: 100%;
-        vertical-align: middle;
-    }
     .blockDetail {
         margin-top: 0 !important;
-        --bs-gutter-x: 1.5rem;
-        --bs-gutter-y: 0;
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: calc(var(--bs-gutter-x) / -2);
-        margin-left: calc(var(--bs-gutter-x) / -2);
     }
     .leftBlock {
         flex-shrink: 0;
         width: 100%;
-        max-width: 100%;
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        padding-left: calc(var(--bs-gutter-x) / 2);
-        margin-top: var(--bs-gutter-y);
-    }
-    .inLeftBlock {
-        padding-right: 0 !important;
-    }
-    .foodPlan {
-        display: flex;
-        flex-wrap: wrap;
-        padding-left: 0;
-        list-style: none;
-    }
-    .headPlan {
-        padding: 5px 8px;
-    }
-    .plan {
-        padding: 5px 8px;
-        border-left: 1px solid #E8E8E8;
-    }
-    .textPlan {
-        color: #7F7F7F;
-        font-family: "Inter", sans-serif;
-        font-weight: 400;
-        text-transform: uppercase;
-        display: block;
-        line-height: 11px;
-        font-size: 12px !important;
-    }
-    .timePlan {
-        font-size: 14px;
-        color: #000;
-        font-family: "Inter", sans-serif;
-        font-weight: 400;
-        line-height: 1.5;
-    }
-    .iconsServings {
-        display: inherit;
-        margin-left: 0.5rem !important;
-        cursor: pointer;
-        vertical-align: middle;
-        width: 20px;
-        height: 20px;
-    }
-    .print {
-        border-left: 1px solid #E8E8E8;
-        padding: 5px 8px;
-    }
-    .iconsPrint {
-        cursor: pointer;
-        vertical-align: middle;
-        width: 20px;
-        height: 20px;
-    }
-    .ingredients {
-        margin-top: 1.5rem !important;
-    }
-    .headIngredients {
-        color: #000;
-        font-size: 20px;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-        line-height: 1.2;
-    }
-    .cake {
-        margin-top: 24px;
-        padding-bottom: 0.5rem !important;
-    }
-    .titleCake {
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 1.5;
-    }
-    .tickCake {
-        margin-top: 25px;
-        /* padding-left: 40px; */
-        display: block;
-        min-height: 1.5rem;
-        margin-bottom: 0.125rem;
-    }
-    .tickBoxCake {
-        border-radius: 50%;
-        width: 24px;
-        height: 24px;
-        margin-left: -40px;
-        border-color: #000;
-        border-width: 2px;
-        float: left;
-        cursor: pointer;
-        background-color: #fff;
-    }
-    .textCake {
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 1.5;
-        cursor: pointer;
-        display: inline-block;
-        padding-left: 2.25rem;
-        display: block;
-    }
-    .instructions {
-        margin-top: 1rem !important;
-        margin-bottom: 70px;
-    }
-    .titleInstructions {
-        color: #000;
-        font-size: 20px;
-        font-weight: 700;
-        font-family: "Playfair Display", serif;
-        line-height: 1.2;
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-    }
-    .listInstructions {
-        padding-top: 15px;
-        padding-left: 0;
-        list-style: none;
-        margin-top: 0;
-    }
-    .textInstructions {
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 23px;
-        padding-right: 0;
-        padding-left: 35px;
-        position: relative;
-    }
-    .numberInstructions {
-        position: absolute;
-        top: 2px;
-        left: 0;
-        width: 24px;
-        height: 24px;
-        border-radius: 100%;
-        background-color: #FF642F;
-        font-weight: 500;
-        font-size: 14px;
-        color: #fff;
-        text-align: center;
-        line-height: 22px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
     }
     .rightBlock {
         flex-shrink: 0;
         width: 100%;
-        max-width: 100%;
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        padding-left: calc(var(--bs-gutter-x) / 2);
-        margin-top: var(--bs-gutter-y);
-    }
-    .nutrition {
-        border-radius: 12px;
-        background-color: #f9f9f9 !important;
-        padding: 1.5rem !important;
-    }
-    .titleNutrition {
-        color: #000;
-        font-size: 20px;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        line-height: 1.2;
-        margin-top: 0;
-        margin-bottom: 1.5rem;
-    }
-    .listNutrition {
-        padding-left: 0;
-        list-style: none;
-        margin-top: 0;
-        margin-bottom: 0rem;
-    }
-    .contentNutrition {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 6px 0;
-        border-top: 1px solid #E8E8E8;
-    }
-    .textNutrition {
-        color: #303030;
-        font-size: 16px;
-        width: 50%;
-        font-weight: 300;
-        font-family: "Inter", sans-serif;
-        line-height: 1.5;
-    }
-    .valueNutrition {
-        font-weight: 400;
-        color: #000;
-        text-align: right;
-        font-size: 16px;
-        width: 50%;
-        font-family: "Inter", sans-serif;
-        line-height: 1.5;
-    }
-    .fresh {
-        padding-top: 1rem !important;
-        margin-top: 1.5rem !important;
-    }
-    .titleFresh {
-        color: #000;
-        font-size: 20px;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-        line-height: 1.2;
-    }
-    .blockFresh {
-        position: relative;
-        padding-bottom: 0.5rem !important;
-        margin-top: 1.5rem !important;
-        align-items: center !important;
-        --bs-gutter-y: 0;
-        --bs-gutter-x: 0;
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 0 1rem;
-    }
-    .imgFresh {
-        flex: 0 0 auto;
-        width: 33%;
-        max-width: 100%;
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        padding-left: calc(var(--bs-gutter-x) / 2);
-        margin-top: var(--bs-gutter-y);
-        display: block;
-        overflow: hidden;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-    .boxFresh {
-        background-color: #fff !important;
-        flex: 0 0 auto;
-        width: 67%;
-        max-width: 100%;
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        padding-left: calc(var(--bs-gutter-x) / 2);
-        margin-top: var(--bs-gutter-y);
-    }
-    .detailFresh {
-        padding-left: 1rem !important;
-    }
-    .votedFresh {
-        width: 100% !important;
-        float: left !important;
-        color: red;
-        line-height: 2.5;
-        font-weight: bold;
-    }
-    .textFresh {
-        color: #000;
-        font-size: 16px;
-        font-weight: 600 !important;
-        line-height: 1.2;
-        font-family: "Inter", sans-serif !important;
-        margin-top: 0.5rem !important;
-        margin-bottom: 0.5rem;
-    }
-    .email {
-        border-radius: 6px;
-        background-color: #ffd8ca;
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-        padding-right: 1.5rem !important;
-        padding-left: 1.5rem !important;
-        margin-top: 3rem !important;
-    }
-    .boxEmail {
-        text-align: center !important;
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-    }
-    .headEmail {
-        font-size: 24px;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        line-height: 1.2;
-        color: #000;
-        margin-bottom: 1rem !important;
-        margin-top: 0;
-    }
-    .textEmail {
-        color: #000;
-        font-size: 14px;
-        line-height: 23px;
-        font-family: "Inter", sans-serif;
-        font-weight: 400 !important;
-        margin-top: 0;
-        margin-bottom: 1rem;
-    }
-    .formEmail {
-        flex-direction: column;
-        position: relative;
-        border-radius: 3px;
-        overflow: hidden;
-        margin-top: 1.5rem !important;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-        width: 100%;
     }
     .inputEmail {
-        width: 100%;
-        height: 48px;
-        font-size: 14px;
-        background-image: url(/icons/recipes/icons-email.png);
-        background-repeat: no-repeat;
-        background-position: left 15px center;
-        padding-left: 48px;
         padding-right: 15px;
         margin-bottom: 0;
-        border-radius: 4px !important;
-        border: none;
-        position: relative;
-        flex: 1 1 auto;
-        min-width: 0;
         transition: none;
-        display: block;
-        min-height: calc(1.5em + 0.75rem + 2px);
-        font-weight: 400;
-        line-height: 1.5;
-        color: #495057;
-        background-color: #fff;
-        background-clip: padding-box;
-        font-family: inherit;
-        outline: none;
-    }
-    .submitEmail {
-        margin: 15px 0;
-        border: none;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-    }
-    .btnEmail {
-        background-color: #ff642b;
-        padding: 5px 42px;
-        border-radius: 4px;
-        border-color: #ff642b;
-        width: 100%;
-        height: 48px;
-        color: #fff !important;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 1.5;
-        text-align: center;
-        text-decoration: none;
-        vertical-align: middle;
-        border: 1px solid transparent;
-        outline: none;
-        outline-offset: 0;
-        text-transform: none;
-        overflow: visible;
-        margin: 0;
-        font-family: inherit;
-        position: relative;
-        z-index: 2;
-        cursor: pointer;
-        transition: none;
-        display: inline-block;
-    }
-    .endEmail {
-        display: block !important;
-        font-size: 12px !important;
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-weight: 400;
-        line-height: 1.5;
-    }
-    .termsEmail {
-        text-decoration-color: #FF642F;
-        text-underline-position: under;
-        cursor: pointer;
-    }
-    .headFeedback {
-        padding-bottom: 1.5rem !important;
-        padding-top: 3rem !important;
-        margin-top: 1.5rem !important;
-        margin-bottom: 1.5rem !important;
-    }
-    .titleFeedback {
-        margin-bottom: 1rem !important;
-        font-size: 30px;
-        color: #000;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        line-height: 1.2;
-        margin-top: 0;
-    }
-    .btnFeedback {
-        border-color: #000;
-        color: #000;
-        font-weight: 500;
-        padding-right: 3rem !important;
-        padding-left: 3rem !important;
-        transition: none;
-        display: inline-block;
-        line-height: 1.5;
-        font-family: "Inter", sans-serif;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-        border: 1px solid black;
-        padding: 0.375rem 0.75rem;
-        font-size: 1rem;
-        border-radius: 0.25rem;
-    }
-    .comments {
-        padding-top: 0 !important;
-        margin-top: 3rem !important;
-        margin-bottom: 3rem !important;
-    }
-    .headComments {
-        border-color: rgba(0, 0, 0, 0.2);
-        padding-bottom: 1rem !important;
-        margin-bottom: 1.5rem !important;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
-    }
-    .titleComments {
-        color: #000;
-        font-size: 30px;
-        display: inline-block !important;
-        font-weight: bold;
-        line-height: 1.2;
-        font-family: "Playfair Display", serif;
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-    }
-    .numberComments {
-        font-size: 16px;
-        font-family: "Inter", sans-serif;
-        color: #000;
-        font-weight: 400;
-        line-height: 1.5;
     }
 
     /* Suggestions */
-    .suggestions {
-        margin-top: 1.5rem !important;
-        margin-bottom: 1.5rem !important;
-    }
-    .titleSuggestions {
-        color: #000;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        font-size: 24px;
-        line-height: 1.2;
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-        margin-bottom: 0 !important;
-        margin-top: 0;
-    }
-    .rowSuggestions {
-        outline: none;
-        --bs-gutter-x: 1.5rem;
-        --bs-gutter-y: 0;
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: calc(var(--bs-gutter-y) * -1);
-        margin-right: calc(var(--bs-gutter-x) / -2);
-        margin-left: calc(var(--bs-gutter-x) / -2);
-    }
     .blockSuggestions {
-        flex: 0 0 auto;
         width: 50%;
-        max-width: 100%;
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        padding-left: calc(var(--bs-gutter-x) / 2);
-        margin-top: var(--bs-gutter-y);
-    }
-    .boxSuggestions {
-        position: relative;
-        margin-top: 1rem !important;
-        margin-bottom: 1rem !important;
-        margin: 0 0 1rem;
-    }
-    .imgSuggestions {
-        display: block;
-        overflow: hidden;
-        border-radius: 6px;
-        width: 100% !important;
-        max-width: 100%;
-    }
-    .textSuggestions {
-        color: #000;
-        font-size: 14px;
-        font-family: "Inter", sans-serif;
-        line-height: 1.5;
-        font-weight: 600 !important;
-        margin-top: 0.5rem !important;
-        margin-top: 0.25rem !important;
-        display: block !important;
-        cursor: pointer;
     }
 }
