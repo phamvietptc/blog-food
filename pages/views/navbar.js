@@ -9,8 +9,8 @@ export default function Navbar() {
   return (
     <>
       <div className={NavbarStyles.container}>
-        <div className={NavbarStyles.content}>
-          <div className={NavbarStyles.boxMenu}>
+        <div className='py-4 md:py-6'>
+          <div className='relative flex items-center px-0 md:flex-nowrap md:justify-start md:py-2'>
 
             {/* Desktop */}
             <Link href={'/'}>
@@ -36,35 +36,35 @@ export default function Navbar() {
               </a>
             </Link>
 
-            <div  className={`hidden md:block ${NavbarStyles.title}`}>
-              <ul className={NavbarStyles.menuHead}>
-                <li className={NavbarStyles.titleMenu}>
+            <div  className='hidden md:block md:flex md:items-center md:w-full'>
+              <ul className='flex-row pt-0 m-auto flex list-none'>
+                <li className='px-4 relative'>
                   <Link href={`/`}>
-                    <a className={NavbarStyles.textMenu}>
+                    <a className='text-black text-base font-sans leading-normal font-medium block cursor-pointer px-2'>
                       <span>Home Page</span>
                       <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Home Page' />
                     </a>
                   </Link>
                 </li>
-                <li className={NavbarStyles.titleMenu}>
+                <li className='px-4 relative'>
                   <Link href={`/`}>
-                    <a className={NavbarStyles.textMenu}>
+                    <a className='text-black text-base font-sans leading-normal font-medium block cursor-pointer px-2'>
                       <span>Recipe Page</span>
                       <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Recipe Page' />
                     </a>
                   </Link>
                 </li>
-                <li className={NavbarStyles.titleMenu}>
+                <li className='px-4 relative'>
                   <Link href={`/`}>
-                    <a className={NavbarStyles.textMenu}>
+                    <a className='text-black text-base font-sans leading-normal font-medium block cursor-pointer px-2'>
                       <span>Pages</span>
                       <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Pages' />
                     </a>
                   </Link>
                 </li>
-                <li className={NavbarStyles.titleMenu}>
+                <li className='px-4 relative'>
                   <Link href={`/`}>
-                    <a className={NavbarStyles.textMenu}>
+                    <a className='text-black text-base font-sans leading-normal font-medium block cursor-pointer px-2'>
                       <span>Buy</span>
                     </a>
                   </Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
 export function Search() {
   return (
     <>
-      <div className={`hidden md:block ${NavbarStyles.box}`}>
+      <div className='hidden md:block items-center pl-0 pr-2.5'>
         <div className={NavbarStyles.container1}>
           <span className={NavbarStyles.icon}>
             {/* <Image
@@ -136,7 +136,7 @@ export function Avatar() {
 export function Menu() {
   return (
     <>
-    <div className={`md:hidden ${NavbarStyles.menu}`}>
+    <div className='md:hidden cursor-pointer pl-1.5 pr-0 ml-2'>
       <div className="dropdown dropdown-end">
         <label tabIndex={0} className="border-transparent bg-inherit  swap swap-rotate">
           <input type="checkbox" />        
@@ -193,9 +193,9 @@ export function Footer() {
       <div className={NavbarStyles.contentFoodter}>
         <div className={NavbarStyles.containerFoodter}>
           <div className={NavbarStyles.foodterLogo}>
-            <div className={NavbarStyles.detailLogo}>
+            <div className='pb-7 pr-0 mr-0 md:pr-12 md:mr-12'>
             <Image src="/images/navbar/Logo.svg" height={50} width={161} alt="Logo" />
-            <p className={NavbarStyles.foodterTitle}>
+            <p className='text-gray-500 text-sm font-normal leading-normal font-sans pr-0 mr-0 my-4 md:text-base md:pr-12 md:mr-6'>
               "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment
             </p>
             </div>
@@ -204,9 +204,9 @@ export function Footer() {
           <Footer_MB />
 
           <div className='hidden md:block'>
-            <div className={NavbarStyles.foodterListHead} >Tastebite</div>
+            <div className='text-black text-sm font-sans font-bold h-8 pr-24'>Tastebite</div>
             <div
-              className={NavbarStyles.foodterList}
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
               onClick={() => {
                 router.push({
                   pathname: '/views/About',
@@ -216,7 +216,7 @@ export function Footer() {
               About us
             </div>
             <div
-              className={NavbarStyles.foodterList}
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Careers',
@@ -226,7 +226,7 @@ export function Footer() {
               Careers
             </div>
             <div
-              className={NavbarStyles.foodterList}
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Contact Us',
@@ -236,7 +236,7 @@ export function Footer() {
               Contact Us
             </div>
             <div
-              className={NavbarStyles.foodterList}
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Feedback',
@@ -248,9 +248,9 @@ export function Footer() {
           </div>
           
           <div className='hidden md:block'>
-            <div className={NavbarStyles.foodterListHead} >Legal</div>
+            <div className='text-black text-sm font-sans font-bold h-8 pr-24'>Legal</div>
             <div
-              className={NavbarStyles.foodterList}
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/terms',
@@ -260,7 +260,7 @@ export function Footer() {
               Terms
             </div>
             <div
-              className={NavbarStyles.foodterList}
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Conditions',
@@ -270,7 +270,7 @@ export function Footer() {
               Conditions
             </div>
             <div
-              className={NavbarStyles.foodterList}
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Cookies',
@@ -280,7 +280,7 @@ export function Footer() {
               Cookies
             </div>
             <div
-              className={NavbarStyles.foodterList}
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Copyright',
@@ -292,9 +292,9 @@ export function Footer() {
           </div>
 
           <div className='hidden md:block'>
-            <div className={NavbarStyles.foodterListHead} >Follow</div>
+            <div className='text-black text-sm font-sans font-bold h-8 pr-24'>Follow</div>
             <div
-              className={NavbarStyles.foodterList}
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Facebook',
@@ -304,7 +304,7 @@ export function Footer() {
               Facebook
             </div>
             <div
-              className={NavbarStyles.foodterList}
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Twitter',
@@ -314,7 +314,7 @@ export function Footer() {
               Twitter
             </div>
             <div
-              className={NavbarStyles.foodterList}
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Instagram',
@@ -324,7 +324,7 @@ export function Footer() {
               Instagram
             </div>
             <div
-              className={NavbarStyles.foodterList}
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Youtube',
