@@ -29,7 +29,7 @@ const ApiClient = () => {
         console.log('NOT_LOGGED_IN_ERROR_CODE', response);
         localStorage.clear();
         // const hotelId = getHotelId();
-        location.replace(`/`);
+        // location.replace(`/`);
       }
       return response;
     },

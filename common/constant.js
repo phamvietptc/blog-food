@@ -1,5 +1,5 @@
-export const ApplicationLogin = 'KANPOBLIS';
-export const StorageName = 'kanpobliss';
+export const ApplicationLogin = 'FOODBLOG';
+export const StorageName = 'foodBlog';
 // export const UserDataKey = 'kanpobliss_user';
 // export const HotelID = 'HOTEL_KEY_STORAGE';
 // export const UUID_KEY = 'kanpobliss_uuid';
@@ -22,4 +22,4 @@ export const StorageName = 'kanpobliss';
 //   Balance: 'Sensitive',
 // };
 
-export const SubDomainLimited = ['app','6f43-183-80-15-194'];
+// export const SubDomainLimited = ['app','6f43-183-80-15-194'];

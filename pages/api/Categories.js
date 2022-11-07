@@ -1,19 +1,6 @@
-// http://194.233.73.110:5678/documentation#/Category/get%2Fcategories
+// http://194.233.73.110:5678/documentation
 
-// Want to use async/await? Add the `async` keyword to your outer function/method.
-// import axios from "axios";
-
-// async function getUser() {
-//     try {
-//       const response = await axios.get('/user?ID=12345');
-//       console.log(response);
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   }
-
-// const CategoryUrl = '/public/categories';
-
+const CategoryUrl = '/api/categories';
 class CategoryService {
     constructor(axios) {
         this.axios = axios;
@@ -21,7 +8,7 @@ class CategoryService {
 
     getCategoryDetail = async (params) => {
         const res = await this.axios.get(
-            `http://localhost:5678/api/categories`,
+            `${CategoryUrl}/CategoryRequest`,
             {params}
         );
         return res.data;

@@ -2,6 +2,7 @@ import CategoriesStyles from '../../../styles/Categories.module.css';
 import Navbar, { MBFooter, Footer } from '../navbar';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import api from '../../api';
 
 
 export default function Categories() {

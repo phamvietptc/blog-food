@@ -3,6 +3,7 @@ import Navbar, { MBFooter, Footer } from '../navbar';
 import Link from 'next/link';
 import styles from '../../../styles/Home.module.css';
 import { useRouter } from 'next/router';
+import api from '../../api';
 
 
 
@@ -162,6 +163,23 @@ export function Card_Food() {
 // Popular Categories
 export function Card_Ctg() {
   const router = useRouter();
+  const startSelection = async () => {
+    try {
+      const res = await api.categories.getCategoryDetail();
+      if (res.messages === 'success') {
+        localStorage.setItem(res.data);
+        router.push({
+          pathname: '/views/Categories',
+          query: {
+            id: res.data,
+          },
+        });
+      }
+    } catch (error) {
+      alert(error);
+    }
+  };
+
   const content = [
     {
       image: '/images/home/Image_Categories.png',
@@ -198,11 +216,7 @@ export function Card_Ctg() {
           <div
             key={index}
             className={styles.blockCtg}
-            onClick={() => {
-                router.push(
-                  '/views/Categories'
-                );
-            }}
+            onClick={startSelection}
           >
             <div className={styles.boxImgCtg}>
               <img className={styles.imageCtg} src={item.image} alt="" />
