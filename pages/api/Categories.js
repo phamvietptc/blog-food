@@ -12,7 +12,7 @@
 //     }
 //   }
 
-const CategoryUrl = '/public/categories';
+// const CategoryUrl = '/public/categories';
 
 class CategoryService {
     constructor(axios) {
@@ -21,7 +21,7 @@ class CategoryService {
 
     getCategoryDetail = async (params) => {
         const res = await this.axios.get(
-            `${CategoryUrl}/getCategoryDetail`,
+            `http://localhost:5678/api/categories`,
             {params}
         );
         return res.data;
