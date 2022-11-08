@@ -251,15 +251,15 @@ export function Collections() {
 
   return (
     <>
-      <div className={styles.boxHpc}>
-      <div className={styles.collections}>Hand-Picked Collections</div>
+      <div className='my-6 md:max-w-6xl md:my-12 md:w-full md:mx-auto'>
+      <div className='text-black text-2xl font-bold font-serif leading-tight py-4 my-0 md:text-5xl md:mx-4'>Hand-Picked Collections</div>
       <div className={styles.hpc}>
         {content.map((item, index) => (
         <div key={index} className={styles.blockHpc}>
-          <img className={styles.imageHpc} src={item.image} alt="" />
+          <img className='rounded-t-md block cursor-pointer overflow-hidden outline-none w-full md:h-2/3' src={item.image} alt="" />
           <div className={styles.titleHpc}>
             <h3 className={styles.textHpc}>{item.title}</h3>
-            <span className={styles.spanHpc} >156 Recipes</span>
+            <span className='text-black text-sm font-medium font-sans leading-normal py-0.5 px-5 rounded border border-solid border-black inline-block text-center cursor-pointer '>156 Recipes</span>
           </div>
         </div>
         ))}

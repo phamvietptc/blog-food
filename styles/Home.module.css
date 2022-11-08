@@ -191,27 +191,6 @@
     }
 
     /* Hand-Picked Collections */
-    .boxHpc {
-        max-width: 1150px;
-        /* margin: 48px auto 48px auto; */
-        margin-top: 3rem !important;
-        margin-bottom: 3rem !important;
-        /* box-sizing: border-box;
-        --bs-gutter-x: 12.5rem;
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        padding-left: calc(var(--bs-gutter-x) / 2); */
-        width: 100%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    .collections {
-        color: black;
-        font-size: 50px;
-        font-family: "Playfair Display", serif;
-        font-weight: bold;
-        width: 1115px;
-        margin-inline: auto;
-    }
     .hpc {
         display: flex;
         justify-content: center;
@@ -220,18 +199,7 @@
     .blockHpc {
         margin: 16px;
     }
-    .imageHpc {
-        height: 332px;
-        width: 540px;
-        cursor: pointer;
-        overflow: hidden;
-        display: block;
-        border-radius: 6px 6px 0 0;
-        outline: none;
-    }
     .titleHpc {
-        color: black;
-        cursor: pointer;
         position: relative;
         border: 1px solid #D8D8D8;
         border-radius: 0 0 6px 6px;
@@ -251,15 +219,8 @@
         font-weight: bold;
         font-size: 30px;
         min-height: 86px;
-    }
-    .spanHpc {
-        border: 1px solid #000000;
-        border-radius: 3px;
-        font-size: 14px;
-        padding: 2px 20px;
-        white-space: nowrap !important;
-        font-family: "Inter", sans-serif;
-        font-weight: 500;
+        cursor: pointer;
+        color: black;
     }
 
     /* Latest Recipes */
@@ -585,21 +546,6 @@
     }
 
     /* Hand-Picked Collections */
-    .boxHpc {
-        margin-top: 1.5rem !important;
-        margin-bottom: 1.5rem !important;
-    }
-    .collections {
-        font-size: 24px;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-        margin-bottom: 0 !important;
-        margin-top: 0;
-        line-height: 1.2;
-        color: #000;
-    }
     .hpc {
         --bs-gutter-x: 1.5rem;
         --bs-gutter-y: 0;
@@ -617,12 +563,6 @@
         padding-left: calc(var(--bs-gutter-x) / 2);
         margin-top: var(--bs-gutter-y);
         margin-bottom: 1rem !important;
-    }
-    .imageHpc {
-        border-radius: 6px 6px 0 0;
-        display: block;
-        cursor: pointer;
-        width: 100%;
     }
     .titleHpc {
         border: 1px solid #D8D8D8;
@@ -648,19 +588,6 @@
         color: black;
         cursor: pointer;
         text-align: left !important;
-    }
-    .spanHpc {
-        color: #000;
-        font-weight: 500;
-        font-size: 14px;
-        padding: 2px 20px;
-        border-radius: 3px;
-        display: inline-block;
-        line-height: 1.5;
-        text-align: center;
-        cursor: pointer;
-        border: 1px solid black;
-        outline: none;
     }
 
     /* Latest Recipes */
