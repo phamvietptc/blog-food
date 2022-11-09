@@ -31,7 +31,7 @@ export default function Home() {
 export function Spotlight_Food() {
   return (
     <>
-      <div className={styles.boxSpotlight}>
+      {/* <div className={styles.boxSpotlight}>
         <div>
           <Link href={``}>
             <Image
@@ -72,7 +72,39 @@ export function Spotlight_Food() {
             />
           </div>
         </div>    
-      </div> 
+      </div>  */}
+
+
+    <div className='m-auto bg-blue-100 rounded-2xl border-0 overflow-hidden mt-0 md:mt-6 md:max-w-6xl'>
+      <div className={styles.rowSF}>
+        <div className={styles.left}>
+          <img className='w-full max-w-full align-middle' src="/images/home/Image_Spotlight.png" alt=''/>
+        </div>
+        <div className={styles.right}>
+          <div className='p-6 justify-center flex-col h-full relative flex md:p-12'>
+            <strong>
+              <Image
+                  src='/icons/home/icons-chart-up.png'
+                  width='24px'
+                  height='24px'
+                  alt=''
+              />
+              <spam className='font-sans text-xs font-medium leading-normal text-black ml-2 md:text-sm md:leading-normal'>85% would make this again</spam>
+            </strong>
+            <h4 className='font-serif font-bold leading-tight text-3xl text-black my-4 md:text-5xl md:leading-tight'>Mighty Super Cheesecake</h4>
+            <p className='font-sans text-sm font-normal leading-normal text-black pb-4 pr-0 mt-0 mb-4 md:text-lg md:leading-normal md:pb-0 md:pr-12'>Look no further for a creamy and ultra smooth classic cheesecake recipe! no one can deny its simple decadence.</p>
+            <a className='absolute flex justify-center flex-col items-center bottom-2.5 right-0 ml-auto cursor-pointer md:bottom-9 md:right-9'>
+              <Image
+                src='/icons/home/icons-right.png'
+                width='24px'
+                height='24px'
+                alt='next'
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
     </>  
   )
 }
@@ -121,36 +153,45 @@ export function Card_Food() {
   const defaultContents = [
     {
       image: '/images/home/card-food.jpg',
-      vote: '★★★★',
       text: 'Spinach and Cheese Pasta',
     },
     {
       image: '/images/home/card-food.jpg',
-      vote: '★★★',
       text: 'Fancy Glazed Donuts',
     },
     {
       image: '/images/home/card-food.jpg',
-      vote: '★★★★★',
       text: 'Mighty Cheesy Breakfast Burger',
     },
   ];
 
   return (
     <>
-    <div className={styles.boxCard}>
-      <div className={styles.titleCard}>Super Delicious</div>
-      <div className={styles.card}>
+    <div className='m-auto my-6 outline-none md:my-12 md:max-w-6xl'>
+      <h5 className='text-black font-serif text-2xl leading-tight font-bold py-4 mb-0 md:text-4xl md:leading-tight'>Super Delicious</h5>
+      <div className={styles.rowCF}>
         {defaultContents.map((item, index) => (
-          <div key={index} className={styles.blockCard}>
-            <div className={styles.boxImgCard}>
-              <img className={styles.imageCard} src={item.image} alt="" />
-            </div>
-            <div className={styles.detailCard}>
-              <h3 className={styles.voteCard}>{item.vote}</h3>
-              <h3 className={styles.textCard}>{item.text}</h3>
-            </div>
-          </div>
+        <div key={index} className={styles.boxCF}>
+          <figure className='relative my-4'>
+            <a className='block overflow-hidden rounded-md'>
+              <img className='w-full max-w-full align-middle cursor-pointer' src={item.image} alt=""/>
+            </a>
+            <figcaption className='mt-2'>
+              <div className='w-full float-left'>
+                <div className='float-left'>
+                  <div className="rating rating-sm">
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 ml-1.5"/>
+                  </div>
+                  <a className='block cursor-pointer font-sans text-black text-base font-semibold leading-normal mt-1 md:text-xl md:leading-normal'>{item.text}</a>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
         ))}
       </div>
     </div>
@@ -191,26 +232,28 @@ export function Card_Ctg() {
 
   return (
     <>
-    <div className={styles.boxCtg}>
-      <div className={styles.category}>Popular Categories</div>
-      <div className={styles.ctg}>
+    <div className='m-auto my-6 md:my-12 md:max-w-6xl'>
+      <h5 className='py-4 my-0 font-serif text-2xl font-bold leading-tight text-black md:text-4xl md:leading-tight'>Popular Categories</h5>
+      <div className={styles.rowCtg}>
         {content.map((item, index) => (
-          <div
-            key={index}
-            className={styles.blockCtg}
-            onClick={() => {
-                router.push(
-                  '/views/Categories'
-                );
-            }}
-          >
-            <div className={styles.boxImgCtg}>
-              <img className={styles.imageCtg} src={item.image} alt="" />
-            </div>
-            <div className={styles.detailCtg}>
-              <h3 className={styles.titleCtg}>{item.title}</h3>
-            </div>
-          </div>
+        <div
+          key={index}
+          className={styles.boxCtg}
+          onClick={() => {
+            router.push(
+              '/views/Categories'
+            );
+          }}
+        >
+          <figure className='relative text-center my-4'>
+            <a className='block overflow-hidden rounded-full'>
+              <img className='max-w-full align-middle cursor-pointer' src={item.image} alt=""/>
+            </a>
+            <figcaption className='mt-2'>
+              <a className='font-sans text-sm font-semibold text-black leading-normal text-center cursor-pointer mt-2 md:text-xl md:leading-normal'>{item.title}</a>
+            </figcaption>
+          </figure>
+        </div>
         ))}
       </div>
     </div>
@@ -251,15 +294,15 @@ export function Collections() {
 
   return (
     <>
-      <div className='my-6 md:max-w-6xl md:my-12 md:w-full md:mx-auto'>
-      <div className='text-black text-2xl font-bold font-serif leading-tight py-4 my-0 md:text-5xl md:mx-4'>Hand-Picked Collections</div>
+      <div className={styles.boxHpc}>
+      <div className={styles.collections}>Hand-Picked Collections</div>
       <div className={styles.hpc}>
         {content.map((item, index) => (
         <div key={index} className={styles.blockHpc}>
-          <img className='rounded-t-md block cursor-pointer overflow-hidden outline-none w-full md:h-2/3' src={item.image} alt="" />
+          <img className={styles.imageHpc} src={item.image} alt="" />
           <div className={styles.titleHpc}>
             <h3 className={styles.textHpc}>{item.title}</h3>
-            <span className='text-black text-sm font-medium font-sans leading-normal py-0.5 px-5 rounded border border-solid border-black inline-block text-center cursor-pointer '>156 Recipes</span>
+            <span className={styles.spanHpc} >156 Recipes</span>
           </div>
         </div>
         ))}
@@ -311,7 +354,7 @@ export function Recipes() {
   return (
     <>
       <div className={styles.boxLr}>
-        <div className={styles.recipes}>Latest Recipes</div>
+        <div className='text-black text-2xl font-bold font-serif leading-tight py-4 my-0 md:text-4xl md:leading-tight'>Latest Recipes</div>
         <div className={styles.rowRecipes}>
           {content.map((item, index) => (
           <div
@@ -323,10 +366,10 @@ export function Recipes() {
                 );
             }}
           >
-            <div className={styles.blockLr}>
-              <img className={styles.imageLr} src={item.image} alt="" />
-              <figcaption className={styles.titleLr}>
-                <a className={styles.textLr}>{item.title}</a>
+            <div className='relative cursor-pointer my-4 md:my-6'>
+              <img className='block overflow-hidden rounded-md w-full max-w-full' src={item.image} alt="" />
+              <figcaption className='mt-2'>
+                <a className='text-black text-sm font-semibold font-sans block cursor-pointer mt-1 md:text-lg md:leading-normal'>{item.title}</a>
               </figcaption>
             </div>
           </div>
@@ -334,9 +377,9 @@ export function Recipes() {
         </div>
 
         {/* load more */}
-        <div className={styles.btnLr}>
+        <div className='py-12 text-center'>
           <a
-            className={styles.textBtnLR}
+            className='text-black text-sm font-medium font-sans leading-normal py-1 px-6 inline-block text-center cursor-pointer rounded border border-black border-solid md:text-lg md:leading-normal md:py-2 md:px-12'
             href=''
           >
             Load More

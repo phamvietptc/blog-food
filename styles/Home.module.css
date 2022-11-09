@@ -1,3 +1,61 @@
+    /* Card Food */
+    .rowCF {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(var(--bs-gutter-y) * -1);
+        margin-right: calc(var(--bs-gutter-x) / -2);
+        margin-left: calc(var(--bs-gutter-x) / -2);
+    }
+    .boxCF {
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-top: var(--bs-gutter-y);
+    }
+
+    /* Popular Categories */
+    .rowCtg {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(var(--bs-gutter-y) * -1);
+        margin-right: calc(var(--bs-gutter-x) / -2);
+        margin-left: calc(var(--bs-gutter-x) / -2);
+    }
+    .boxCtg {
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-top: var(--bs-gutter-y);
+    }
+
+    /* Spotlight Food */
+    .rowSF {
+        display: flex;
+        flex-wrap: wrap;
+        --bs-gutter-y: 0;
+        --bs-gutter-x: 0;
+        margin-top: calc(var(--bs-gutter-y) * -1);
+        margin-right: calc(var(--bs-gutter-x) / -2);
+        margin-left: calc(var(--bs-gutter-x) / -2);
+    }
+    .left {
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-top: var(--bs-gutter-y);
+    }
+    .right {
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2);
+        margin-top: var(--bs-gutter-y);
+    }
+
+
 /* Desktop */
 @media only screen and (min-width: 768px) {
     .contain {
@@ -20,6 +78,14 @@
     }
 
     /* Spotlight Food */
+    .left {
+        flex: 0 0 auto;
+        width: 58.3333333333%;
+    }
+    .right {
+        flex: 0 0 auto;
+        width: 41.6666666667%;
+    }
     .boxSpotlight {
         margin-top: 1.5rem !important;
         height: 488px;
@@ -119,6 +185,10 @@
         margin-top: 48px;
         /* margin: auto; */
     }
+    .boxCF {
+        flex: 0 0 auto;
+        width: 33.3333333333%;
+    }
     .titleCard {
         color: black;
         font-size: 36px;
@@ -154,43 +224,32 @@
     
     /* Popular Categories */
     .boxCtg {
-        box-sizing: border-box;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        /* margin: auto; */
+        flex: 0 0 auto;
+        width: 16.6666666667%;
     }
-    .category {
+
+    /* Hand-Picked Collections */
+    .boxHpc {
+        max-width: 1150px;
+        /* margin: 48px auto 48px auto; */
+        margin-top: 3rem !important;
+        margin-bottom: 3rem !important;
+        /* box-sizing: border-box;
+        --bs-gutter-x: 12.5rem;
+        padding-right: calc(var(--bs-gutter-x) / 2);
+        padding-left: calc(var(--bs-gutter-x) / 2); */
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .collections {
         color: black;
-        font-size: 36px;
+        font-size: 50px;
         font-family: "Playfair Display", serif;
         font-weight: bold;
         width: 1115px;
         margin-inline: auto;
     }
-    .ctg {
-        display: flex;
-        justify-content: center;
-    }
-    .blockCtg {
-        margin: 16px;
-    }
-    .imageCtg {
-        width: 160px;
-        height: 160px;
-        margin-top: 10px;
-        cursor: pointer;
-    }
-    .detailCtg {
-        position: relative;
-    }
-    .titleCtg {
-        color: black;
-        text-align: center;
-        margin-top: 10px;
-        cursor: pointer;
-    }
-
-    /* Hand-Picked Collections */
     .hpc {
         display: flex;
         justify-content: center;
@@ -199,7 +258,18 @@
     .blockHpc {
         margin: 16px;
     }
+    .imageHpc {
+        height: 332px;
+        width: 540px;
+        cursor: pointer;
+        overflow: hidden;
+        display: block;
+        border-radius: 6px 6px 0 0;
+        outline: none;
+    }
     .titleHpc {
+        color: black;
+        cursor: pointer;
         position: relative;
         border: 1px solid #D8D8D8;
         border-radius: 0 0 6px 6px;
@@ -219,8 +289,15 @@
         font-weight: bold;
         font-size: 30px;
         min-height: 86px;
-        cursor: pointer;
-        color: black;
+    }
+    .spanHpc {
+        border: 1px solid #000000;
+        border-radius: 3px;
+        font-size: 14px;
+        padding: 2px 20px;
+        white-space: nowrap !important;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
     }
 
     /* Latest Recipes */
@@ -234,17 +311,6 @@
         margin-right: auto;
         margin-left: auto;
         max-width: 1150px;
-    }
-    .recipes {
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-        margin-bottom: 0 !important;
-        font-size: 36px;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        margin-top: 0;
-        line-height: 1.2;
-        color: #000;
     }
     .rowRecipes {
         --bs-gutter-x: 1.5rem;
@@ -262,57 +328,6 @@
         padding-right: calc(var(--bs-gutter-x) / 2);
         padding-left: calc(var(--bs-gutter-x) / 2);
         margin-top: var(--bs-gutter-y);
-    }
-    .blockLr {
-        position: relative;
-        margin-top: 1.5rem !important;
-        margin-bottom: 1.5rem !important;
-        margin: 0 0 1rem;
-        outline: none;
-        cursor: pointer;
-    }
-    .imageLr {
-        display: block;
-        overflow: hidden;
-        border-radius: 6px;
-        transform: scale(1);
-        transition: all ease .8s;
-        width: 100% !important;
-        max-width: 100%;
-    }
-    .titleLr {
-        margin-top: 0.5rem !important;
-    }
-    .textLr {
-        color: black;
-        font-size: 18px;
-        font-family: "Inter", sans-serif;
-        font-weight: 600 !important;
-        line-height: 1.5;
-        margin-top: 0.25rem !important;
-        display: block !important;
-        cursor: pointer;
-    }
-    .btnLr {
-        text-align: center !important;
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-    }
-    .textBtnLR {
-        color: #000;
-        font-size: 18px;
-        font-family: "Inter", sans-serif;
-        font-weight: 500 !important;
-        line-height: 1.5;
-        padding-top: 0.5rem !important;
-        padding-bottom: 0.5rem !important;
-        padding-right: 3rem !important;
-        padding-left: 3rem !important;
-        display: inline-block;
-        text-align: center;
-        cursor: pointer;
-        border: 1px solid black;
-        border-radius: 0.25rem;
     }
 
 }
@@ -335,6 +350,14 @@
     }
 
     /* Spotlight Food */
+    .left {
+        flex-shrink: 0;
+        width: 100%;
+    }
+    .right {
+        flex-shrink: 0;
+        width: 100%;
+    }
     .boxSpotlight {
         background-color: #c5e6e9;
         display: flex;
@@ -353,6 +376,10 @@
         background-color: #ffffff;
         margin-top: 1.5rem !important;
         margin-bottom: 1.5rem !important;
+    }
+    .boxCF {
+        flex-shrink: 0;
+        width: 100%;
     }
     .titleCard {
         padding-top: 1rem !important;
@@ -388,58 +415,8 @@
 
     /* Popular Categories */
     .boxCtg {
-        margin-top: 1.5rem !important;
-        margin-bottom: 1.5rem !important;
-    }
-    .category {
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-        margin-bottom: 0 !important;
-        font-size: 24px;
-        font-weight: 700;
-        font-family: "Playfair Display", serif;
-        margin-top: 0;
-        color: #000;
-        line-height: 1.2;
-    }
-    .ctg {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .blockCtg {
         flex: 0 0 auto;
         width: 33.3333333333%;
-        max-width: 100%;
-        padding-right: calc(var(--bs-gutter-x) / 2);
-        padding-left: calc(var(--bs-gutter-x) / 2);
-        margin-top: var(--bs-gutter-y);
-    }
-    .boxImgCtg {
-        position: relative;
-        text-align: center !important;
-        margin-top: 1rem !important;
-        margin-bottom: 1rem !important;
-        margin: 0 0 1rem;
-    }
-    .imageCtg {
-        display: block;
-        overflow: hidden;
-        border-radius: 50% !important;
-        color: #000;
-        max-width: 100%;
-    }
-    .detailCtg {
-        position: relative;
-        margin-top: 0.5rem !important;
-        text-align: center !important;
-    }
-    .titleCtg {
-        font-size: 14px;
-        font-weight: 600;
-        margin-top: 8px;
-        font-family: "Inter", sans-serif;
-        color: #000;
-        background-color: #fff;
     }
 
     /* Email */
@@ -546,6 +523,21 @@
     }
 
     /* Hand-Picked Collections */
+    .boxHpc {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .collections {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: "Playfair Display", serif;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+        margin-bottom: 0 !important;
+        margin-top: 0;
+        line-height: 1.2;
+        color: #000;
+    }
     .hpc {
         --bs-gutter-x: 1.5rem;
         --bs-gutter-y: 0;
@@ -563,6 +555,12 @@
         padding-left: calc(var(--bs-gutter-x) / 2);
         margin-top: var(--bs-gutter-y);
         margin-bottom: 1rem !important;
+    }
+    .imageHpc {
+        border-radius: 6px 6px 0 0;
+        display: block;
+        cursor: pointer;
+        width: 100%;
     }
     .titleHpc {
         border: 1px solid #D8D8D8;
@@ -589,22 +587,24 @@
         cursor: pointer;
         text-align: left !important;
     }
+    .spanHpc {
+        color: #000;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 2px 20px;
+        border-radius: 3px;
+        display: inline-block;
+        line-height: 1.5;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid black;
+        outline: none;
+    }
 
     /* Latest Recipes */
     .boxLr {
         margin-top: 1.5rem !important;
         margin-bottom: 1.5rem !important;
-    }
-    .recipes {
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-        margin-bottom: 0 !important;
-        font-size: 24px;
-        font-weight: bold;
-        font-family: "Playfair Display", serif;
-        margin-top: 0;
-        line-height: 1.2;
-        color: #000;
     }
     .rowRecipes {
         --bs-gutter-x: 1.5rem;
@@ -622,52 +622,6 @@
         padding-right: calc(var(--bs-gutter-x) / 2);
         padding-left: calc(var(--bs-gutter-x) / 2);
         margin-top: var(--bs-gutter-y);
-    }
-    .blockLr {
-        position: relative;
-        margin-top: 1rem !important;
-        margin-bottom: 1rem !important;
-        margin: 0 0 1rem;
-    }
-    .imageLr {
-        display: block;
-        overflow: hidden;
-        border-radius: 6px;
-        width: 100% !important;
-        max-width: 100%;
-    }
-    .titleLr {
-        margin-top: 0.5rem !important;
-    }
-    .textLr {
-        color: #000;
-        font-size: 14px;
-        font-weight: 600;
-        font-family: "Inter", sans-serif;
-        margin-top: 0.25rem !important;
-        display: block !important;
-        cursor: pointer;  
-    }
-    .btnLr {
-        text-align: center !important;
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-    }
-    .textBtnLR {
-        color: #000;
-        font-size: 14px;
-        font-weight: 500 !important;
-        line-height: 1.5;
-        padding-top: 0.25rem !important;
-        padding-bottom: 0.25rem !important;
-        padding-right: 1.5rem !important;
-        padding-left: 1.5rem !important;
-        display: inline-block;
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-        border: 1px solid black;
-        border-radius: 0.25rem;
     }
 }
   
