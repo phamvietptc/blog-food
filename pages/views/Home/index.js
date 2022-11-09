@@ -13,8 +13,8 @@ export default function Home() {
         <Navbar />
         <div className={styles.content}>        
           <Spotlight_Food />
-          <Card_Food />
-          <Card_Food />
+          <Card_Food1 />
+          <Card_Food2 />
           <Card_Ctg />
           <Email />
           <Collections />
@@ -31,73 +31,29 @@ export default function Home() {
 export function Spotlight_Food() {
   return (
     <>
-      {/* <div className={styles.boxSpotlight}>
-        <div>
-          <Link href={``}>
-            <Image
-              className={styles.imgSpotlight}
-              src="/images/home/Image_Spotlight.png"
-              width='650px'
-              height='488px'
-              alt=''
-            />
-          </Link> 
-        </div>
-        <div className={styles.boxTextSpotlight}>  
-          <div className={styles.textSpotlight}>
-            <div style={{display:'flex'}}>
-            <Image
-                src='/icons/home/icons-chart-up.png'
-                width='24px'
-                height='24px'
-                alt=''
-            />
-            <p style={{color:'black', fontWeight:'600', paddingLeft:'5px'}}>
-              85% would make this again
-            </p>
-            </div>
-            <h1 style={{color:'black', fontFamily:'-moz-initial', fontSize:'45px', fontWeight:'bold'}}>
-              Mighty Super Cheesecake
-            </h1>
-            <p style={{color:'black', fontWeight:'600', lineHeight:'25px'}}>
-              Look no further for a creamy and ultra smooth classic cheesecake recipe! no one can deny its simple decadence.
-            </p>
-          </div>
-          <div style={{float:'right', margin:'-30px 10px', cursor:'pointer'}}>
-            <Image
-              src='/icons/home/icons-right.png'
-              width='24px'
-              height='24px'
-              alt=''
-            />
-          </div>
-        </div>    
-      </div>  */}
-
-
-    <div className='m-auto bg-blue-100 rounded-2xl border-0 overflow-hidden mt-0 md:mt-6 md:max-w-6xl'>
+    <div className='m-auto bg-blue-100 rounded-2xl border-0 overflow-hidden mt-0 md:rounded-tl-2xl md:rounded-bl-2xl md:rounded-br-none md:rounded-tr-none md:mt-6 md:max-w-6xl'>
       <div className={styles.rowSF}>
         <div className={styles.left}>
           <img className='w-full max-w-full align-middle' src="/images/home/Image_Spotlight.png" alt=''/>
         </div>
         <div className={styles.right}>
           <div className='p-6 justify-center flex-col h-full relative flex md:p-12'>
-            <strong>
+            <strong className='flex'>
               <Image
                   src='/icons/home/icons-chart-up.png'
-                  width='24px'
-                  height='24px'
-                  alt=''
+                  width='20px'
+                  height='20px'
+                  alt='chart'
               />
               <spam className='font-sans text-xs font-medium leading-normal text-black ml-2 md:text-sm md:leading-normal'>85% would make this again</spam>
             </strong>
             <h4 className='font-serif font-bold leading-tight text-3xl text-black my-4 md:text-5xl md:leading-tight'>Mighty Super Cheesecake</h4>
             <p className='font-sans text-sm font-normal leading-normal text-black pb-4 pr-0 mt-0 mb-4 md:text-lg md:leading-normal md:pb-0 md:pr-12'>Look no further for a creamy and ultra smooth classic cheesecake recipe! no one can deny its simple decadence.</p>
-            <a className='absolute flex justify-center flex-col items-center bottom-2.5 right-0 ml-auto cursor-pointer md:bottom-9 md:right-9'>
+            <a className='flex justify-center flex-col items-center bottom-2.5 right-0 ml-auto cursor-pointer bg-white w-10 h-10 rounded-full  md:bottom-4 md:right-5 md:absolute md:bg-inherit md:w-6 md:h-6'>
               <Image
                 src='/icons/home/icons-right.png'
-                width='24px'
-                height='24px'
+                width='20px'
+                height='20px'
                 alt='next'
               />
             </a>
@@ -127,17 +83,15 @@ export function Email() {
                 placeholder="Enter Address"
                 className={styles.inputEmail}
               />
-              <div
+              <button
                 className={styles.btnEmail}
                 onClick={'/...'}
               >
                 JOIN
-              </div>
+              </button>
             </div>
             <div className={styles.endEmail}>
-              <small className={styles.endTextEmail}>
-                By joining our newsletter you agree to our <u href='#0' className={styles.termsEmail}>Terms and Conditions</u>
-              </small>
+              <small className='block text-black text-xs font-sans leading-normal font-normal'>By joining our newsletter you agree to our <br className='md:hidden'/> <u href='/' className='hover:text-red-400 decoration-red-400 underline-offset-4 cursor-pointer'>Terms and Conditions</u></small>
             </div>
           </div>
         </div>
@@ -147,8 +101,8 @@ export function Email() {
 }
 
 
-// Card Food
-export function Card_Food() {
+// Card Food1
+export function Card_Food1() {
   const router = useRouter();
   const defaultContents = [
     {
@@ -180,11 +134,65 @@ export function Card_Food() {
               <div className='w-full float-left'>
                 <div className='float-left'>
                   <div className="rating rating-sm">
-                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400"/>
-                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 ml-1.5"/>
-                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 ml-1.5"/>
-                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 ml-1.5"/>
-                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
+                  </div>
+                  <a className='block cursor-pointer font-sans text-black text-base font-semibold leading-normal mt-1 md:text-xl md:leading-normal'>{item.text}</a>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+        ))}
+      </div>
+    </div>
+    </>
+  )
+}
+
+
+
+// Card Food2
+export function Card_Food2() {
+  const router = useRouter();
+  const defaultContents = [
+    {
+      image: '/images/home/card-food.jpg',
+      text: 'Caramel Strawberry Milkshake',
+    },
+    {
+      image: '/images/home/card-food.jpg',
+      text: 'Chocolate and Banana Jar Cake',
+    },
+    {
+      image: '/images/home/card-food.jpg',
+      text: 'Berry Maddness Biscuts',
+    },
+  ];
+
+  return (
+    <>
+    <div className='m-auto my-6 outline-none md:my-12 md:max-w-6xl'>
+      <h5 className='text-black font-serif text-2xl leading-tight font-bold py-4 mb-0 md:text-4xl md:leading-tight'>Sweet Tooth</h5>
+      <div className={styles.rowCF}>
+        {defaultContents.map((item, index) => (
+        <div key={index} className={styles.boxCF}>
+          <figure className='relative my-4'>
+            <a className='block overflow-hidden rounded-md'>
+              <img className='w-full max-w-full align-middle cursor-pointer' src={item.image} alt=""/>
+            </a>
+            <figcaption className='mt-2'>
+              <div className='w-full float-left'>
+                <div className='float-left'>
+                  <div className="rating rating-sm">
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
                   </div>
                   <a className='block cursor-pointer font-sans text-black text-base font-semibold leading-normal mt-1 md:text-xl md:leading-normal'>{item.text}</a>
                 </div>
