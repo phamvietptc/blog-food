@@ -264,6 +264,129 @@
   margin-top: 2rem !important;
   margin-bottom: 1rem !important;
 }
+
+
+
+.search {
+  opacity: 1;
+    visibility: visible;
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding-bottom: 25px;
+    transition: all ease .4s;
+    display: none;
+}
+.containerSearch {
+  --bs-gutter-x: 1.5rem;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin-right: auto;
+    margin-left: auto;
+}
+.inputSearch {
+  border-bottom: 1px solid #000;
+    padding: 8px 0;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+.form {
+  border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+    border-radius: 0;
+    background-color: #f9f9f9;
+    font-size: 18px;
+    color: #000;
+    padding-left: 0;
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+    transition: none;
+    display: block;
+    min-height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-clip: padding-box;
+    appearance: none;
+    overflow: visible;
+    margin: 0;
+    font-family: inherit;
+}
+.buttonS {
+  margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    z-index: 5;
+    -webkit-appearance: button;
+    outline: none;
+    outline-offset: 0;
+    transition: all ease .4s;
+    text-transform: none;
+    overflow: visible;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 0;
+}
+.im {
+  max-width: 100%;
+    transition: all ease .4s;
+    user-select: none;
+    vertical-align: middle;
+}
+.result {
+  display: none;
+}
+.aaaa {
+  display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #E8E8E8;
+    align-items: center;
+    padding: 8px 0;
+    color: #000;
+    text-decoration: none;
+    transition: all ease .4s;
+}
+.figure {
+  margin-bottom: 0;
+  margin: 0 0 1rem;
+}
+.mm {
+  border-radius: 50% !important;
+  max-width: 100%;
+    transition: all ease .4s;
+    user-select: none;
+    vertical-align: middle;
+}
+.namee {
+  width: calc(100% - 65px);
+    padding-left: 15px;
+}
+.small {
+  display: block;
+    line-height: 18px;
+    font-size: 12px !important;
+    font-weight: 700;
+}
+.tiny {
+  display: block;
+  font-size: 10px;
+}
 }
 
 
