@@ -59,6 +59,17 @@
   color: #93a2ad;
 }
 
+/* Search */
+.containerSearch {
+  --bs-gutter-x: 1.5rem;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) / 2);
+    padding-left: calc(var(--bs-gutter-x) / 2);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
 
 /* Desktop */
 @media only screen and (min-width: 768px) {
@@ -147,8 +158,6 @@
   margin-left: calc(var(--bs-gutter-x) / -2);
 }
 }
-
-
 
 /* ------------------------------------------------- */
 
