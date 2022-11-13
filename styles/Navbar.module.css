@@ -68,6 +68,20 @@
     margin-right: auto;
     margin-left: auto;
 }
+.dropdown {
+  display: inline-block;
+}
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+.dropdownContent {
+  display: none;
+}
+.closed:hover .dropdownContent{
+  display: none;
+}
+
+
 
 
 /* Desktop */

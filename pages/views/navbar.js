@@ -109,16 +109,16 @@ export function Search_MB() {
 
   return (
     <>
-    <div className="dropdown">
-    <label tabIndex={0} className="md:hidden btn btn-ghost btn-circle ml-36">
+    <div className={NavbarStyles.dropdown}>
+    <label className="md:hidden btn btn-ghost btn-circle ml-36">
       <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-neutral" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
     </label>
 
-    <div tabIndex={0} className='dropdown-content bg-slate-50 absolute top-0 inset-x-0 z-10 pb-6'>
+    <div className={`bg-slate-50 absolute top-0 inset-x-0 z-10 pb-6 outline-none ${NavbarStyles.dropdownContent}`}>
       <div className={NavbarStyles.containerSearch}>
         <div className='border-b border-black border-solid py-2 mb-2.5 flex items-center'>
           <input type="text" id="Search" placeholder="Search..." className='bg-slate-50 text-lg font-normal leading-normal text-black outline-none flex-auto py-1.5 px-3'/>
-          <button type="button" className='cursor-pointer flex'>
+          <button type="button" className={`cursor-pointer flex ${NavbarStyles.closed}`}>
             <Image width='24px' height='24px' src="/icons/navbar/icons-close.svg" alt="closed"/>
           </button>
         </div>
