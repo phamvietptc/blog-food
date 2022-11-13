@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import NavbarStyles from '../../styles/Navbar.module.css';
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 
 // Header
@@ -104,52 +105,62 @@ export function Search() {
   );
 }
 
-export function Search_MB() {
-
-
+export function Search_MB({onShow}) {
+  const [hide, setHide] = useState('hidden');
   return (
     <>
-    <div className={NavbarStyles.dropdown}>
-    <label className="md:hidden btn btn-ghost btn-circle ml-36">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-neutral" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-    </label>
+    <div className='md:hidden'>
+      <label
+        onClick={() => {
+          setHide('block');
+          if (onShow) onShow(true);
+        }}
+        className="btn btn-ghost btn-circle ml-36">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-neutral" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+      </label>
 
-    <div className={`bg-slate-50 absolute top-0 inset-x-0 z-10 pb-6 outline-none ${NavbarStyles.dropdownContent}`}>
-      <div className={NavbarStyles.containerSearch}>
-        <div className='border-b border-black border-solid py-2 mb-2.5 flex items-center'>
-          <input type="text" id="Search" placeholder="Search..." className='bg-slate-50 text-lg font-normal leading-normal text-black outline-none flex-auto py-1.5 px-3'/>
-          <button type="button" className={`cursor-pointer flex ${NavbarStyles.closed}`}>
-            <Image width='24px' height='24px' src="/icons/navbar/icons-close.svg" alt="closed"/>
-          </button>
-        </div>
-        <div  className='md:hidden'>
-          <div>
-            <a href='#0' className='flex flex-wrap border-b border-gray-200 border-solid items-center py-2'>
-              <figure className='flex'>
-                <Image width='64px' height='64px' className='rounded-full' src="/images/navbar/search.png" alt="Menu Food"/>
-              </figure>
-              <div className='w-4/5 pl-3.5'>
-                <strong className='block font-sans text-base leading-5 text-black'>Cake</strong>
-                <span className='block font-sans text-xs leading-normal font-normal text-black'>Category</span>
-              </div>
-            </a>
+      <div className={`bg-slate-50 absolute top-0 inset-x-0 z-10 pb-6 outline-none ${hide}`}>
+        <div className={NavbarStyles.containerSearch}>
+          <div className='border-b border-black border-solid py-2 mb-2.5 flex items-center'>
+            <input type="text" id="Search" placeholder="Search..." className='bg-slate-50 text-lg font-normal leading-normal text-black outline-none flex-auto py-1.5 px-3'/>
+            <button
+              onClick={() => {
+                setHide('hidden');
+                if (onShow) onShow(false);
+              }}
+              type="button"
+              className='cursor-pointer flex'>
+              <Image width='24px' height='24px' src="/icons/navbar/icons-close.svg" alt="closed"/>
+            </button>
           </div>
           <div>
-            <a href='#0' className='flex flex-wrap border-b border-gray-200 border-solid items-center py-2'>
-              <figure className='flex'>
-                <Image width='64px' height='48px' className='rounded-sm' src="/images/navbar/menuFood.jpg" alt="Menu Food"/>
-              </figure>
-              <div className='w-4/5 pl-3.5'>
-                <strong className='block font-sans text-base leading-5 text-black'>Black Forest Birthday Cake</strong>
-              </div>
-            </a>
-          </div>
-          <div className='text-center py-6'>
-            <a className='font-sans text-black text-sm font-medium py-1 px-6 leading-normal text-center inline-block rounded border border-black border-solid hover:bg-black hover:text-white'>See all 343 results</a>
+            <div>
+              <a href='#0' className='flex flex-wrap border-b border-gray-200 border-solid items-center py-2'>
+                <figure className='flex'>
+                  <Image width='64px' height='64px' className='rounded-full' src="/images/navbar/search.png" alt="Menu Food"/>
+                </figure>
+                <div className='w-4/5 pl-3.5'>
+                  <strong className='block font-sans text-base leading-5 text-black'>Cake</strong>
+                  <span className='block font-sans text-xs leading-normal font-normal text-black'>Category</span>
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href='#0' className='flex flex-wrap border-b border-gray-200 border-solid items-center py-2'>
+                <figure className='flex'>
+                  <Image width='64px' height='48px' className='rounded-sm' src="/images/navbar/menuFood.jpg" alt="Menu Food"/>
+                </figure>
+                <div className='w-4/5 pl-3.5'>
+                  <strong className='block font-sans text-base leading-5 text-black'>Black Forest Birthday Cake</strong>
+                </div>
+              </a>
+            </div>
+            <div className='text-center py-6'>
+              <a className='font-sans text-black text-sm font-medium py-1 px-6 leading-normal text-center inline-block rounded border border-black border-solid hover:bg-black hover:text-white'>See all 343 results</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
     </>
   )
