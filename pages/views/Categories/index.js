@@ -52,9 +52,9 @@ export default function Categories() {
                     {content.map((item, index) => (
                     <div key={index} className={CategoriesStyles.blockCategories}>
                         <div  className='relative text-center my-4 md:my-6'>
-                            <Image className='overflow-hidden rounded-full max-w-full cursor-pointer' width='255px' height='255px' src={item.image} alt="" />
+                          <Image className='overflow-hidden rounded-full max-w-full cursor-pointer' width='255px' height='255px' src={item.image} alt="Menu"/>
                         <figcaption className='mt-2 md:mt-4'>
-                            <a className='text-black text-sm font-sans font-semibold mt-2 text-center cursor-pointer md:text-xl md:leading-normal'>{item.title}</a>
+                          <a className='text-black text-sm font-sans font-semibold mt-2 text-center cursor-pointer md:text-xl md:leading-normal'>{item.title}</a>
                         </figcaption>
                         </div>
                     </div>

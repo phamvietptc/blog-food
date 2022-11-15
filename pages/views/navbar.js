@@ -241,10 +241,10 @@ export function Footer() {
   const router = useRouter();
 
   return (
-    <div className={NavbarStyles.foodter}>
-      <div className={NavbarStyles.contentFoodter}>
-        <div className={NavbarStyles.containerFoodter}>
-          <div className={NavbarStyles.foodterLogo}>
+    <div className={NavbarStyles.footer}>
+      <div className={NavbarStyles.contentFooter}>
+        <div className={NavbarStyles.containerFooter}>
+          <div className={NavbarStyles.footerLogo}>
             <div className='pb-7 pr-0 mr-0 md:pr-12 md:mr-12'>
             <Image src="/images/navbar/Logo.svg" height={50} width={161} alt="Logo" />
             <p className='text-gray-500 text-sm font-normal leading-normal font-sans pr-0 mr-0 my-4 md:text-base md:pr-12 md:mr-6'>
@@ -258,7 +258,7 @@ export function Footer() {
           <div className='hidden md:block'>
             <div className='text-black text-sm font-sans font-bold h-8 pr-24'>Tastebite</div>
             <div
-              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
                   pathname: '/views/About',
@@ -268,7 +268,7 @@ export function Footer() {
               About us
             </div>
             <div
-              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Careers',
@@ -278,7 +278,7 @@ export function Footer() {
               Careers
             </div>
             <div
-              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Contact Us',
@@ -288,7 +288,7 @@ export function Footer() {
               Contact Us
             </div>
             <div
-              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Feedback',
@@ -302,7 +302,7 @@ export function Footer() {
           <div className='hidden md:block'>
             <div className='text-black text-sm font-sans font-bold h-8 pr-24'>Legal</div>
             <div
-              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/terms',
@@ -312,7 +312,7 @@ export function Footer() {
               Terms
             </div>
             <div
-              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Conditions',
@@ -322,7 +322,7 @@ export function Footer() {
               Conditions
             </div>
             <div
-              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Cookies',
@@ -332,7 +332,7 @@ export function Footer() {
               Cookies
             </div>
             <div
-              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Copyright',
@@ -346,7 +346,7 @@ export function Footer() {
           <div className='hidden md:block'>
             <div className='text-black text-sm font-sans font-bold h-8 pr-24'>Follow</div>
             <div
-              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Facebook',
@@ -356,7 +356,7 @@ export function Footer() {
               Facebook
             </div>
             <div
-              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Twitter',
@@ -366,7 +366,7 @@ export function Footer() {
               Twitter
             </div>
             <div
-              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Instagram',
@@ -376,7 +376,7 @@ export function Footer() {
               Instagram
             </div>
             <div
-              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer'
+              className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
                   pathname: '/' + router.query + '/Youtube',
@@ -390,11 +390,11 @@ export function Footer() {
 
         <div>
         <hr style={{ color:'#E8E8E8', height:'1px'}} />
-        <div className={NavbarStyles.foodterEnd}>
+        <div className={NavbarStyles.footerEnd}>
           <div className={NavbarStyles.copyright}>© 2022 Tastebite - All rights reserved</div>
-          <div className={NavbarStyles.foodterIcon}>
+          <div className={NavbarStyles.footerIcon}>
               <a
-                className={NavbarStyles.foodterIcon}
+                className={NavbarStyles.footerIcon}
                 href=""
                 target="_blank"
               >
@@ -406,7 +406,7 @@ export function Footer() {
                 />
               </a>
               <a
-                className={NavbarStyles.foodterIcon}
+                className={NavbarStyles.footerIcon}
                 href=""
                 target="_blank"
               >
@@ -418,7 +418,7 @@ export function Footer() {
                 />
               </a>
               <a
-                className={NavbarStyles.foodterIcon}
+                className={NavbarStyles.footerIcon}
                 href=""
                 target="_blank"
               >
@@ -430,7 +430,7 @@ export function Footer() {
                 />
               </a>
               <a
-                className={NavbarStyles.foodterIcon}
+                className={NavbarStyles.footerIcon}
                 href=""
                 target="_blank"
               >

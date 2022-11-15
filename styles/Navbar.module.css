@@ -69,8 +69,6 @@
     margin-left: auto;
 }
 
-
-
 /* Desktop */
 @media only screen and (min-width: 768px) {
   .container {
@@ -84,13 +82,13 @@
     margin-left: auto;
   }
 
-/* Foodter */
-.foodter {
+/* Footer */
+.footer {
   background-color: #f3f3f3 !important;
   padding-top: 3rem !important;
   margin-top: 3rem !important;
 }
-.contentFoodter {
+.contentFooter {
   max-width: 1152px;
   --bs-gutter-x: 1.5rem;
   width: 100%;
@@ -99,7 +97,7 @@
   margin-right: auto;
   margin-left: auto;
 }
-.containerFoodter {
+.containerFooter {
   padding-bottom: 3rem !important;
   padding-top: 1.5rem !important;
   --bs-gutter-x: 1.5rem;
@@ -110,7 +108,7 @@
   margin-right: calc(var(--bs-gutter-x) / -2);
   margin-left: calc(var(--bs-gutter-x) / -2);
 }
-.foodterLogo {
+.footerLogo {
   flex: 0 0 auto;
   width: 50%;
   max-width: 100%;
@@ -118,7 +116,7 @@
   padding-left: calc(var(--bs-gutter-x) / 2);
   margin-top: var(--bs-gutter-y);
 }
-.foodterIcon {
+.footerIcon {
   flex: 0 0 auto;
   width: 50%;
   max-width: 100%;
@@ -145,7 +143,7 @@
   font-weight: 400;
   line-height: 1.5;
 }
-.foodterEnd {
+.footerEnd {
   padding-bottom: 1.5rem !important;
   padding-top: 1.5rem !important;
   align-items: center !important;
@@ -172,7 +170,7 @@
   margin-left: auto;
 }
 
-.foodter {
+.footer {
   background-color: #f3f3f3 !important;
   --bs-gutter-x: 1.5rem;
   width: 100%;
@@ -182,60 +180,7 @@
   margin-left: auto;
   padding-top: 2.5rem;
 }
-
-.listMB {
-  flex-shrink: 0;
-  width: 100%;
-  max-width: 100%;
-}
-.titleMB {
-  cursor: pointer;
-  color: #000;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  font-family: "Inter", sans-serif !important;
-  line-height: 1.2;
-  padding-bottom: 5px;
-  padding-top: 13px !important;
-  margin-bottom: 0.5rem !important;
-  margin-top: 0;
-}
-.dropDown {
-  cursor: pointer;
-  vertical-align: middle;
-  display: inline-block !important;
-  float: right !important;
-}
-.boxList {
-  display: none;
-   position: absolute;
-   background-color: #f1f1f1;
-   z-index: 1;
-}
-.boxList li {
-  color: black;
-  text-decoration: none;
-  display: block;
-}
-.boxList li::hover {
-  background-color: #ddd;
-}
-.listMB:hover .boxList {
-  display: block;
-}
-.itemList {
-  list-style: none;
-}
-.textList {
-  color: #7F7F7F;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.5;
-  font-family: "Inter", sans-serif;
-  cursor: pointer;
-}
-
-.foodterEnd {
+.footerEnd {
   padding-bottom: 0.5rem !important;
   padding-top: 0.5rem !important;
   align-items: center !important;
@@ -263,7 +208,7 @@
   font-weight: 400;
   line-height: 1.5;
 }
-.foodterIcon {
+.footerIcon {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -274,6 +219,3 @@
   margin-bottom: 1rem !important;
 }
 }
-
-
-  

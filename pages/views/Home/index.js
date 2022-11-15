@@ -51,6 +51,7 @@ export function Spotlight_Food() {
             <p className='font-sans text-sm font-normal leading-normal text-black pb-4 pr-0 mt-0 mb-4 md:text-lg md:leading-normal md:pb-0 md:pr-12'>Look no further for a creamy and ultra smooth classic cheesecake recipe! no one can deny its simple decadence.</p>
             <a className='flex justify-center flex-col items-center bottom-2.5 right-0 ml-auto cursor-pointer bg-white w-10 h-10 rounded-full  md:bottom-4 md:right-5 md:absolute md:bg-inherit md:w-6 md:h-6'>
               <Image
+                className='hover:scale-125 transition-all'
                 src='/icons/home/icons-right.png'
                 width='20px'
                 height='20px'
@@ -128,7 +129,7 @@ export function Card_Food1() {
         <div key={index} className={styles.boxCF}>
           <figure className='relative my-4'>
             <a className='block overflow-hidden rounded-md'>
-              <img className='w-full max-w-full align-middle cursor-pointer' src={item.image} alt=""/>
+              <img className='w-full max-w-full align-middle cursor-pointer hover:scale-105 transition-all' src={item.image} alt=""/>
             </a>
             <figcaption className='mt-2'>
               <div className='w-full float-left'>
@@ -182,7 +183,7 @@ export function Card_Food2() {
         <div key={index} className={styles.boxCF}>
           <figure className='relative my-4'>
             <a className='block overflow-hidden rounded-md'>
-              <img className='w-full max-w-full align-middle cursor-pointer' src={item.image} alt=""/>
+              <img className='w-full max-w-full align-middle cursor-pointer hover:scale-105 transition-all' src={item.image} alt=""/>
             </a>
             <figcaption className='mt-2'>
               <div className='w-full float-left'>
@@ -255,7 +256,7 @@ export function Card_Ctg() {
         >
           <figure className='relative text-center my-4'>
             <a className='block overflow-hidden rounded-full'>
-              <img className='max-w-full align-middle cursor-pointer' src={item.image} alt=""/>
+              <img className='max-w-full align-middle cursor-pointer hover:scale-105 transition-all' src={item.image} alt=""/>
             </a>
             <figcaption className='mt-2'>
               <a className='font-sans text-sm font-semibold text-black leading-normal text-center cursor-pointer mt-2 md:text-xl md:leading-normal'>{item.title}</a>
@@ -375,7 +376,7 @@ export function Recipes() {
             }}
           >
             <div className='relative cursor-pointer my-4 md:my-6'>
-              <img className='block overflow-hidden rounded-md w-full max-w-full' src={item.image} alt="" />
+              <img className='block overflow-hidden rounded-md w-full max-w-full hover:scale-105 transition-all' src={item.image} alt="" />
               <figcaption className='mt-2'>
                 <a className='text-black text-sm font-semibold font-sans block cursor-pointer mt-1 md:text-lg md:leading-normal'>{item.title}</a>
               </figcaption>
@@ -387,7 +388,7 @@ export function Recipes() {
         {/* load more */}
         <div className='py-12 text-center'>
           <a
-            className='text-black text-sm font-medium font-sans leading-normal py-1 px-6 inline-block text-center cursor-pointer rounded border border-black border-solid md:text-lg md:leading-normal md:py-2 md:px-12'
+            className='text-black text-sm font-medium font-sans leading-normal py-1 px-6 inline-block text-center cursor-pointer rounded border border-black border-solid md:text-lg md:leading-normal md:py-2 md:px-12 hover:bg-black hover:text-white'
             href=''
           >
             Load More
