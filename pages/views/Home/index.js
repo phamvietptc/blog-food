@@ -375,10 +375,10 @@ export function Recipes() {
                 );
             }}
           >
-            <div className='relative cursor-pointer my-4 md:my-6'>
+            <div className='relative cursor-pointer my-4 md:my-6 text-black hover:text-red-500'>
               <img className='block overflow-hidden rounded-md w-full max-w-full hover:scale-105 transition-all' src={item.image} alt="" />
               <figcaption className='mt-2'>
-                <a className='text-black text-sm font-semibold font-sans block cursor-pointer mt-1 md:text-lg md:leading-normal'>{item.title}</a>
+                <a className='text-sm font-semibold font-sans block cursor-pointer mt-1 md:text-lg md:leading-normal'>{item.title}</a>
               </figcaption>
             </div>
           </div>
