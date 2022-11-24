@@ -1,77 +1,70 @@
 import CategoriesStyles from '../../../styles/Categories.module.css';
 import Navbar, { MBFooter, Footer } from '../navbar';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 
 export default function Categories() {
 
     const content = [
         {
-          id: 0,
+          image: '/images/categories/categories-img.png',
           title: 'Seafood',
         },
         {
-          id: 1,
+          image: '/images/categories/categories-img.png',
           title: 'Soup',
         },
         {
-          id: 2,
+          image: '/images/categories/categories-img.png',
           title: 'Pancakes',
         },
         {
-          id: 3,
+          image: '/images/categories/categories-img.png',
           title: 'Meat',
         },
         {
-          id: 4,
+          image: '/images/categories/categories-img.png',
           title: 'Chicken',
         },
         {
-          id: 5,
+          image: '/images/categories/categories-img.png',
           title: 'Pasta',
         },
         {
-          id: 6,
+          image: '/images/categories/categories-img.png',
           title: 'Pizza',
         },
         {
-          id: 7,
+          image: '/images/categories/categories-img.png',
           title: 'Less than 30 min',
         },
       ];
 
     return (
         <>
-        <div className={CategoriesStyles.container}>
+        <div className='bg-white box-border outline-none p-0'>
+          <Navbar />
           <div className={CategoriesStyles.content}>
-            <Navbar />
-            <div className={CategoriesStyles.categories}>
-                <h5 className={CategoriesStyles.headText}>Categories</h5>
-
+            <div className='my-6 md:my-12 md:mx-auto md:max-w-6xl'>
+                <h5 className='text-black text-2xl leading-tight font-bold font-serif py-4 mt-0 mb-4 border-b border-inherit border-solid md:text-6xl md:leading-tight md:mb-12'>Categories</h5>
                 <div className={CategoriesStyles.rowCategories}>
                     {content.map((item, index) => (
                     <div key={index} className={CategoriesStyles.blockCategories}>
-                        <div  className={CategoriesStyles.imgCategories}>
-                            {index === 0 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
-                            {index === 1 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
-                            {index === 2 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
-                            {index === 3 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
-                            {index === 4 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
-                            {index === 5 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
-                            {index === 6 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
-                            {index === 7 && <img className={CategoriesStyles.image} src="/images/categories/categories-img.png" alt="" />}
-                        <figcaption className={CategoriesStyles.titleCategories}>
-                            <a className={CategoriesStyles.textCategories}>
-                            {item.title}
-                            </a>
-                        </figcaption>
+                      <div  className='relative text-center my-4 md:my-6 text-black hover:text-red-500'>
+                        <div className='hover:scale-105 transition-all'>
+                          <Image className='overflow-hidden rounded-full max-w-full cursor-pointer' width='255px' height='255px' src={item.image} alt="Menu"/>
                         </div>
+                        <figcaption className='mt-2 md:mt-4'>
+                          <a className='text-sm font-sans font-semibold mt-2 text-center cursor-pointer md:text-xl md:leading-normal'>{item.title}</a>
+                        </figcaption>
+                      </div>
                     </div>
                     ))}
                 </div>
             </div>
-            <Footer />
           </div>
+          <Footer />
         </div>
         </>
     )

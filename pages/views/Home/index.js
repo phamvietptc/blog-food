@@ -10,17 +10,17 @@ export default function Home() {
   return (
     <>
       <div className={styles.contain}>
-        <div className={styles.content}>
-          <Navbar />
+        <Navbar />
+        <div className={styles.content}>        
           <Spotlight_Food />
-          <Card_Food />
-          <Card_Food />
+          <Card_Food1 />
+          <Card_Food2 />
           <Card_Ctg />
           <Email />
           <Collections />
-          <Recipes />
-          <Footer />
+          <Recipes />   
         </div>
+        <Footer />
       </div>
     </>
   );
@@ -31,45 +31,37 @@ export default function Home() {
 export function Spotlight_Food() {
   return (
     <>
-      <div className={styles.boxSpotlight}>
-        <div>
-          <Link href={``}>
-            <Image
-              className={styles.imgSpotlight}
-              src="/images/home/Image_Spotlight.png"
-              width='650px'
-              height='488px'
-            />
-          </Link> 
+    <div className='m-auto bg-blue-100 rounded-2xl border-0 overflow-hidden mt-0 md:rounded-tl-2xl md:rounded-bl-2xl md:rounded-br-none md:rounded-tr-none md:mt-6 md:max-w-6xl'>
+      <div className={styles.rowSF}>
+        <div className={styles.left}>
+          <img className='w-full max-w-full align-middle' src="/images/home/Image_Spotlight.png" alt=''/>
         </div>
-        <div className={styles.boxTextSpotlight}>  
-          <div className={styles.textSpotlight}>
-            <div style={{display:'flex'}}>
-            <Image
-                src='/icons/home/icons-chart-up.png'
-                width='24px'
-                height='24px'
-            />
-            <p style={{color:'black', fontWeight:'600', lineHeight:'0', paddingLeft:'5px'}}>
-              85% would make this again
-            </p>
-            </div>
-            <h1 style={{color:'black', fontFamily:'-moz-initial', fontSize:'45px', fontWeight:'bold'}}>
-              Mighty Super Cheesecake
-            </h1>
-            <p style={{color:'black', fontWeight:'600', lineHeight:'25px'}}>
-              Look no further for a creamy and ultra smooth classic cheesecake recipe! no one can deny its simple decadence.
-            </p>
+        <div className={styles.right}>
+          <div className='p-6 justify-center flex-col h-full relative flex md:p-12'>
+            <strong className='flex'>
+              <Image
+                  src='/icons/home/icons-chart-up.png'
+                  width='20px'
+                  height='20px'
+                  alt='chart'
+              />
+              <spam className='font-sans text-xs font-medium leading-normal text-black ml-2 md:text-sm md:leading-normal'>85% would make this again</spam>
+            </strong>
+            <h4 className='font-serif font-bold leading-tight text-3xl text-black my-4 md:text-5xl md:leading-tight'>Mighty Super Cheesecake</h4>
+            <p className='font-sans text-sm font-normal leading-normal text-black pb-4 pr-0 mt-0 mb-4 md:text-lg md:leading-normal md:pb-0 md:pr-12'>Look no further for a creamy and ultra smooth classic cheesecake recipe! no one can deny its simple decadence.</p>
+            <a className='flex justify-center flex-col items-center bottom-2.5 right-0 ml-auto cursor-pointer bg-white w-10 h-10 rounded-full  md:bottom-4 md:right-5 md:absolute md:bg-inherit md:w-6 md:h-6'>
+              <Image
+                className='hover:scale-125 transition-all'
+                src='/icons/home/icons-right.png'
+                width='20px'
+                height='20px'
+                alt='next'
+              />
+            </a>
           </div>
-          <div style={{float:'right', margin:'-30px 10px', cursor:'pointer'}}>
-            <Image
-              src='/icons/home/icons-right.png'
-              width='24px'
-              height='24px'
-            />
-          </div>
-        </div>    
-      </div> 
+        </div>
+      </div>
+    </div>
     </>  
   )
 }
@@ -92,17 +84,15 @@ export function Email() {
                 placeholder="Enter Address"
                 className={styles.inputEmail}
               />
-              <div
+              <button
                 className={styles.btnEmail}
                 onClick={'/...'}
               >
                 JOIN
-              </div>
+              </button>
             </div>
             <div className={styles.endEmail}>
-              <a className={styles.endTextEmail}>
-                By joining our newsletter you agree to our <u href='#0' className={styles.termsEmail}>Terms and Conditions</u>
-              </a>
+              <small className='block text-black text-xs font-sans leading-normal font-normal'>By joining our newsletter you agree to our <br className='md:hidden'/> <u href='/' className='hover:text-red-400 decoration-red-400 underline-offset-4 cursor-pointer'>Terms and Conditions</u></small>
             </div>
           </div>
         </div>
@@ -112,71 +102,105 @@ export function Email() {
 }
 
 
-// Card Food
-export function Card_Food() {
+// Card Food1
+export function Card_Food1() {
   const router = useRouter();
   const defaultContents = [
     {
-      id: 0,
-      vote: '★★★★',
+      image: '/images/home/card-food.jpg',
       text: 'Spinach and Cheese Pasta',
     },
     {
-      id: 1,
-      vote: '★★★',
+      image: '/images/home/card-food.jpg',
       text: 'Fancy Glazed Donuts',
     },
     {
-      id: 2,
-      vote: '★★★★★',
+      image: '/images/home/card-food.jpg',
       text: 'Mighty Cheesy Breakfast Burger',
     },
   ];
 
   return (
     <>
-    <div className={styles.boxCard}>
-      <div className={styles.titleCard}>Super Delicious</div>
-      <div className={styles.card}>
+    <div className='m-auto my-6 outline-none md:my-12 md:max-w-6xl'>
+      <h5 className='text-black font-serif text-2xl leading-tight font-bold py-4 mb-0 md:text-4xl md:leading-tight'>Super Delicious</h5>
+      <div className={styles.rowCF}>
         {defaultContents.map((item, index) => (
-          <div key={index} className={styles.blockCard}>
-            <div className={styles.boxImgCard}>
-              {index === 0 && <img className={styles.imageCard} src="/images/home/card-food.jpg" alt="" />}
-              {index === 1 && <img className={styles.imageCard} src="/images/home/card-food.jpg" alt="" />}
-              {index === 2 && <img className={styles.imageCard} src="/images/home/card-food.jpg" alt="" />}
-            </div>
-            <div className={styles.detailCard}>
-              <h3
-                className={styles.voteCard}
-                onClick={() => {
-                  if (item.id === 3) {
-                    router.push(
-                      '/'
-                    );
-                  } else {
-                    return;
-                  }
-                }}
-              >
-                {item.vote}
-              </h3>
-            
-            <h3
-              className={styles.textCard}
-              onClick={() => {
-                if (item.id === 3) {
-                  router.push(
-                    '/'
-                  );
-                } else {
-                  return;
-                }
-              }}
-            >
-              {item.text}
-            </h3>
-            </div>
-          </div>
+        <div key={index} className={styles.boxCF}>
+          <figure className='relative my-4'>
+            <a className='block overflow-hidden rounded-md'>
+              <img className='w-full max-w-full align-middle cursor-pointer hover:scale-105 transition-all' src={item.image} alt=""/>
+            </a>
+            <figcaption className='mt-2'>
+              <div className='w-full float-left'>
+                <div className='float-left'>
+                  <div className="rating rating-sm">
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
+                  </div>
+                  <a className='block cursor-pointer font-sans text-black text-base font-semibold leading-normal mt-1 md:text-xl md:leading-normal'>{item.text}</a>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+        ))}
+      </div>
+    </div>
+    </>
+  )
+}
+
+
+
+// Card Food2
+export function Card_Food2() {
+  const router = useRouter();
+  const defaultContents = [
+    {
+      image: '/images/home/card-food.jpg',
+      text: 'Caramel Strawberry Milkshake',
+    },
+    {
+      image: '/images/home/card-food.jpg',
+      text: 'Chocolate and Banana Jar Cake',
+    },
+    {
+      image: '/images/home/card-food.jpg',
+      text: 'Berry Maddness Biscuts',
+    },
+  ];
+
+  return (
+    <>
+    <div className='m-auto my-6 outline-none md:my-12 md:max-w-6xl'>
+      <h5 className='text-black font-serif text-2xl leading-tight font-bold py-4 mb-0 md:text-4xl md:leading-tight'>Sweet Tooth</h5>
+      <div className={styles.rowCF}>
+        {defaultContents.map((item, index) => (
+        <div key={index} className={styles.boxCF}>
+          <figure className='relative my-4'>
+            <a className='block overflow-hidden rounded-md'>
+              <img className='w-full max-w-full align-middle cursor-pointer hover:scale-105 transition-all' src={item.image} alt=""/>
+            </a>
+            <figcaption className='mt-2'>
+              <div className='w-full float-left'>
+                <div className='float-left'>
+                  <div className="rating rating-sm">
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
+                  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-600 ml-1.5"/>
+                  </div>
+                  <a className='block cursor-pointer font-sans text-black text-base font-semibold leading-normal mt-1 md:text-xl md:leading-normal'>{item.text}</a>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
         ))}
       </div>
     </div>
@@ -190,64 +214,55 @@ export function Card_Ctg() {
   const router = useRouter();
   const content = [
     {
-      id: 0,
+      image: '/images/home/Image_Categories.png',
       title: 'Pasta',
     },
     {
-      id: 1,
+      image: '/images/home/Image_Categories.png',
       title: 'Pizza',
     },
     {
-      id: 2,
+      image: '/images/home/Image_Categories.png',
       title: 'Vegan',
     },
     {
-      id: 3,
+      image: '/images/home/Image_Categories.png',
       title: 'Desserts',
     },
     {
-      id: 4,
+      image: '/images/home/Image_Categories.png',
       title: 'Smoothies',
     },
     {
-      id: 5,
+      image: '/images/home/Image_Categories.png',
       title: 'Breakfast',
     },
   ];
 
   return (
     <>
-    <div className={styles.boxCtg}>
-      <div className={styles.category}>Popular Categories</div>
-      <div className={styles.ctg}>
+    <div className='m-auto my-6 md:my-12 md:max-w-6xl'>
+      <h5 className='py-4 my-0 font-serif text-2xl font-bold leading-tight text-black md:text-4xl md:leading-tight'>Popular Categories</h5>
+      <div className={styles.rowCtg}>
         {content.map((item, index) => (
-          <div
-            key={index}
-            className={styles.blockCtg}
-            onClick={() => {
-              if (item.id === index) {
-                router.push(
-                  '/views/Categories'
-                );
-              } else {
-                return;
-              }
-            }}
-          >
-            <div className={styles.boxImgCtg}>
-              {index === 0 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
-              {index === 1 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
-              {index === 2 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
-              {index === 3 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
-              {index === 4 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
-              {index === 5 && <img className={styles.imageCtg} src="/images/home/Image_Categories.png" alt="" />}
-            </div>
-            <div className={styles.detailCtg}>
-              <h3 className={styles.titleCtg}>
-                {item.title}
-              </h3>
-            </div>
-          </div>
+        <div
+          key={index}
+          className={styles.boxCtg}
+          onClick={() => {
+            router.push(
+              '/views/Categories'
+            );
+          }}
+        >
+          <figure className='relative text-center my-4'>
+            <a className='block overflow-hidden rounded-full'>
+              <img className='max-w-full align-middle cursor-pointer hover:scale-105 transition-all' src={item.image} alt=""/>
+            </a>
+            <figcaption className='mt-2'>
+              <a className='font-sans text-sm font-semibold text-black leading-normal text-center cursor-pointer mt-2 md:text-xl md:leading-normal'>{item.title}</a>
+            </figcaption>
+          </figure>
+        </div>
         ))}
       </div>
     </div>
@@ -261,27 +276,27 @@ export function Collections() {
   const router = useRouter();
   const content = [
     {
-      id: 0,
+      image: '/images/home/Picked_Collections.jpg',
       title: 'Sushi Combos for your Next Party',
     },
     {
-      id: 1,
+      image: '/images/home/Picked_Collections.jpg',
       title: 'Everything Bagel',
     },
     {
-      id: 2,
+      image: '/images/home/Picked_Collections.jpg',
       title: 'Cook Like a Chef',
     },
     {
-      id: 3,
+      image: '/images/home/Picked_Collections.jpg',
       title: 'Exquisite Dinner Recipe Ideas',
     },
     {
-      id: 4,
+      image: '/images/home/Picked_Collections.jpg',
       title: 'The Ultimate Cookie Frenzy Cookie ',
     },
     {
-      id: 5,
+      image: '/images/home/Picked_Collections.jpg',
       title: 'For the Love of Donuts',
     },
   ];
@@ -292,18 +307,13 @@ export function Collections() {
       <div className={styles.collections}>Hand-Picked Collections</div>
       <div className={styles.hpc}>
         {content.map((item, index) => (
-          <div key={index} className={styles.blockHpc}>
-              {index === 0 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
-              {index === 1 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
-              {index === 2 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
-              {index === 3 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
-              {index === 4 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
-              {index === 5 && <img className={styles.imageHpc} src="/images/home/Picked_Collections.jpg" alt="" />}
-            <div className={styles.titleHpc}>
-              <h3 className={styles.textHpc}>{item.title}</h3>
-              <span className={styles.spanHpc} >156 Recipes</span>
-            </div>
+        <div key={index} className={styles.blockHpc}>
+          <img className={styles.imageHpc} src={item.image} alt="" />
+          <div className={styles.titleHpc}>
+            <h3 className={styles.textHpc}>{item.title}</h3>
+            <span className={styles.spanHpc} >156 Recipes</span>
           </div>
+        </div>
         ))}
       </div>
     </div>
@@ -317,35 +327,35 @@ export function Recipes() {
   const router = useRouter();
   const content = [
     {
-      id: 0,
+      image: '/images/home/Recipes.jpg',
       title: 'Caramel Strawberry Milkshake',
     },
     {
-      id: 1,
+      image: '/images/home/Recipes.jpg',
       title: 'Cashew Vegan Rice',
     },
     {
-      id: 2,
+      image: '/images/home/Recipes.jpg',
       title: 'Smoked Salmon Salad Sandwich',
     },
     {
-      id: 3,
+      image: '/images/home/Recipes.jpg',
       title: 'Salmon in Creamy Sun Dried Tomato Sauce',
     },
     {
-      id: 4,
+      image: '/images/home/Recipes.jpg',
       title: 'Healthy Jam Waffle Breakfast',
     },
     {
-      id: 5,
+      image: '/images/home/Recipes.jpg',
       title: 'Chocolate and Banana Jar Cake',
     },
     {
-      id: 6,
+      image: '/images/home/Recipes.jpg',
       title: 'Caramel Blueberry Scones',
     },
     {
-      id: 7,
+      image: '/images/home/Recipes.jpg',
       title: 'Blueberry Carrot Cake',
     },
   ];
@@ -353,35 +363,22 @@ export function Recipes() {
   return (
     <>
       <div className={styles.boxLr}>
-        <div className={styles.recipes}>Latest Recipes</div>
+        <div className='text-black text-2xl font-bold font-serif leading-tight py-4 my-0 md:text-4xl md:leading-tight'>Latest Recipes</div>
         <div className={styles.rowRecipes}>
           {content.map((item, index) => (
           <div
             key={index}
             className={styles.lr}
             onClick={() => {
-              if (item.id === index) {
                 router.push(
                   '/views/Recipes'
                 );
-              } else {
-                return;
-              }
             }}
           >
-            <div className={styles.blockLr}>
-                {index === 0 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-                {index === 1 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-                {index === 2 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-                {index === 3 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-                {index === 4 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-                {index === 5 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-                {index === 6 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-                {index === 7 && <img className={styles.imageLr} src="/images/home/Recipes.jpg" alt="" />}
-              <figcaption className={styles.titleLr}>
-                <a className={styles.textLr}>
-                  {item.title}
-                </a>
+            <div className='relative cursor-pointer my-4 md:my-6 text-black hover:text-red-500'>
+              <img className='block overflow-hidden rounded-md w-full max-w-full hover:scale-105 transition-all' src={item.image} alt="" />
+              <figcaption className='mt-2'>
+                <a className='text-sm font-semibold font-sans block cursor-pointer mt-1 md:text-lg md:leading-normal'>{item.title}</a>
               </figcaption>
             </div>
           </div>
@@ -389,9 +386,9 @@ export function Recipes() {
         </div>
 
         {/* load more */}
-        <div className={styles.btnLr}>
+        <div className='py-12 text-center'>
           <a
-            className={styles.textBtnLR}
+            className='text-black text-sm font-medium font-sans leading-normal py-1 px-6 inline-block text-center cursor-pointer rounded border border-black border-solid md:text-lg md:leading-normal md:py-2 md:px-12 hover:bg-black hover:text-white'
             href=''
           >
             Load More
