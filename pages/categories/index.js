@@ -8,7 +8,7 @@ import api from '../api';
 
 export default function Categories() {
 
-const [categoriesData, setcategoriesData] = useState([]);
+const [categoriesData, setCategoriesData] = useState([]);
 useEffect(() => {
   const getCategories = async () => {
     const res = await api.categories.getCategoryDetail();
@@ -19,7 +19,7 @@ useEffect(() => {
     img: item.image,
   })),
   ];
-  setcategoriesData(buttonMenu);
+  setCategoriesData(buttonMenu);
 };
    getCategories();
 }, []);
