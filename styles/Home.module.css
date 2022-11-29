@@ -96,17 +96,17 @@
         background: #e5d8be;
     }
     .emailBox {
-        width: 342px;
+        width: 363px;
     }
     .headTextEmail {
         color: black;
         font-size: 59px;
         font-family: -moz-initial;
         font-weight: bold;
-        width: 342px;
+        width: 363px;
         line-height: 60px;
         text-align: center;
-        margin: 0px 20px 0px 0px;
+        /* margin: 0px 20px 0px 0px; */
     }
     .bodyTextEmail {
         color: black;
@@ -118,7 +118,7 @@
         display: flex;
         height: 50px;
         width: 400px;
-        margin-left: -25px;
+        margin-left: -20px;
     }
     .inputEmail {
         width: 400px;

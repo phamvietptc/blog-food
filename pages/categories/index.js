@@ -2,6 +2,8 @@ import CategoriesStyles from '../../styles/Categories.module.css';
 import Navbar, { MBFooter, Footer } from '../../components/navbar';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import { useState, useEffect, useCallback } from 'react';
+import api from '../api';
 
 
 export default function Categories() {
@@ -41,6 +43,43 @@ export default function Categories() {
         },
       ];
 
+      const [categoriesData, setcategoriesData] = useState([]);
+
+      useEffect(() => {
+   const getCategories = async () => {
+     const res = await api.categories.getCategoryDetail();
+     if (res.data == null) {
+       return;
+     }
+     setcategoriesData(res.data);
+   };
+   // const getCategories = async () => {
+   //   const res = await api.categories.getCategoryDetail();
+   //   if (res?.data == null) {
+   //     return;
+   //   }
+   //   console.log(123, teacherList);
+   //   setExperts(
+   //     teacherList.data.map((teacher) => ({
+   //       id: teacher.id,
+   //       url: teacher.avatar,
+   //       name: teacher.fullName,
+   //       role: teacher.title,
+   //     }))
+   //   );
+   //   setExpertsMobile(
+   //     teacherList.data.map((teacher) => ({
+   //       id: teacher.id,
+   //       url: teacher.avatar,
+   //       name: teacher.fullName,
+   //       role: teacher.title,
+   //     }))
+   //   );
+   // };
+   getCategories();
+   // getTeachers();
+ }, []);
+
     return (
         <>
         <div className='bg-white box-border outline-none p-0'>
@@ -49,14 +88,14 @@ export default function Categories() {
             <div className='my-6 md:my-12 md:mx-auto md:max-w-6xl'>
                 <h5 className='text-black text-2xl leading-tight font-bold font-serif py-4 mt-0 mb-4 border-b border-inherit border-solid md:text-6xl md:leading-tight md:mb-12'>Categories</h5>
                 <div className={CategoriesStyles.rowCategories}>
-                    {content.map((item, index) => (
+                    {categoriesData.map((id, index) => (
                     <div key={index} className={CategoriesStyles.blockCategories}>
                       <div  className='relative text-center my-4 md:my-6 text-black hover:text-red-500'>
                         <div className='hover:scale-105 transition-all'>
-                          <Image className='overflow-hidden rounded-full max-w-full cursor-pointer' width='255px' height='255px' src={item.image} alt="Menu"/>
+                          <Image className='overflow-hidden rounded-full max-w-full cursor-pointer' width='255px' height='255px' src={id.image} alt="Menu"/>
                         </div>
                         <figcaption className='mt-2 md:mt-4'>
-                          <a className='text-sm font-sans font-semibold mt-2 text-center cursor-pointer md:text-xl md:leading-normal'>{item.title}</a>
+                          <a className='text-sm font-sans font-semibold mt-2 text-center cursor-pointer md:text-xl md:leading-normal'>{id.title}</a>
                         </figcaption>
                       </div>
                     </div>
