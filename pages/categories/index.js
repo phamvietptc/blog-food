@@ -1,5 +1,5 @@
-import CategoriesStyles from '../../../styles/Categories.module.css';
-import Navbar, { MBFooter, Footer } from '../navbar';
+import CategoriesStyles from '../../styles/Categories.module.css';
+import Navbar, { MBFooter, Footer } from '../../components/navbar';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 

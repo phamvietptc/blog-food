@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import NavbarStyles from '../../styles/Navbar.module.css';
+import NavbarStyles from '../styles/Navbar.module.css';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
@@ -14,7 +14,7 @@ export default function Navbar() {
           <div className='relative flex items-center px-0 md:flex-nowrap md:justify-start md:py-2'>
 
             {/* Desktop */}
-            <Link href={'/'}>
+            <Link href={'/home'}>
               <a className='hidden md:block'>
               <Image
                width={301} 
@@ -26,7 +26,7 @@ export default function Navbar() {
             </Link>
 
             {/* Mobile */}
-            <Link href={'/'}>
+            <Link href={'/home'}>
               <a className='md:hidden'>
               <Image
                width={110} 
@@ -40,7 +40,7 @@ export default function Navbar() {
             <div  className='hidden md:block md:flex md:items-center md:w-full'>
               <ul className='flex-row pt-0 m-auto flex list-none'>
                 <li className='px-4 relative'>
-                  <Link href={`/`}>
+                  <Link href={`/home`}>
                     <a className='text-black text-base font-sans leading-normal font-medium block cursor-pointer px-2'>
                       <span>Home Page</span>
                       <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Home Page' />
@@ -48,7 +48,7 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className='px-4 relative'>
-                  <Link href={`/`}>
+                  <Link href={`/recipes`}>
                     <a className='text-black text-base font-sans leading-normal font-medium block cursor-pointer px-2'>
                       <span>Recipe Page</span>
                       <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Recipe Page' />
@@ -197,7 +197,7 @@ export function Menu() {
         </label>
         <ul tabIndex={0} className="mt-5 dropdown-content menu p-2 shadow bg-primary-content rounded-box w-52">
           <li>
-            <Link href={`/`}>
+            <Link href={`/home`}>
               <a className='link link-hover text-neutral'>
                 <span>Home Page</span> 
                 <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Home Page' />
@@ -205,7 +205,7 @@ export function Menu() {
             </Link>
           </li>
           <li>
-            <Link href={`/`}>
+            <Link href={`/recipes`}>
               <a className='link link-hover text-neutral'>
                 <span>Recipe Page</span> 
                 <Image width='15px' height='15px' src='/icons/navbar/icons-drop-down.png' alt='Recipe Page' />
@@ -261,7 +261,7 @@ export function Footer() {
               className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
-                  pathname: '/views/About',
+                  pathname: '/about',
                 });
               }}
             >
@@ -271,7 +271,7 @@ export function Footer() {
               className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
-                  pathname: '/' + router.query + '/Careers',
+                  pathname: '/' + router.query + '/careers',
                 });
               }}
             >
@@ -281,7 +281,7 @@ export function Footer() {
               className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
-                  pathname: '/' + router.query + '/Contact Us',
+                  pathname: '/' + router.query + '/contact Us',
                 });
               }}
             >
@@ -291,7 +291,7 @@ export function Footer() {
               className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
-                  pathname: '/' + router.query + '/Feedback',
+                  pathname: '/' + router.query + '/feedback',
                 });
               }}
             >
@@ -315,7 +315,7 @@ export function Footer() {
               className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
-                  pathname: '/' + router.query + '/Conditions',
+                  pathname: '/' + router.query + '/conditions',
                 });
               }}
             >
@@ -325,7 +325,7 @@ export function Footer() {
               className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
-                  pathname: '/' + router.query + '/Cookies',
+                  pathname: '/' + router.query + '/cookies',
                 });
               }}
             >
@@ -335,7 +335,7 @@ export function Footer() {
               className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
-                  pathname: '/' + router.query + '/Copyright',
+                  pathname: '/' + router.query + '/copyright',
                 });
               }}
             >
@@ -349,7 +349,7 @@ export function Footer() {
               className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
-                  pathname: '/' + router.query + '/Facebook',
+                  pathname: '/' + router.query + '/facebook',
                 });
               }}
             >
@@ -359,7 +359,7 @@ export function Footer() {
               className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
-                  pathname: '/' + router.query + '/Twitter',
+                  pathname: '/' + router.query + '/twitter',
                 });
               }}
             >
@@ -369,7 +369,7 @@ export function Footer() {
               className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
-                  pathname: '/' + router.query + '/Instagram',
+                  pathname: '/' + router.query + '/instagram',
                 });
               }}
             >
@@ -379,7 +379,7 @@ export function Footer() {
               className='text-gray-500 text-sm font-sans font-normal h-8 pr-24 cursor-pointer link-hover text-neutral'
               onClick={() => {
                 router.push({
-                  pathname: '/' + router.query + '/Youtube',
+                  pathname: '/' + router.query + '/youtube',
                 });
               }}
             >
@@ -454,7 +454,7 @@ export function Footer_MB() {
 
   const list = [
     {
-      link: '/views/About',
+      link: '/about',
       link1: '/',
       link2: '/',
       link3: '/',

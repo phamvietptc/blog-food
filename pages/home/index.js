@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Navbar, { MBFooter, Footer } from '../navbar';
+import Navbar, { MBFooter, Footer } from '../../components/navbar';
 import Link from 'next/link';
-import styles from '../../../styles/Home.module.css';
+import styles from '../../styles/Home.module.css';
 import { useRouter } from 'next/router';
 
 
@@ -250,7 +250,7 @@ export function Card_Ctg() {
           className={styles.boxCtg}
           onClick={() => {
             router.push(
-              '/views/Categories'
+              '/categories'
             );
           }}
         >
@@ -371,7 +371,7 @@ export function Recipes() {
             className={styles.lr}
             onClick={() => {
                 router.push(
-                  '/views/Recipes'
+                  '/recipes'
                 );
             }}
           >

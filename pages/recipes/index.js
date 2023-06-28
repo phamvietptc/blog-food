@@ -1,5 +1,5 @@
-import RecipesStyles from '../../../styles/Recipes.module.css';
-import Navbar, { MBFooter, Footer } from '../navbar';
+import RecipesStyles from '../../styles/Recipes.module.css';
+import Navbar, { MBFooter, Footer } from '../../components/navbar';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 

@@ -1,5 +1,5 @@
-import AboutStyles from '../../../styles/About.module.css';
-import Navbar, { MBFooter, Footer } from '../navbar';
+import AboutStyles from '../../styles/About.module.css';
+import Navbar, { MBFooter, Footer } from '../../components/navbar';
 import Image from 'next/image';
 
 export default function About() {
