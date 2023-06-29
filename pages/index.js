@@ -1,9 +1,9 @@
-import Home from '../pages/home/index';
+import Home from "../pages/home/index";
 
 export default function Main() {
-    return (
-        <>
-        <Home/>
-        </>
-    )
+  return (
+    <>
+      <Home />
+    </>
+  );
 }

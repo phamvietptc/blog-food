@@ -1,4 +1,4 @@
-import styles from '../../styles/Home.module.css'
+import styles from "../../styles/Home.module.css";
 
 export default function Version() {
   return (
@@ -7,5 +7,5 @@ export default function Version() {
         <div className={styles.content}>Version 0.1</div>
       </div>
     </>
-  )
+  );
 }
