@@ -28,7 +28,7 @@ return (
             Super Delicious
             </h5>
             <div className={styles.rowCF}>
-            {defaultContents.map((item, index) => (
+            {defaultContents.filter((item, index) => index < 3).map((item, index) => (
                 <div key={index} className={styles.boxCF}>
                 <figure className="relative my-4">
                     <a className="block overflow-hidden rounded-md">
